@@ -20,7 +20,8 @@
     stroke-linecap="round"
     stroke-linejoin="round"
   />
-</svg>
+
+  </svg>
 /* XXXL */ @media (min-width: 1400px) {} /* XXL */ @media (min-width: 1200px)
 and (max-width: 1400px) {} /* XL */ @media (min-width: 992px) and (max-width:
 1200px) {} /* LG */ @media (max-width: 992px) {} @media (min-width: 768px) and
@@ -29,6 +30,7 @@ and (max-width: 1400px) {} /* XL */ @media (min-width: 992px) and (max-width:
 480px) {} /* XXS */ @media (max-width: 425px) {} /* XXXS */ @media (max-width:
 375px) {} /* Smallest Devices */ @media (max-width: 320px) {} /* Warehouse
 capabilities */
+
 
 <section class="warehouse-capabilities">
   <div class="container">

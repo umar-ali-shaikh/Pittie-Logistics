@@ -348,6 +348,7 @@ img {
     gap: var(--pm16);
     width: 30%;
     display: flex;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 

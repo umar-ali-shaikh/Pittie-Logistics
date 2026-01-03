@@ -333,6 +333,14 @@
   transform: translateY(-1px);
 }
 
+.container {
+  padding: 0;
+}
+
+.services-layout {
+  padding: 0;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .cta-wrapper {
@@ -357,9 +365,10 @@
   }
 
   .services-image {
-    width: 50%;
+    width: 90%;
     margin: auto;
   }
+
 }
 
 

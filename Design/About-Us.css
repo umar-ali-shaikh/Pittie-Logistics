@@ -405,6 +405,27 @@
     }
 }
 
+ @media (max-width: 768px) {
+     .journey-timeline::before {
+        height: 178%;
+        left: 26px;
+    }
+ }
+@media (max-width: 576px){
+      .journey-timeline::before {
+        height: 225%;
+        left: 26px;
+    }
+}
+
+ @media (max-width:
+375px) {
+      .journey-timeline::before {
+        height: 270%;
+        left: 26px;
+    }
+}
+
 /* ==============================
    CTA – Transport Services
    ============================== */
