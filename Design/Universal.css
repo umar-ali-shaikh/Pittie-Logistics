@@ -57,7 +57,7 @@ body {
     font-weight: 400;
     background-color: var(--bg-primary);
     line-height: 1.5;
-    /* overscroll-behavior: none; */
+    overscroll-behavior: none;
 }
 
 
@@ -359,7 +359,8 @@ section {
 
 /* Brand */
 .footer-logo {
-    max-width: 160px;
+    /* max-width: 160px; */
+    max-width: 102px;
     margin-bottom: 12px;
 }
 

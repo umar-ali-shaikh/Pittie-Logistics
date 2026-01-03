@@ -157,7 +157,7 @@
 }
 
 /* PLAY BUTTON */
-.play-btn {
+/* .play-btn {
     position: absolute;
     inset: 0;
     margin: auto;
@@ -176,7 +176,7 @@
     border-left: 20px solid #000;
     border-top: 14px solid transparent;
     border-bottom: 14px solid transparent;
-}
+} */
 
 /* MODAL */
 .video-modal {
