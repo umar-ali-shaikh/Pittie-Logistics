@@ -1,0 +1,690 @@
+/* Hero Section */
+
+.page-banner {
+    /* min-height: 311px;   */
+    border-radius: 16px;
+    overflow: hidden;
+    background-image: url("../Assests/capabilities/header-bg-img.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: clamp(220px, 40vh, 311px);
+    padding: var(--pm32);
+}
+
+/* Content */
+.page-banner-content {
+    color: #ffffff;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.breadcrumb span img {
+    width: fit-content;
+    margin: 0 6px;
+}
+
+/* Heading */
+.page-banner-content h1 {
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ==============================
+   Network Coverage Section
+   ============================== */
+
+.network-coverage {
+    background-color: var(--bg-primary);
+}
+
+.coverage-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--pm64);
+    align-items: center;
+}
+
+/* LEFT MAP */
+.coverage-map img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* RIGHT CONTENT */
+.coverage-content h2 {
+    color: var(--text-primary);
+    margin-bottom: var(--pm12);
+}
+
+.coverage-desc {
+    color: var(--para-text);
+    max-width: 520px;
+    margin-bottom: var(--pm32);
+}
+
+/* STATS GRID */
+.coverage-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--pm24);
+}
+
+/* CARD */
+.stat-card {
+    background-color: #f4f7fb;
+    border-radius: var(--radius16);
+    padding: var(--pm24);
+    text-align: center;
+}
+
+.stat-card h4 {
+    color: var(--bg-danger);
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: var(--pm8);
+}
+
+.stat-card p {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+
+@media (max-width: 1024px) {
+    .coverage-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--pm48);
+    }
+
+    .coverage-content {
+        text-align: center;
+    }
+
+    .coverage-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .coverage-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==============================
+   Warehouse Capabilities
+   ============================== */
+
+.warehouse-capabilities {
+    background: linear-gradient(135deg, #0b4ea2, #1c6fd1);
+    border-radius: 24px;
+    color: #ffffff;
+    margin: 0 10px;
+}
+
+.warehouse-capabilities {
+    padding: 40px 10px;
+}
+
+/* Header */
+.warehouse-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px;
+}
+
+.warehouse-header h2 {
+    margin-bottom: 12px;
+}
+
+.warehouse-header p {
+    color: #fff;
+}
+
+/* Grid */
+.warehouse-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Card */
+.warehouse-card {
+    background-color: #ffffff;
+    color: #1a4174;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.warehouse-card .icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-sections);
+    border-radius: 8px;
+    display: inline-flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 12px;
+    margin-bottom: 0;
+    margin-right: 10px; */
+}
+
+/* icon image smaller than background */
+.warehouse-card .icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: block;
+}
+
+/* icon + h4 wrapper behavior */
+.warehouse-card .icon,
+.warehouse-card h4 {
+    align-self: flex-start;
+}
+
+/* icon + h4 row */
+.warehouse-card .icon+h4 {
+    margin-left: 50px;
+    margin-top: -40px;
+}
+
+.warehouse-card h4 {
+    color: var(--bg-danger);
+    font-size: 30px;
+    font-weight: 600;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+
+}
+
+.warehouse-card p {
+    color: var(--text-primary);
+    width: 100%;
+    margin-top: 6px;
+}
+
+/* Image Card */
+.warehouse-image {
+    grid-column: span 2;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.warehouse-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+
+@media (max-width: 1024px) {
+    .warehouse-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .warehouse-image {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .warehouse-container {
+        padding: 24px;
+    }
+
+    .warehouse-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .warehouse-image {
+        grid-column: span 1;
+    }
+}
+
+/* ==============================
+   CTA – Transport Services
+   ============================== */
+
+.cta-transport {
+    border-radius: var(--radius24);
+    margin: 50px 10px 0px 10px;
+
+
+    /* Blue gradient exactly like image */
+    background: linear-gradient(90deg,
+            #0B2E5F 0%,
+            #1A4174 60%,
+            #2C5FA6 100%);
+}
+
+.cta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--bg-primary);
+}
+
+/* LEFT TEXT */
+.cta-text {
+    max-width: 650px;
+    padding: 30px 0;
+}
+
+.cta-text h4 {
+    color: var(--bg-primary);
+    margin-bottom: var(--pm8);
+}
+
+.cta-text p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: clamp(14px, 1.2vw, 16px);
+    margin-bottom: 0px;
+}
+
+/* BUTTON */
+.cta-action .btn-primary {
+    background-color: var(--bg-danger);
+    /* box-shadow: 0 10px 24px rgba(233, 41, 47, 0.35); */
+}
+
+/* Arrow inside button */
+.cta-arrow {
+    font-size: 16px;
+    margin-left: 4px;
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .cta-wrapper {
+        flex-direction: column;
+        gap: var(--pm24);
+        text-align: center;
+        padding: var(--pm32);
+    }
+}
+
+
+.op-header svg {
+    stroke: var(--bg-primary);
+
+}
+
+
+
+/*========= Advanced technology SECTION ========= */
+
+.advanced-technology {
+    background: #ffffff;
+    padding: 50px 20px 0 20px;
+    overflow: hidden;
+    margin-bottom: -200px;
+}
+
+.tech-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-container h2 {
+    text-align: center;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.tech-subtitle {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 50px;
+    color: var(--para-text);
+}
+
+/* CARDS WRAPPER */
+.tech-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 26px;
+}
+
+/* CARD BASE */
+.tech-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 26px 30px;
+    border-radius: 14px;
+}
+
+/* BLUE CARD */
+.tech-card--blue {
+    background: linear-gradient(90deg, #0b4fa3, #0a3f86);
+}
+
+.tech-card--blue h4,
+.tech-card--blue p {
+    color: #ffffff;
+}
+
+/* LIGHT CARD */
+.tech-card--light {
+    background: #eef2f8;
+}
+
+.tech-card--light h4 {
+    color: #0f172a;
+}
+
+.tech-card--light p {
+    color: var(--para-text)
+}
+
+/* CONTENT */
+.tech-content {
+    flex: 1;
+}
+
+.tech-content h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.tech-content p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* IMAGE */
+.tech-image {
+    flex: 0 0 360px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tech-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+/* ===============================
+   STACK / FOLDER EFFECT
+================================ */
+.tech-stack {
+    position: relative;
+    height: 100vh;
+}
+
+.pin-spacer {
+    padding: 0 !important;
+}
+
+.tech-card {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    border-radius: 24px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+/* last card ko extra margin nahi chahiye */
+.tech-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Depth feeling */
+.tech-stack .tech-card:nth-child(1) {
+    z-index: 1 !important;
+}
+
+.tech-stack .tech-card:nth-child(2) {
+    z-index: 2 !important;
+}
+
+.tech-stack .tech-card:nth-child(3) {
+    z-index: 3 !important;
+}
+
+.tech-stack .tech-card:nth-child(4) {
+    z-index: 4 !important;
+}
+
+/* Slight offset like folders */
+.tech-stack .tech-card {
+    transform: translateY(var(--offset, 0)) scale(0.98);
+}
+
+/* Mobile → normal layout */
+
+@media (max-width: 1200px) {
+    .advanced-technology {
+        margin-bottom: -140px;
+    }
+}
+
+@media (max-width: 900px) {
+    .pin-spacer {
+        height: calc((300px * 4 + 4 * 50px) * 2 + 300px) !important;
+    }.tech-subtitle{
+        margin-bottom: 0 !important;
+    }
+     .tech-stack{
+        top: 20px !important;
+     }
+
+    .tech-stack .tech-card {
+        position: relative;
+        height: 300px;
+        overflow: auto;
+    }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .tech-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tech-image {
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+/* ==============================
+   Operational Capabilities
+   ============================== */
+
+.operational-capabilities {
+    background: linear-gradient(135deg, #1f5fa9, #1a4f91);
+    border-radius: 28px;
+    padding: 64px;
+    margin: 40px 10px;
+}
+
+.op-container {
+    display: flex;
+    gap: 64px;
+    align-items: flex-start;
+}
+
+/* LEFT */
+.op-left {
+    flex: 1;
+    color: #ffffff;
+}
+
+.op-left h2 {
+    font-size: 42px;
+    margin-bottom: 16px;
+}
+
+.op-subtitle {
+    max-width: 520px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+}
+
+/* LIST */
+.op-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ITEM */
+.op-item {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* HEADER */
+.op-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* TITLE */
+.op-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* ICON */
+.op-icon {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.op-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+/* SVG ARROW */
+.op-header svg {
+    width: 24px;
+    height: 24px;
+    stroke: #ffffff;
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
+}
+
+/* BODY */
+.op-body {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.45s ease, opacity 0.35s ease;
+}
+
+.op-body p {
+    margin-top: 16px;
+    max-width: 520px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+/* ACTIVE STATE */
+.op-item.active .op-body {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.op-item.active .op-header svg {
+    transform: rotate(50deg);
+}
+
+/* RIGHT IMAGE */
+.op-right {
+    flex: 1;
+    max-width: 520px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.op-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+
+@media (max-width: 992px) {
+    .op-container {
+        flex-direction: column;
+    }
+
+    .op-right {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .operational-capabilities {
+        padding: 32px 20px;
+    }
+
+    .op-left h2 {
+        font-size: 32px;
+    }
+}

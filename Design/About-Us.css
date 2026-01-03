@@ -1,0 +1,1037 @@
+/* Hero Section */
+
+.page-banner {
+    /* min-height: 311px;   */
+    border-radius: 16px;
+    overflow: hidden;
+    background-image: url("../Assests/about-us/header-bg-img.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: clamp(220px, 40vh, 311px);
+    padding: var(--pm32);
+}
+
+/* Content */
+.page-banner-content {
+    color: #ffffff;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.breadcrumb span img {
+    margin: 0 6px;
+}
+
+
+
+/* ============ Introduction Section =========== */
+
+.overview-container {
+    align-items: center;
+}
+
+/* LEFT */
+.overview-text h2 {
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.overview-desc {
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--para-text);
+    padding: 0 20px 0 0;
+    margin-bottom: 15px;
+}
+
+.overview-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.overview-list li {
+    position: relative;
+    padding-left: 26px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: var(--para-text);
+}
+
+.overview-list li::before {
+    background-image: url("../Assests/about-us/check-icon.png");
+    content: "";
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 0;
+    margin-top: 2px;
+
+}
+
+/* Mission Vision */
+.mv-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.mv-card {
+    background: #f4f7fb;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.mv-card h4 {
+    font-size: 24px;
+    width: 100%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.mv-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--para-text);
+}
+
+/* RIGHT IMAGE */
+.overview-image::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.9),
+            /* bottom – dark */
+            rgba(0, 0, 0, 0)
+            /* top – transparent */
+        );
+    z-index: 2;
+}
+
+.overview-image {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.overview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+/* Overlay Text */
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 40px;
+    color: #ffffff;
+    z-index: 3;
+}
+
+.image-overlay p {
+    color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .overview-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mv-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==============================
+   Features – Why Choose Us
+   ============================== */
+
+.features {
+    background-color: var(--bg-sections);
+    border-radius: var(--radius24);
+    margin: var(--pm48) 10px;
+}
+
+.features-wrapper {
+    padding: var(--pm64) var(--pm32);
+}
+
+/* Header */
+.features-header {
+    text-align: center;
+    margin-bottom: var(--pm12);
+}
+
+
+.features-header h2 {
+    color: var(--text-primary);
+}
+
+/* Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--pm24);
+    padding: 0px;
+}
+
+/* Card */
+.feature-card {
+    background-color: var(--bg-primary);
+    padding: var(--pm32) var(--pm24);
+    border-radius: var(--radius16);
+    text-align: left;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(13, 74, 188, 0.15);
+}
+
+/* Icon */
+.feature-icon {
+    width: 44px;
+    height: 44px;
+    background-color: var(--bg-light-blue);
+    border-radius: var(--radius8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--pm16);
+}
+
+.feature-icon i {
+    color: var(--text-white);
+    font-size: 18px;
+}
+
+/* Text */
+.feature-card h5 {
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: var(--pm8);
+}
+
+.feature-card p {
+    color: var(--para-text);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-wrapper {
+        padding: var(--pm48) var(--pm16);
+    }
+}
+
+/* ==============================
+   Journey Section
+   ============================== */
+
+.journey {
+    background-color: var(--bg-primary);
+}
+
+.journey-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--pm64);
+    align-items: flex-start;
+}
+
+/* LEFT */
+.journey-content {
+    position: sticky;
+    top: var(--pm64);
+}
+
+.journey-content h2 {
+    color: var(--text-primary);
+}
+
+.journey-desc {
+    color: var(--para-text);
+}
+
+/* RIGHT – Scrollable Timeline */
+.journey-timeline {
+    position: relative;
+    max-height: 520px;
+    /* controls scroll area */
+    overflow-y: auto;
+    padding-left: 38px;
+    scrollbar-width: thin;
+    cursor: pointer;
+}
+
+.journey-timeline {
+    overflow-y: auto;
+    /* scroll allow */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE / Edge */
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
+}
+
+
+/* Vertical line */
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    left: 12px;
+    top: 0;
+    width: 2px;
+    height: 120%;
+    background-color: #BABABA;
+}
+
+/* Timeline item */
+.timeline-item {
+    position: relative;
+    padding-left: var(--pm32);
+    margin-bottom: var(--pm32);
+}
+
+/* Dot */
+.timeline-dot {
+    position: absolute;
+    left: -31px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--text-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px #EEF1F6;
+}
+
+/* Text */
+.timeline-year {
+    display: block;
+    color: var(--bg-danger);
+    font-weight: 600;
+    margin-bottom: var(--pm4);
+
+}
+
+.timeline-text h6 {
+    margin-bottom: var(--pm4);
+}
+
+.timeline-text p {
+    color: var(--para-text);
+}
+
+/* Smooth scroll feel */
+.journey-timeline::-webkit-scrollbar {
+    width: 6px;
+}
+
+.journey-timeline::-webkit-scrollbar-thumb {
+    background-color: rgba(13, 74, 188, 0.3);
+    border-radius: var(--radius8);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .journey-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-content {
+        position: relative;
+        top: auto;
+    }
+
+    .journey-timeline {
+        height: 300px;
+        overflow: auto;
+        padding-left: var(--pm24);
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: -3px;
+        top: 6px;
+    }
+
+    .journey-timeline::before {
+        height: 165%;
+        left: 26px;
+    }
+}
+
+/* ==============================
+   CTA – Transport Services
+   ============================== */
+
+.cta-transport {
+    border-radius: var(--radius24);
+
+
+    /* Blue gradient exactly like image */
+    background: linear-gradient(90deg,
+            #0B2E5F 0%,
+            #1A4174 60%,
+            #2C5FA6 100%);
+}
+
+.cta-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--bg-primary);
+}
+
+/* LEFT TEXT */
+.cta-text {
+    max-width: 650px;
+    padding: 30px 0;
+}
+
+.cta-text h4 {
+    color: var(--bg-primary);
+    margin-bottom: var(--pm8);
+}
+
+.cta-text p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: clamp(14px, 1.2vw, 16px);
+    margin-bottom: 0px;
+}
+
+/* BUTTON */
+.cta-action .btn-primary {
+    background-color: var(--bg-danger);
+    /* box-shadow: 0 10px 24px rgba(233, 41, 47, 0.35); */
+}
+
+/* Arrow inside button */
+.cta-arrow {
+    font-size: 16px;
+    margin-left: 4px;
+    transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .cta-wrapper {
+        flex-direction: column;
+        gap: var(--pm24);
+        text-align: center;
+        padding: var(--pm32);
+    }
+}
+
+
+/* ==============================
+   Team Section
+   ============================== */
+
+.team {
+    background-color: var(--bg-primary);
+}
+
+/* Header */
+.team-header {
+    max-width: 720px;
+    margin: 0 auto var(--pm48);
+    text-align: center;
+}
+
+.team-header h2 {
+    color: var(--text-primary);
+    margin-bottom: var(--pm12);
+}
+
+.team-header p {
+    color: var(--para-text);
+}
+
+/* Grid */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--pm24);
+}
+
+/* Card */
+.team-card {
+    position: relative;
+    height: 100%;
+    background-color: var(--bg-sections);
+    border-radius: var(--radius16);
+    overflow: hidden;
+}
+
+
+
+/* Image */
+.team-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+    object-position: top;
+}
+
+/* Info */
+.team-info {
+    position: absolute;
+    background-color: #EEF1F6;
+    padding: var(--pm16);
+    width: 100%;
+    height: 100%;
+    top: 70%;
+    left: 0;
+    transition: top 0.5s ease;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+
+.team-card:hover .team-info {
+    top: 0%;
+    z-index: 11;
+
+}
+
+.team-info h4 {
+    color: var(--strong-black);
+    margin-bottom: var(--pm4);
+}
+
+.team-info p {
+    color: var(--para-text);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card img {
+        height: 500px;
+        object-position: top;
+
+    }
+}
+
+@media (max-width: 480px) {}
+
+/* ==============================
+   Career Hero Section
+   ============================== */
+
+.career-hero {
+    background: linear-gradient(135deg, #1f5fa9, #1a4f91);
+    border-radius: var(--radius24);
+    margin: var(--pm48) 10px;
+    color: var(--bg-primary);
+}
+
+.career-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: var(--pm48);
+    align-items: center;
+    padding: 0;
+}
+
+/* LEFT */
+.career-left h2 {
+    margin: var(--pm16) 0 var(--pm32);
+    color: var(--bg-primary);
+}
+
+.career-image {
+    border-radius: var(--radius16);
+    overflow: hidden;
+    max-width: 520px;
+}
+
+.career-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* RIGHT FORM CARD */
+.career-right {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius24);
+    padding: var(--pm32);
+    color: var(--strong-black);
+}
+
+.career-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pm24);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pm8);
+}
+
+.form-group label {
+    font-size: 14px;
+    color: var(--para-text);
+}
+
+.form-group input,
+.form-group select {
+    border: none;
+    border-bottom: 1px solid #E5E7EB;
+    padding: 10px 4px;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    outline: none;
+}
+
+select {
+    font-family: var(--font-primary);
+    color: #9CA3AF;
+}
+
+.form-group .form-text {
+    color: #9CA3AF;
+}
+
+.form-group input::placeholder {
+    color: #9CA3AF;
+}
+
+/* ROW */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--pm24);
+}
+
+/* Upload */
+
+.upload-group {
+    position: relative;
+}
+
+.file-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 4px;
+    border-bottom: 1px solid #E5E7EB;
+    cursor: pointer;
+    font-size: 15px;
+    color: #9CA3AF;
+}
+
+.file-field span {
+    font-family: var(--font-primary);
+}
+
+.file-field svg {
+    flex-shrink: 0;
+}
+
+/* Hide actual file input */
+.file-field input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+
+/* Button */
+.apply-btn {
+    margin-top: var(--pm16);
+    width: 100%;
+    justify-content: center;
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+
+@media (max-width: 992px) {
+    .career-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .career-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .career-wrapper {
+        padding: var(--pm12);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==============================
+   Offices World Map Section
+   ============================== */
+
+.offices-map {
+    background-color: var(--bg-primary);
+    text-align: center;
+}
+
+.offices-map .container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0;
+}
+
+.offices-map h2 {
+    margin-bottom: var(--pm32);
+    color: var(--text-primary);
+}
+
+/* Map Container */
+.map-wrapper {
+    position: relative;
+    height: 677px;
+    border-radius: var(--radius24);
+    background: #f1f4f9;
+    overflow: hidden;
+}
+
+/* Dotted World Map */
+.map-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url("../Assests/about-us/location.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* SVG Lines */
+.map-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.map-lines path {
+    fill: none;
+    stroke: #2f6fd8;
+    stroke-width: 2;
+    stroke-dasharray: 6 6;
+}
+
+/* Pins */
+.pin {
+    position: absolute;
+    z-index: 3;
+}
+
+
+/* Pin Positions (matched to image) */
+.usa {
+    left: 19.5%;
+    top: 30%;
+
+}
+
+.uk {
+    left: 42.3%;
+    top: 22%;
+}
+
+.india {
+    left: 64%;
+    top: 42%;
+}
+
+.uae {
+    left: 55%;
+    top: 56%;
+}
+
+.singapore {
+    left: 69.2%;
+    top: 63.2%;
+}
+
+
+/* Flag image */
+
+
+.pin span img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.25s ease;
+}
+
+/* Property image (hidden by default) */
+.pin span::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    inset: 0;
+    width: 216px;
+    height: 214px;
+    top: -120%;
+    left: -80%;
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+/* Hover effect */
+.pin:hover span img {
+    opacity: 0;
+}
+
+.pin:hover span::after {
+    opacity: 1;
+}
+
+
+.pin.usa span::after {
+    background-image: url("../Assests/about-us/property.png");
+}
+
+.pin.uk span::after {
+    background-image: url("../Assests/about-us/property.png");
+}
+
+.pin.india span::after {
+    background-image: url("../Assests/about-us/property.png");
+}
+
+.pin.uae span::after {
+    background-image: url("../Assests/about-us/property.png");
+}
+
+.pin.singapore span::after {
+    background-image: url("../Assests/about-us/property.png");
+}
+
+
+.pin {
+    cursor: pointer;
+}
+
+.pin span,
+.pin span::after,
+.pin span img {
+    pointer-events: none;
+}
+
+.pin:hover {
+    transform: translate(-50%, -50%);
+    transition: transform 0.25s ease;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .map-wrapper {
+        height: 380px;
+    }
+
+    .pin span {
+        font-size: 12px;
+    }
+}
+
+
+/* ===Responsive=== */
+
+@media (min-width: 576px) and (max-width: 992px) {
+
+    /* ===== hero section  ===== */
+    .page-banner-content h1 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    /* ===== Introduction section  ===== */
+    .overview-text .overview-desc {
+        padding-right: 0;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .overview-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .overview-image {
+        margin-top: 20px;
+        width: 90vw;
+    }
+}
+
+@media(max-width: 577px) {
+
+    /* ===== hero section Responsive ===== */
+    .page-banner-content h1 {
+        font-size: 23px;
+        font-weight: 600;
+    }
+
+    /* ===== Introduction section  ===== */
+    .overview-text .overview-desc {
+        padding-right: 0;
+    }
+
+    .overview-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* ===== hero section Responsive ===== */
+    .page-banner-content h1 {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    /* ===== Introduction section  ===== */
+}
+
+@media (max-width: 375px) {}
+
+
+
+
+
+
+
+/* XXXL */
+@media (min-width: 1400px) {}
+
+/* XXL */
+@media (min-width: 1200px) and (max-width: 1400px) {}
+
+/* XL */
+@media (min-width: 992px) and (max-width: 1200px) {}
+
+/* LG */
+@media (max-width: 992px) {
+    .overview-container {
+        flex-direction: column;
+    }
+
+    .team-info {
+        top: 75%;
+    }
+
+    .team-info p {
+        margin-bottom: 50px;
+    }
+
+    .team-card:hover .team-info p {
+        margin-bottom: var(--pm16) !important;
+    }
+
+    .career-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: 70%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {}
+
+/* MD */
+@media (max-width: 650px) {}
+
+@media (max-width: 768px) {}
+
+/* SM */
+@media (max-width: 576px) {
+    .team-info {
+        top: 80%;
+    }
+
+    .journey-timeline {
+        height: 250px;
+    }
+}
+
+/* XS */
+@media (max-width: 480px) {}
+
+/* XXS */
+@media (max-width: 425px) {}
+
+/* XXXS */
+@media (max-width: 375px) {}
+
+/* Smallest Devices */
+@media (max-width: 320px) {}

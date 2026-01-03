@@ -1,0 +1,183 @@
+/*
+<section class="section">
+  <div class="container">
+    <div class="row"></div>
+  </div>
+</section>
+*/ /* ============================== ============================== */
+
+<span class="badge sub-heading mb-3"></span
+><svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+/* XXXL */ @media (min-width: 1400px) {} /* XXL */ @media (min-width: 1200px)
+and (max-width: 1400px) {} /* XL */ @media (min-width: 992px) and (max-width:
+1200px) {} /* LG */ @media (max-width: 992px) {} @media (min-width: 768px) and
+(max-width: 992px) {} /* MD */ @media (max-width: 650px) {} @media (max-width:
+768px) {} /* SM */ @media (max-width: 576px) {} /* XS */ @media (max-width:
+480px) {} /* XXS */ @media (max-width: 425px) {} /* XXXS */ @media (max-width:
+375px) {} /* Smallest Devices */ @media (max-width: 320px) {} /* Warehouse
+capabilities */
+
+<section class="warehouse-capabilities">
+  <div class="container">
+    <div class="row">
+      <div class="warehouse-container">
+        < !-- Header -->
+        <div class="warehouse-header">
+          <h2>Warehouse Capabilities</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            pulvinar nulla metus, eu varius leo venenatis eget.
+          </p>
+        </div>
+        < !-- Grid -->
+        <div class="warehouse-grid">
+          < !-- Card 1 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon1.svg" alt="icon1" />
+            </div>
+            <h4>1000+</h4>
+            <p class="">Manpower strength</p>
+          </div>
+          < !-- Card 2 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon2.svg" alt="icon2" />
+            </div>
+            <h4>99.80%</h4>
+            <p>Low inventory holding cost due to shared facilities</p>
+          </div>
+          < !-- Card 3 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon3.svg" alt="icon3" />
+            </div>
+            <h4>19+</h4>
+            <p>Storage capabilities & locations</p>
+          </div>
+          < !-- Card 4 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon4.svg" alt="icon4" />
+            </div>
+            <h4>5 lakh+</h4>
+            <p>Cases/Month Business Handled (Inward + Outward)</p>
+          </div>
+          < !-- Card 5 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon5.svg" alt="icon5" />
+            </div>
+            <h4>Real-time</h4>
+            <p>MIS</p>
+          </div>
+          < !-- Card 6 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon6.svg" alt="icon6" />
+            </div>
+            <h4>48 hours</h4>
+            <p>Fastest Speed To Market</p>
+          </div>
+          < !-- Card 7 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon7.svg" alt="icon7" />
+            </div>
+            <h4>Negligible Inventory</h4>
+            <p>Loss leading to higher profits</p>
+          </div>
+          < !-- Card 8 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon4.svg" alt="icon8" />
+            </div>
+            <h4>Better Predictability</h4>
+            <p>due to standardized processes</p>
+          </div>
+          < !-- Card 9 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon5.svg" alt="icon9" />
+            </div>
+            <h4>0.2%</h4>
+            <p>Less shrinkage & pilferage</p>
+          </div>
+          < !-- Card 10 -->
+          <div class="warehouse-card">
+            <div class="icon">
+              <img src="Assests/capabilities/icon6.svg" alt="icon10" />
+            </div>
+            <h4>Localised</h4>
+            <p>Vendor & manpower management</p>
+          </div>
+          < !-- Image Card -->
+          <div class="warehouse-image">
+            <img
+              src="Assests/capabilities/warehouse-img.png"
+              alt="Warehouse"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+.warehouse-capabilities { background: linear-gradient(135deg, #0b4ea2, #1c6fd1);
+border-radius: 24px; color: #ffffff; margin: 0 10px; } .warehouse-capabilities {
+padding: 40px 10px; } /* Header */ .warehouse-header { text-align: center;
+max-width: 720px; margin: 0 auto 40px; } .warehouse-header h2 { font-size: 32px;
+font-weight: 700; margin-bottom: 12px; } .warehouse-header p { opacity: 0.9;
+color: #fff; } /* Grid */ .warehouse-grid { display: grid;
+grid-template-columns: repeat(4, 1fr); gap: 20px; } /* Card */ .warehouse-card {
+background-color: #ffffff; color: #1a4174; border-radius: 12px; padding: 20px; }
+.warehouse-card .icon { width: 40px; height: 40px; background-color:
+var(--bg-sections); border-radius: 8px; display: flex; align-items: center;
+justify-content: center; margin-bottom: 12px; } /* icon image smaller than
+background */ .warehouse-card .icon img { width: 30px; height: 30px; object-fit:
+contain; display: block; } .warehouse-card h4 { color: var(--bg-danger);
+font-size: 20px; font-weight: 600; margin-bottom: 6px; } .warehouse-card p {
+color: var(--text-primary); margin: 0; } /* Image Card */ .warehouse-image {
+grid-column: span 2; border-radius: 12px; overflow: hidden; } .warehouse-image
+img { width: 100%; height: 100%; object-fit: cover; display: block; } scrolling
+efffect js // Ummar js gsap.registerPlugin(ScrollTrigger); const cards =
+gsap.utils.toArray(".tech-stack .tech-card"); const CARD_HEIGHT = 300; const GAP
+= 50; const TAB = 28; /* INITIAL NORMAL STATE */ cards.forEach(card => {
+gsap.set(card, { position: "relative", y: 0 }); }); const tl = gsap.timeline({
+scrollTrigger: { trigger: ".tech-stack", start: "top top", end: () =>
+`+=${cards.length * 100}%`, // 👈 each card gets scroll space scrub: true, pin:
+true, pinSpacing: true } }); /* ACTIVATE ABSOLUTE STACK AT START */ tl.add(() =>
+{ cards.forEach((card, i) => { gsap.set(card, { position: "absolute", top: 0,
+left: 0, y: i * (CARD_HEIGHT + GAP), zIndex: cards.length - i }); }); }); /* 🔥
+ONE BY ONE STACK */ cards.forEach((card, i) => { tl.to(card, { y: i * TAB, //
+28px step zIndex: cards.length + i, ease: "none" }); }); // Prathamesh js
+gsap.registerPlugin(ScrollTrigger); const cards =
+gsap.utils.toArray(".tech-stack .tech-card"); const CARD_HEIGHT = 300; const GAP
+= 50; const TAB = 28; function initTechStack() {
+ScrollTrigger.getAll().forEach(st => st.kill()); gsap.killTweensOf(cards); const
+isMobile = window.innerWidth <= 900; // Reset cards.forEach(card => {
+gsap.set(card, { position: "relative", y: 0, clearProps: "transform" }); });
+const tl = gsap.timeline({ scrollTrigger: { trigger: ".tech-stack", start:
+isMobile ? "top+=80 top" : "top top", end: `+=${cards.length * 120}%`, scrub:
+true, pin: true, pinSpacing: !isMobile, // 🔥 KEY FIX anticipatePin: 1 } }); //
+Activate stack AFTER trigger starts tl.add(() => { cards.forEach((card, i) => {
+gsap.set(card, { position: "absolute", top: 0, left: 0, width: "100%", y: i *
+(CARD_HEIGHT + GAP), zIndex: cards.length - i }); }); }); // Stack animation
+cards.forEach((card, i) => { tl.to(card, { y: i * TAB, ease: "none" }); }); } //
+Init initTechStack(); // Re-init on resize window.addEventListener("resize", ()
+=> { clearTimeout(window.__stackResize); window.__stackResize =
+setTimeout(initTechStack, 300); });

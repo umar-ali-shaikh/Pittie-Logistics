@@ -1,0 +1,463 @@
+/* ==============================
+   Pittie Logistics – Design System
+   ============================== */
+
+:root {
+
+    /* Colors */
+    --text-primary: #1A4174;
+    --bg-primary: #FFFFFF;
+    --bg-sections: #EAEEF4;
+    --bg-danger: #E9292F;
+    --para-text: #6B7280;
+    --bg-dark: #010169;
+    --strong-black: #141415;
+    --bg-light-blue: #0D4ABC;
+    --bg-red-dark: #9D1015;
+
+    /* ---------- Font Family ---------- */
+    --font-primary: 'Poppins', sans-serif;
+
+
+    /* ---------- Spacing Scale ---------- */
+    --pm4: 4px;
+    --pm8: 8px;
+    --pm12: 12px;
+    --pm16: 16px;
+    --pm24: 24px;
+    --pm32: 32px;
+    --pm48: 48px;
+    --pm64: 64px;
+
+    /* ---------- Border Radius ---------- */
+    --radius4: 4px;
+    --radius8: 8px;
+    --radius12: 12px;
+    --radius16: 16px;
+    --radius24: 24px;
+    --radius999: 999px;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: inherit;
+}
+
+html {
+    scroll-behavior: auto;
+}
+
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+    background-color: var(--bg-primary);
+    line-height: 1.5;
+    /* overscroll-behavior: none; */
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-primary);
+}
+
+p {
+    font-size: clamp(14px, 1.2vw, 16px);
+    font-family: var(--font-primary);
+}
+
+.bg-color-blue h1,
+.bg-color-blue h2,
+.bg-color-blue h3,
+.bg-color-blue h4,
+.bg-color-blue h5,
+.bg-color-blue h6 {
+    color: var(--text-primary);
+}
+
+.bg-color-white h1,
+.bg-color-white h2,
+.bg-color-white h3,
+.bg-color-white h4,
+.bg-color-white h5,
+.bg-color-white h6 {
+    color: var(--bg-primary);
+}
+
+p {
+    color: var(--para-text);
+}
+
+/* ==============================
+   Responsive Headings (clamp)
+   ============================== */
+.h1,
+h1 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: clamp(38px, 4.5vw, 58px);
+    font-weight: 600;
+}
+
+.h2,
+h2 {
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: clamp(38px, 4.5vw, 58px);
+    font-weight: 600;
+}
+
+.h3,
+h3 {
+    font-size: clamp(26px, 3.5vw, 40px);
+    line-height: clamp(32px, 4vw, 48px);
+    font-weight: 700;
+}
+
+.h4,
+h4 {
+    font-size: clamp(22px, 3vw, 30px);
+    line-height: clamp(28px, 3.5vw, 38px);
+    font-weight: 700;
+}
+
+.h5,
+h5 {
+    font-size: clamp(20px, 2.5vw, 28px);
+    line-height: clamp(28px, 3vw, 40px);
+    font-weight: 600;
+}
+
+.h6,
+h6 {
+    font-size: clamp(18px, 2vw, 20px);
+    line-height: clamp(24px, 2.5vw, 30px);
+    font-weight: 600;
+}
+
+/* ==============================
+   Universal Button System
+   ============================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--pm8);
+
+    padding: 10px 28px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    font-weight: 600;
+
+    border-radius: var(--radius12);
+    border: none;
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.2s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn-primary {
+    background-color: var(--bg-danger);
+    color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--bg-red-dark);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--bg-danger);
+    border: 1px solid var(--bg-danger);
+}
+
+.btn-outline:hover {
+    background-color: var(--bg-danger);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.btn-primary a {
+    color: var(--bg-primary);
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-outline:hover a {
+    color: var(--bg-primary);
+}
+
+.btn-outline a {
+    color: var(--bg-danger);
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+button.btn-outline a svg {
+    stroke: var(--bg-danger);
+}
+
+button.btn-outline:hover a svg {
+    stroke: var(--bg-primary);
+}
+
+button.btn-primary a svg {
+    stroke: var(--bg-primary);
+}
+
+button.btn-primary:hover a svg {
+    stroke: var(--bg-primary);
+}
+
+/* classes */
+.container {
+    width: 100%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.hero-section {
+    margin: 0 10px;
+}
+
+/* sub heading */
+
+.sub-heading {
+    border: 1px solid var(--bg-danger);
+    color: var(--bg-danger);
+    padding: 6px 16px;
+    border-radius: var(--radius999);
+    font-weight: 500;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-family: var(--font-primary);
+    width: fit-content;
+}
+
+.sub-heading-outline {
+    display: inline-block;
+    border: 1px solid var(--bg-primary);
+    padding: 6px 16px;
+    border-radius: var(--radius999);
+    font-weight: 500;
+    font-size: clamp(14px, 1.2vw, 18px);
+    margin-bottom: var(--pm16);
+    color: var(--bg-primary);
+    width: fit-content;
+}
+
+
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+.row .div-pm {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    margin-inline: 10px;
+}
+
+@media (min-width: 576px) {
+    .row {
+        flex-wrap: nowrap;
+        display: flex;
+    }
+
+    .section {
+        padding-block: var(--pm48);
+    }
+
+}
+
+@media (max-width: 576px) {
+    .row {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+    .section {
+        padding: var(--pm48) 0;
+    }
+}
+
+
+/* Arrows */
+.icon-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--bg-primary);
+    border: none;
+    color: var(--text-primary);
+    font-size: 20px;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease;
+    z-index: 2;
+}
+
+.icon-arrow:hover {
+    color: var(--bg-primary);
+    background-color: var(--bg-dark);
+}
+
+
+
+
+
+
+
+
+/* ==============================
+   Footer
+   ============================== */
+
+.footer-section {
+    background: var(--bg-primary);
+    padding: 50px 0;
+    border-top: 1px solid #e5e7eb;
+    font-family: var(--font-primary);
+    border-radius: 50px;
+}
+
+/* Grid */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Brand */
+.footer-logo {
+    max-width: 160px;
+    margin-bottom: 12px;
+}
+
+.footer-tagline {
+    font-size: 16px;
+    color: var(--strong-black);
+    max-width: 260px;
+    line-height: 1.6;
+}
+
+/* Titles */
+.footer-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--strong-black);
+    margin-bottom: 14px;
+}
+
+/* Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    font-size: 18px;
+    color: var(--strong-black);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--bg-danger);
+}
+
+/* Contact */
+.footer-contact {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.footer-contact i {
+    color: var(--strong-black);
+    font-size: 18px;
+}
+
+.footer-contact a {
+    color: var(--strong-black);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-contact a:hover {
+    color: var(--bg-danger);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .sub-heading {
+        margin: auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-brand,
+    .footer-col {
+        align-items: center;
+    }
+
+    .footer-contact li {
+        justify-content: center;
+    }
+
+    .footer-tagline {
+        margin: auto;
+    }
+}

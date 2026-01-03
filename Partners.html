@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pittie Logistics</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="Design/Partners.css" />
+    <link rel="stylesheet" href="Design/Universal.css" />
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="Assests/Pittie-Logistics-Logo.svg" alt="" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav gap-3">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              <a class="nav-link" href="About-Us.html">About Us</a>
+              <a class="nav-link" href="Capabilities.html">Capabilities</a>
+              <a class="nav-link" href="Services.html">Services</a>
+              <a class="nav-link active" href="Partners.html"
+                >Partners & Clients</a
+              >
+              <a class="nav-link" href="Contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section  -->
+    <section
+      class="page-banner hero-section justify-content-center align-items-center d-flex section"
+    >
+      <div class="page-banner-content container">
+        <nav class="breadcrumb d-flex align-items-center gap-1">
+          <a href="#">Home</a>
+          <span
+            ><img
+              src="Assests/about-us/lessor-sign.svg"
+              alt="Icon"
+              loading="eager"
+          /></span>
+          <span>Partners & Clients</span>
+        </nav>
+        <h1>
+          Trusted by leading brands and long-term partners across industries.
+        </h1>
+      </div>
+    </section>
+
+    <!-- Our Top 5 Brands -->
+    <section class="client-video-section bg-color-blue section">
+      <div class="container">
+        <div class="row">
+          <div class="section-head">
+            <h2>Our Valued Clients</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              pulvinar nulla metus, eu varius leo venenatis eget. Suspendisse
+              odio est, tincidunt quis est a, mattis egestas nunc.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="client-logos">
+            <button
+              class="logo active"
+              data-thumb="Assests/partner_clients/Brand-img1.png"
+              data-video="https://www.youtube.com/embed/ysz5S6PUM-U"
+              data-title="PATANJALI"
+            >
+              <img src="Assests/partner_clients/Patanjali_Logo.png" />
+            </button>
+
+            <button
+              class="logo"
+              data-thumb="Assests/partner_clients/Brand-img2.png"
+              data-video="https://www.youtube.com/embed/jNQXAC9IVRw"
+              data-title="NAIR"
+            >
+              <img src="Assests/partner_clients/shubhkart.png" />
+            </button>
+
+            <button
+              class="logo"
+              data-thumb="Assests/partner_clients/Brand-img3.png"
+              data-video="https://www.youtube.com/embed/ScMzIvxBSi4"
+              data-title="BIKANO"
+            >
+              <img src="Assests/partner_clients/chakachaak.png" />
+            </button>
+
+            <button
+              class="logo"
+              data-thumb="Assests/partner_clients/Brand-img4.png"
+              data-video="https://www.youtube.com/embed/ScMzIvxBSi4"
+              data-title="BIKANO"
+            >
+              <img src="Assests/partner_clients/Coolberg.png" />
+            </button>
+
+            <button
+              class="logo malaki-logo"
+              data-thumb="Assests/partner_clients/Brand-img5.png"
+              data-video="https://www.youtube.com/embed/ScMzIvxBSi4"
+              data-title="BIKANO"
+            >
+              <img src="Assests/partner_clients/ocean.png" />
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="video-thumb">
+            <img
+              id="videoThumbnail"
+              src="Assests/partner_clients/Brand-img1.png"
+            />
+            <div class="play-btn" id="playVideo"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL Our 5 Brands -->
+    <div class="video-modal" id="videoModal">
+      <div class="video-modal-content">
+        <span class="close">&times;</span>
+        <iframe
+          id="videoFrame"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Out Top 4 Brands  -->
+    <section class="product-showcase section">
+      <div class="container">
+        <h3 class="section-heading">Lorem Ipsum</h3>
+        <div class="row">
+          <div class="product-grid">
+            <!-- CARD 1 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="Assests/partner_clients/image 2342.png"
+                  alt="Patanjali"
+                />
+              </div>
+              <div class="product-footer">
+                <img
+                  src="Assests/partner_clients/brand-footer-logo1.png"
+                  class="brand-logo"
+                />
+                <span class="brand-name">Patanjali</span>
+              </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img src="Assests/partner_clients/image 2343.png" alt="Nair" />
+              </div>
+              <div class="product-footer">
+                <img
+                  src="Assests/partner_clients/brand-footer-logo2.png"
+                  class="brand-logo"
+                />
+                <span class="brand-name">Nair</span>
+              </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="Assests/partner_clients/image 2344.png"
+                  alt="Samrat Snacks"
+                />
+              </div>
+              <div class="product-footer">
+                <img
+                  src="Assests/partner_clients/brand-footer-logo3.png"
+                  class="brand-logo"
+                />
+                <span class="brand-name">Samrat Snacks</span>
+              </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="product-card">
+              <div class="product-image">
+                <img
+                  src="Assests/partner_clients/image 2345.png"
+                  alt="Diamond"
+                />
+              </div>
+              <div class="product-footer">
+                <img
+                  src="Assests/partner_clients/brand-footer-logo4.png"
+                  class="brand-logo"
+                />
+                <span class="brand-name">Diamond</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Image Carousal -->
+    <section class="brand-section section">
+      <div class="container">
+        <h3 class="section-heading">Lorem Ipsum</h3>
+        <div class="row">
+          <!-- CAROUSEL (NOW LIMITED TO CONTAINER WIDTH) -->
+          <div class="brand-carousel" id="brandCarousel">
+            <div class="brand-track" id="brandTrack">
+              <div class="brand-item">
+                <img src="Assests/partner_clients/Patanjali_Logo.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/Nair-Logo.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/carousal-img1.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/carousal-img2.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/Patanjali_Logo.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/Nair-Logo.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="image-carousal section">
+      <div class="container">
+        <h3 class="image-section-heading">Lorem Ipsum</h3>
+        <div class="row">
+          <div class="carousel-track">
+            SET 1 
+            <div class="brand">
+              <img
+                src="Assests/partner_clients/Patanjali_Logo.png"
+                alt="Patanjali"
+              />
+            </div>
+            <div class="brand">
+              <img src="Assests/partner_clients/Nair-Logo.png" alt="Nair" />
+            </div>
+            <div class="brand">
+              <img
+                src="Assests/partner_clients/britannia-logo.png"
+                alt="Britannia"
+              />
+            </div>
+            <div class="brand">
+              <img
+                src="Assests/partner_clients/flawless-logo.png"
+                alt="Flawless"
+              />
+            </div>
+            <div class="brand">
+              <img
+                src="Assests/partner_clients/Patanjali_Logo.png"
+                alt="Patanjali"
+              />
+            </div>
+            <div class="brand">
+              <img src="Assests/partner_clients/Nair-Logo.png" alt="Nair" />
+            </div>
+
+            DUPLICATE SET (for seamless loop) 
+            <div class="brand">
+              <img
+                src="Assests/partner_clients/Patanjali_Logo.png"
+                alt="Patanjali"
+              />
+            </div>
+            <div class="brand">
+              <img src="Assests/partner_clients/Nair-Logo.png" alt="Nair" />
+            </div>
+            <div class="brand">
+              <img
+                src="Assests/partner_clients/britannia-logo.png"
+                alt="Britannia"
+              />
+            </div>
+            <div class="brand">
+              <img
+                src="Assests/partner_clients/flawless-logo.png"
+                alt="Flawless"
+              />
+            </div>
+            <div class="brand">
+              <img
+                src="Assests/partner_clients/Patanjali_Logo.png"
+                alt="Patanjali"
+              />
+            </div>
+            <div class="brand">
+              <img src="Assests/partner_clients/Nair-Logo.png" alt="Nair" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Company Info -->
+          <div class="footer-col footer-brand">
+            <img
+              src="Assests/Pittie-Logistics-Logo.svg"
+              alt="Pittie Logistics"
+              class="footer-logo"
+            />
+            <p class="footer-tagline">
+              Enhancing lives through innovative logistics solutions.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h6 class="footer-title">Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Capabilities</a></li>
+              <li><a href="#">Partner & Clients</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-col">
+            <h6 class="footer-title">Services</h6>
+            <ul class="footer-links">
+              <li><a href="#">Carry & Forward Partners</a></li>
+              <li><a href="#">Superstockist</a></li>
+              <li><a href="#">Build-to-suit</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-col">
+            <h6 class="footer-title">Contact Us</h6>
+            <ul class="footer-contact">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                >
+                  <path
+                    d="M4 4.91113H20C21.1 4.91113 22 5.81113 22 6.91113V18.9111C22 20.0111 21.1 20.9111 20 20.9111H4C2.9 20.9111 2 20.0111 2 18.9111V6.91113C2 5.81113 2.9 4.91113 4 4.91113Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M22 6.91113L12 13.9111L2 6.91113"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <a href="mailto:contact@pittiegroup.com"
+                  >contact@pittiegroup.com</a
+                >
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                >
+                  <path
+                    d="M21.9994 17.8312V20.8312C22.0006 21.1097 21.9435 21.3854 21.832 21.6406C21.7204 21.8958 21.5567 22.1248 21.3515 22.3131C21.1463 22.5014 20.904 22.6447 20.6402 22.7339C20.3764 22.8232 20.0968 22.8563 19.8194 22.8312C16.7423 22.4969 13.7864 21.4454 11.1894 19.7612C8.77327 18.2259 6.72478 16.1774 5.18945 13.7612C3.49942 11.1524 2.44769 8.18222 2.11944 5.09123C2.09446 4.8147 2.12732 4.53599 2.21595 4.27285C2.30457 4.00972 2.44702 3.76792 2.63421 3.56285C2.82141 3.35778 3.04925 3.19394 3.30324 3.08175C3.55722 2.96956 3.83179 2.91149 4.10945 2.91123H7.10945C7.59475 2.90645 8.06524 3.07831 8.43321 3.39476C8.80118 3.71122 9.04152 4.15068 9.10944 4.63123C9.23607 5.5913 9.47089 6.53396 9.80945 7.44123C9.94399 7.79915 9.97311 8.18814 9.89335 8.56211C9.8136 8.93608 9.62831 9.27934 9.35944 9.55123L8.08945 10.8212C9.513 13.3248 11.5859 15.3977 14.0894 16.8212L15.3594 15.5512C15.6313 15.2824 15.9746 15.0971 16.3486 15.0173C16.7225 14.9376 17.1115 14.9667 17.4694 15.1012C18.3767 15.4398 19.3194 15.6746 20.2794 15.8012C20.7652 15.8698 21.2088 16.1144 21.526 16.4887C21.8431 16.863 22.0116 17.3408 21.9994 17.8312Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <a href="tel:+912242604260">+91 22 4260 4260</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Main JS -->
+    <script src="Logic/Partners.js"></script>
+    <script src="Logic/Universal.js"></script>
+  </body>
+</html>

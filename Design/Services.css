@@ -1,0 +1,431 @@
+/* Hero Section */
+
+.page-banner {
+  /* min-height: 311px;   */
+  border-radius: 16px;
+  overflow: hidden;
+  background-image: url("../Assests/service/header-bg-img.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  min-height: clamp(220px, 40vh, 311px);
+  padding: var(--pm32);
+}
+
+/* Content */
+.page-banner-content {
+  color: #ffffff;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumb span img {
+  margin: 0 6px;
+}
+
+
+/*============= Our service section
+============================== */
+
+.logistics-services {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* HEADER */
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-header h2 {
+  margin-top: 12px;
+  color: var(--text-primary);
+}
+
+/* LAYOUT */
+.services-layout {
+  display: flex;
+  gap: 30px;
+}
+
+/* LEFT NAV */
+.services-nav {
+  width: 250px;
+  position: relative;
+}
+
+.services-nav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  background: #e6e6e6;
+  height: 100%;
+}
+
+.services-nav ul {
+  list-style: none;
+  width: fit-content;
+  margin: 0;
+  padding: 0;
+}
+
+.services-nav li {
+  padding: 14px 18px;
+  color: #6b7280;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.services-nav li.active {
+  font-weight: 600;
+  color: #0c2d57;
+}
+
+.services-nav li.active::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #e60000;
+  border-radius: 4px;
+}
+
+/* TABLE WRAPPER */
+.table-wrap {
+  display: block;
+  margin-top: 16px;
+  border: 1px solid #DEE2E6;
+  background: #f7f9fc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* ROW */
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.table-row span:first-child {
+  border-right: 1px solid #DEE2E6;
+}
+
+/* CELL */
+.table-row span {
+  padding: 14px 16px;
+  border-bottom: 1px solid #DEE2E6;
+  color: #5C5C5C;
+
+}
+
+/* HEADER */
+.table-head span {
+  font-weight: 600;
+  background: #f7f9fc;
+  color: #111827;
+}
+
+/* REMOVE LAST BORDER */
+.table-row:last-child span {
+  border-bottom: none;
+}
+
+
+
+/* RIGHT CARD */
+.services-card {
+  flex: 1;
+  background: #f7f9fc;
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CONTENT */
+.service-content {
+  display: none;
+  gap: 30px;
+}
+
+.service-content.active {
+  display: flex;
+}
+
+.services-text {
+  flex: 1;
+}
+
+.services-text h3 {
+  font-size: 30px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.services-text li {
+  color: #5C5C5C;
+}
+
+.services-text p {
+  color: #5C5C5C;
+}
+
+.services-image {
+  width: 400px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.services-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/*============= Our Collaboration section
+============================== */
+/* SECTION */
+.collaboration-section {
+  padding: var(--pm48) 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+/* PILL */
+.section-pill {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+/* TITLE */
+.section-title {
+  color: var(--text-primary);
+  margin-bottom: 40px;
+}
+
+/* IMAGE WRAPPER */
+.collaboration-image {
+  margin: auto;
+}
+
+/* MAP WRAPPER */
+.collaboration-map {
+  position: relative;
+  width: 100%;
+}
+
+/* BASE IMAGE */
+.base-image {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+/* OVERLAY IMAGE */
+.overlay-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* ACTIVE STATE */
+.overlay-image.active {
+  opacity: 1;
+}
+
+/* HOTSPOT (CLICK AREA) */
+.hotspot {
+  position: absolute;
+  top: 3%;
+  left: 20%;
+  width: 15%;
+  height: 23%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot1 {
+  position: absolute;
+  top: 3%;
+  left: 38%;
+  width: 15%;
+  height: 20%;
+  cursor: pointer;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+
+/* ==============================
+   CTA – Transport Services
+   ============================== */
+
+.cta-transport {
+  border-radius: var(--radius24);
+  margin: var(--pm48) 10px;
+
+  /* Blue gradient exactly like image */
+  background: linear-gradient(90deg,
+      #0B2E5F 0%,
+      #1A4174 60%,
+      #2C5FA6 100%);
+}
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--bg-primary);
+}
+
+/* LEFT TEXT */
+.cta-text {
+  max-width: 650px;
+  padding: 30px 0;
+}
+
+.cta-text h4 {
+  color: var(--bg-primary);
+  margin-bottom: var(--pm8);
+}
+
+.cta-text p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(14px, 1.2vw, 16px);
+  margin-bottom: 0px;
+}
+
+/* BUTTON */
+.cta-action .btn-primary {
+  background-color: var(--bg-danger);
+  /* box-shadow: 0 10px 24px rgba(233, 41, 47, 0.35); */
+}
+
+/* Arrow inside button */
+.cta-arrow {
+  font-size: 16px;
+  margin-left: 4px;
+  transform: translateY(-1px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cta-wrapper {
+    flex-direction: column;
+    gap: var(--pm24);
+    text-align: center;
+    padding: var(--pm32);
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 1100px) {
+  .service-content {
+    flex-direction: column;
+  }
+
+  .services-image {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+
+
+/* XXXL */
+@media (min-width: 1400px) {}
+
+/* XXL */
+@media (min-width: 1200px) and (max-width: 1400px) {}
+
+/* XL */
+@media (min-width: 992px) and (max-width: 1200px) {}
+
+/* LG */
+@media (max-width: 992px) {}
+
+@media (min-width: 768px) and (max-width: 992px) {}
+
+/* MD */
+@media (max-width: 650px) {}
+
+@media (max-width: 768px) {
+  .services-layout {
+    flex-direction: column;
+  }
+
+  .services-nav ul {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+  }
+
+  .services-nav {
+    width: 100%;
+  }
+
+  .services-nav::after {
+    height: 2px;
+    width: 100%;
+  }
+
+
+  .services-nav li.active::before {
+    left: 0;
+    top: -1px;
+    height: 4px;
+    width: 100%;
+    z-index: 1111;
+  }
+
+  .services-nav li {
+    min-width: fit-content;
+  }
+}
+
+/* SM */
+@media (max-width: 576px) {}
+
+/* XS */
+@media (max-width: 480px) {}
+
+/* XXS */
+@media (max-width: 425px) {}
+
+/* XXXS */
+@media (max-width: 375px) {}
+
+/* Smallest Devices */
+@media (max-width: 320px) {}
