@@ -116,13 +116,17 @@ img {
 }
 
 
-.hero .overlay-bg .image1,
-.hero .overlay-bg .image2,
-.hero .overlay-bg .image3 {
-
+.hero .overlay-bg .image1 {
     background: url("../Assests/home/Bg-image-herosection.webp") no-repeat center / cover;
 }
 
+.hero .overlay-bg .image2 {
+    background: url("../Assests/home/Bg-image-herosection1.png") no-repeat center / cover;
+}
+
+.hero .overlay-bg .image3 {
+    background: url("../Assests/home/Bg-image-herosection2.png") no-repeat center / cover;
+}
 
 /* Layout */
 .hero-wrapper {
@@ -140,7 +144,7 @@ img {
 
 
 .hero-content h1 {
-    font-size: clamp(36px, 5vw, 60px);
+    font-size: clamp(30px, 5vw, 60px);
     line-height: clamp(44px, 6vw, 72px);
     font-weight: 700;
     margin-bottom: var(--pm16);
@@ -281,10 +285,6 @@ img {
 
 
 .what-title {
-    font-size: 33px;
-    /* 36 Prathamesh */
-    font-weight: 600;
-    line-height: normal;
     color: var(--text-primary);
 }
 
@@ -519,9 +519,6 @@ img {
 }
 
 .services-content p {
-    font-size: 15px;
-    line-height: 1.6;
-    opacity: 0.9;
     margin-bottom: 22px;
 }
 
@@ -1256,6 +1253,17 @@ img {
         padding-left: 0;
     }
 
+    .hero {
+        height: 100%;
+    }
+
+    .hero-wrapper {
+        padding: 10px 20px;
+    }
+
+    .hero-dots {
+        top: 110%;
+    }
 
     .hero .hero-arrow {
         display: none;
@@ -1269,6 +1277,27 @@ img {
     /* ---------- WHAT WE DO ---------- */
     .what-we-do-section-btn {
         flex-direction: column;
+    }
+
+    .what-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .what-item h6 {
+        margin: auto;
+    }
+
+    .what-item p {
+        margin: 0;
+    }
+
+    .what-images-wrapper {
+        display: none;
+    }
+
+    .what-img-row2 {
+        display: none;
     }
 
     .what-images-wrapper {
@@ -1344,6 +1373,10 @@ img {
         font-size: 26px;
     }
 
+    .blog-card-content {
+        padding: 20px 0;
+    }
+
     .blogs-section-wrapper {
         flex-direction: column;
         gap: 24px;
@@ -1369,3 +1402,40 @@ img {
         display: none;
     }
 }
+
+
+
+@media (min-width: 1400px) {}
+
+/* XXL */
+@media (min-width: 1200px) and (max-width: 1400px) {}
+
+/* XL */
+@media (min-width: 992px) and (max-width: 1200px) {}
+
+/* LG */
+@media (max-width: 992px) {}
+
+@media (min-width: 768px) and (max-width: 992px) {}
+
+/* MD */
+@media (max-width: 650px) {}
+
+@media (max-width: 768px) {}
+
+/* SM */
+@media (max-width: 576px) {}
+
+/* XS */
+@media (max-width: 480px) {}
+
+/* XXS */
+@media (max-width: 425px) {}
+
+/* XXXS */
+@media (max-width: 375px) {}
+
+/* Smallest Devices */
+@media (max-width: 320px) {}
+
+/*

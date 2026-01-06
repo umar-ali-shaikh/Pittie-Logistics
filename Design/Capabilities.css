@@ -42,6 +42,12 @@
     margin: 0;
 }
 
+@media (max-width: 576px) {
+    .page-banner-content {
+        padding: 0;
+    }
+}
+
 /* ==============================
    Network Coverage Section
    ============================== */
@@ -124,8 +130,34 @@
 }
 
 @media (max-width: 576px) {
+    .row div {
+        padding: 0;
+    }
+
+    .row .tech-card .tech-content {
+        padding: 20px 10px;
+    }
+
+    .stat-card {
+        background-color: transparent;
+    }
+
     .coverage-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .coverage-content {
+        padding: 0;
+    }
+
+    .stat-card h4,
+    .warehouse-card .icon+h4 {
+        font-size: 28px;
+        list-style: 34px;
+    }
+
+    .page-banner {
+        padding: var(--pm12);
     }
 }
 
@@ -215,9 +247,6 @@
 
 .warehouse-card h4 {
     color: var(--bg-danger);
-    font-size: 30px;
-    font-weight: 600;
-    display: inline-block;
     vertical-align: middle;
     margin: 0;
 
@@ -258,8 +287,31 @@
 }
 
 @media (max-width: 576px) {
+
+    .warehouse-card .icon {
+        margin: auto;
+    }
+
+
+    .warehouse-capabilities {
+        padding: 40px 0;
+    }
+
+    .warehouse-card .icon+h4 {
+        margin-top: 10px !important;
+        margin: auto;
+    }
+
     .warehouse-container {
-        padding: 24px;
+        padding: 0;
+
+    }
+
+    .warehouse-card {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0 !important;
+        height: 100%;
     }
 
     .warehouse-grid {
@@ -439,6 +491,37 @@
     display: block;
 }
 
+@media (max-width:576px) {
+    .advanced-technology {
+        padding-inline: 0;
+    }
+
+    .pin-spacer {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .tech-stack {
+        width: 90vw !important;
+        max-width: 90vw !important;
+    }
+
+    .tech-stack {
+        left: 0 !important;
+        right: 0 !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .tech-container {
+        padding: 0;
+    }
+
+    .advanced-technology {
+        margin-bottom: -120px !important;
+    }
+}
 
 
 
@@ -499,14 +582,14 @@
 }
 
 @media (max-width: 900px) {
-    .pin-spacer {
-        height: calc((300px * 4 + 4 * 50px) * 2 + 300px) !important;
-    }.tech-subtitle{
+
+    .tech-subtitle {
         margin-bottom: 0 !important;
     }
-     .tech-stack{
+
+    .tech-stack {
         top: 20px !important;
-     }
+    }
 
     .tech-stack .tech-card {
         position: relative;
@@ -559,7 +642,6 @@
 }
 
 .op-left h2 {
-    font-size: 42px;
     margin-bottom: 16px;
 }
 
@@ -595,7 +677,7 @@
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: 600;
 }
 
@@ -681,10 +763,6 @@
 
 @media (max-width: 576px) {
     .operational-capabilities {
-        padding: 32px 20px;
-    }
-
-    .op-left h2 {
-        font-size: 32px;
+        padding: 20px 10px;
     }
 }

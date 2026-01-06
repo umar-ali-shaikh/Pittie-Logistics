@@ -109,8 +109,6 @@
 }
 
 .mv-card p {
-    font-size: 16px;
-    line-height: 1.6;
     color: var(--para-text);
 }
 
@@ -262,6 +260,15 @@
     .features-wrapper {
         padding: var(--pm48) var(--pm16);
     }
+
+    .feature-grid .feature-card .feature-icon {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .feature-grid .feature-card {
+        text-align: center;
+    }
 }
 
 /* ==============================
@@ -405,22 +412,22 @@
     }
 }
 
- @media (max-width: 768px) {
-     .journey-timeline::before {
+@media (max-width: 768px) {
+    .journey-timeline::before {
         height: 178%;
         left: 26px;
     }
- }
-@media (max-width: 576px){
-      .journey-timeline::before {
+}
+
+@media (max-width: 576px) {
+    .journey-timeline::before {
         height: 225%;
         left: 26px;
     }
 }
 
- @media (max-width:
-375px) {
-      .journey-timeline::before {
+@media (max-width: 375px) {
+    .journey-timeline::before {
         height: 270%;
         left: 26px;
     }
@@ -461,7 +468,6 @@
 
 .cta-text p {
     color: rgba(255, 255, 255, 0.85);
-    font-size: clamp(14px, 1.2vw, 16px);
     margin-bottom: 0px;
 }
 
@@ -582,9 +588,8 @@
     }
 
     .team-card img {
-        height: 500px;
+        object-fit: cover;
         object-position: top;
-
     }
 }
 
@@ -741,11 +746,19 @@ select {
 
 @media (max-width: 576px) {
     .career-wrapper {
-        padding: var(--pm12);
+        padding: 0;
     }
 
     .form-row {
         grid-template-columns: 1fr;
+    }
+
+    .career-image {
+        height: 300px;
+    }
+
+    .career-right {
+        padding: 20px;
     }
 }
 
@@ -957,9 +970,12 @@ select {
 @media(max-width: 577px) {
 
     /* ===== hero section Responsive ===== */
-    .page-banner-content h1 {
-        font-size: 23px;
-        font-weight: 600;
+    .page-banner {
+        padding: 10px;
+    }
+
+    .page-banner-content.container {
+        padding: 0 !important;
     }
 
     /* ===== Introduction section  ===== */
@@ -971,17 +987,6 @@ select {
         flex-direction: column;
         flex-wrap: wrap;
     }
-}
-
-@media (max-width: 480px) {
-
-    /* ===== hero section Responsive ===== */
-    .page-banner-content h1 {
-        font-size: 17px;
-        font-weight: 600;
-    }
-
-    /* ===== Introduction section  ===== */
 }
 
 @media (max-width: 375px) {}
@@ -1037,7 +1042,7 @@ select {
 /* SM */
 @media (max-width: 576px) {
     .team-info {
-        top: 80%;
+        top: 70%;
     }
 
     .journey-timeline {

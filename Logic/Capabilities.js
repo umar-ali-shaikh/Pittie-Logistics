@@ -96,18 +96,21 @@ function initMobileStack() {
     });
   });
 
+  // const pinOffset = window.innerHeight * 0.6 + 100;
+
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".tech-stack",
-      start: "top+=80 top",
-      end: `+=${cards.length * 120}%`,
+      start: "top+=100 top",
+      end: () => `+=${cards.length * 100}%`,
       scrub: true,
       pin: true,
-      pinSpacing: false,
+      pinSpacing: true,
       anticipatePin: 1
     }
   });
 
+  // stack cards
   tl.add(() => {
     cards.forEach((card, i) => {
       gsap.set(card, {
@@ -121,6 +124,7 @@ function initMobileStack() {
     });
   });
 
+  // compress stack
   cards.forEach((card, i) => {
     tl.to(card, {
       y: i * TAB,
@@ -128,6 +132,8 @@ function initMobileStack() {
     });
   });
 }
+
+
 
 
 function initTechStackByScreen() {

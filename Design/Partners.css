@@ -127,10 +127,6 @@
 .client-logos .logo.active {
     opacity: 1;
 }
-/* 
-.client-logos .malaki-logo img {
-    width: 40%;
-} */
 
 
 /* VIDEO THUMB */
@@ -317,3 +313,50 @@
   height: 40px;
   width: auto;
 }
+
+/* ========================= */
+/* MOBILE VERSION ONLY */
+/* ========================= */
+@media (max-width: 767px) {
+
+    .client-logos {
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        margin: 0px;
+    }
+
+    .client-logos .logo {
+        display: none;
+        width: 100%;
+        max-width: 180px;
+        margin: 0 auto;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .client-logos .logo.active {
+        display: block;
+        opacity: 1;
+    }
+
+    .client-video-section .container .row:nth-child(2)::after {
+        display: none;
+    }
+
+    .client-logos .logo::before {
+        bottom: -10px;
+        height: 4px;
+    }
+
+    .video-thumb {
+        margin-top: 20px;
+    }
+
+    .video-thumb img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+}
+
