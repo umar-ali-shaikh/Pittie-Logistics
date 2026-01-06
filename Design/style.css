@@ -64,7 +64,7 @@ img {
 .hero {
     position: relative;
     height: 100vh;
-    max-height: 700px;
+    max-height: 600px;
     border-radius: var(--radius16);
     overflow: hidden;
     color: var(--text-white);
@@ -80,11 +80,6 @@ img {
     top: 0;
     z-index: -1;
 }
-
-/* Example backgrounds */
-/* .image1 { background-image: url("Assests/home/hero-bg-1.jpg"); }
-.image2 { background-image: url("Assests/home/hero-bg-2.jpg"); }
-.image3 { background-image: url("Assests/home/hero-bg-3.jpg"); } */
 
 
 /* Default state */
@@ -126,6 +121,11 @@ img {
 
 .hero .overlay-bg .image3 {
     background: url("../Assests/home/Bg-image-herosection2.png") no-repeat center / cover;
+}
+
+
+.hero .overlay-image-mv {
+    display: none;
 }
 
 /* Layout */
@@ -556,6 +556,11 @@ img {
 
 .why-choose-section-item p {
     color: var(--bg-primary);
+}
+
+.why-choose-section-item h3 {
+    font-size: clamp(20px, 3.5vw, 24px);
+    line-height: clamp(26px, 3.4vw, 38px);
 }
 
 .why-choose-section-item {
@@ -1254,7 +1259,7 @@ img {
     }
 
     .hero {
-        height: 100%;
+        min-height: 600px;
     }
 
     .hero-wrapper {
@@ -1262,7 +1267,20 @@ img {
     }
 
     .hero-dots {
-        top: 110%;
+        top: 100%;
+    }
+
+
+    .hero .overlay-bg .image1 {
+        background: url("../Assests/home/Bg-image-herosection4.png") no-repeat center / cover !important;
+    }
+
+    .hero .overlay-bg .image2 {
+        background: url("../Assests/home/Bg-image-herosection5.png") no-repeat center / cover !important;
+    }
+
+    .hero .overlay-bg .image3 {
+        background: url("../Assests/home/Bg-image-herosection6.png") no-repeat center / cover !important;
     }
 
     .hero .hero-arrow {
@@ -1318,6 +1336,10 @@ img {
     }
 
     /* ---------- OUR MILESTONE ---------- */
+    .milestone-section {
+        max-height: 650px;
+    }
+
     .milestone-services,
     .milestone-stats {
         display: flex;
@@ -1375,6 +1397,10 @@ img {
 
     .blog-card-content {
         padding: 20px 0;
+    }
+
+    .blogs-section .container {
+        padding-bottom: 0;
     }
 
     .blogs-section-wrapper {

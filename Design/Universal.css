@@ -111,28 +111,28 @@ h1 {
 .h2,
 h2 {
     font-size: clamp(24px, 4vw, 42px);
-    line-height: clamp(32px, 4vw, 54px);
+    line-height: clamp(32px, 4vw, 52px);
     font-weight: 600;
 }
 
 .h3,
 h3 {
-    font-size: clamp(20px, 3.5vw, 36px);
-    line-height: clamp(28px, 3.8vw, 48px);
+    font-size: clamp(20px, 3.5vw, 28px);
+    line-height: clamp(28px, 3.8vw, 42px);
     font-weight: 700;
 }
 
 .h4,
 h4 {
-    font-size: clamp(18px, 3vw, 28px);
+    font-size: clamp(18px, 3vw, 24px);
     line-height: clamp(26px, 3.4vw, 38px);
     font-weight: 700;
 }
 
 .h5,
 h5 {
-    font-size: clamp(16px, 2.5vw, 24px);
-    line-height: clamp(24px, 3vw, 34px);
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: clamp(24px, 3vw, 28px);
     font-weight: 600;
 }
 
@@ -372,7 +372,7 @@ button.btn-primary:hover a svg {
 }
 
 .footer-tagline {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--strong-black);
     max-width: 260px;
     line-height: 1.6;
@@ -380,8 +380,7 @@ button.btn-primary:hover a svg {
 
 /* Titles */
 .footer-title {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: clamp(22px, 2.5vw, 26px);
     color: var(--strong-black);
     margin-bottom: 14px;
 }
@@ -448,6 +447,8 @@ button.btn-primary:hover a svg {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
+
+
 }
 
 @media (max-width: 576px) {
@@ -468,4 +469,19 @@ button.btn-primary:hover a svg {
     .footer-tagline {
         margin: auto;
     }
+
+    .footer-links a,
+    .footer-contact a {
+        font-size: 16px;
+    }
+
+    .footer-contact svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .footer-tagline {
+        font-size: 16px;
+    }
+
 }

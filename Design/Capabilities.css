@@ -531,6 +531,7 @@
 .tech-stack {
     position: relative;
     height: 100vh;
+    max-height: 650px;
 }
 
 .pin-spacer {

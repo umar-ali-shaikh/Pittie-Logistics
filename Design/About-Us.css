@@ -181,7 +181,7 @@
 }
 
 .features-wrapper {
-    padding: var(--pm64) var(--pm32);
+    padding: 0;
 }
 
 /* Header */
@@ -258,7 +258,7 @@
     }
 
     .features-wrapper {
-        padding: var(--pm48) var(--pm16);
+        padding: 0 var(--pm16);
     }
 
     .feature-grid .feature-card .feature-icon {

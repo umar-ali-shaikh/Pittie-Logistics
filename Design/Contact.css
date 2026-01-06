@@ -198,7 +198,7 @@
 
 .contact-card {
     background: var(--bg-sections);
-    border-radius: var(--radius24);
+    border-radius: var(--radius12);
     padding: var(--pm48) var(--pm32);
     height: 100%;
 }
@@ -294,7 +294,20 @@
 @media (max-width: 768px) {}
 
 /* SM */
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+    .contact-section .row {
+        padding: 0 0 40px 0;
+    }
+
+    .contact-form {
+        margin: 0;
+    }
+
+    .contact-info-section .row .col-lg-4.col-md-6,
+    .contact-info-section .row .col-lg-4.col-md-12 {
+        padding: 0;
+    }
+}
 
 /* XS */
 @media (max-width: 480px) {}

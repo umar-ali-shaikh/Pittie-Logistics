@@ -129,3 +129,26 @@ startAutoSlide();
 
 });
 
+
+
+// New Edits
+
+
+const seeMoreBtn = document.getElementById("seeMoreBtn");
+const hiddenCards = document.querySelectorAll(".product-card.hidden");
+
+let expanded = false;
+
+seeMoreBtn.addEventListener("click", function () {
+    expanded = !expanded;
+
+    hiddenCards.forEach(card => {
+        card.style.display = expanded ? "flex" : "none";
+    });
+
+    seeMoreBtn.textContent = expanded ? "See less" : "See more";
+});
+
+
+
+

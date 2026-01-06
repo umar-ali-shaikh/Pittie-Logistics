@@ -213,9 +213,7 @@
 /* =========Out Top 4 Brands 
  =============================*/
 
-.section-heading {
-    font-size: 30px;
-    font-weight: 500;
+/* .section-heading {
     margin-bottom: 20px;
     color: var(--text-primary);
 }
@@ -224,19 +222,23 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    align-items: start;
     padding: 0;
-}
+} */
 
 /* CARD */
-.product-card {
+/* .product-card {
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-}
+    display: flex;
+    flex-direction: column;
+    height: auto;
+} */
 
 /* IMAGE AREA */
-.product-image {
+/* .product-image {
     background: #f6f6f6;
     display: flex;
     align-items: center;
@@ -247,10 +249,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 /* FOOTER */
-.product-footer {
+/* .product-footer {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -267,10 +269,10 @@
     font-size: 14px;
     font-weight: 500;
     color: #222;
-}
+} */
 
 /* RESPONSIVE */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -280,38 +282,40 @@
     .product-grid {
         grid-template-columns: 1fr;
     }
-}
+} */
+
+/* 4 Top Brands Section End */
 
 
 /*=== Image Carousal section 
 ========================= */
 
 .container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
 
 .brand-carousel {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .brand-track {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    width: max-content;
 }
 
 .brand-item {
-  flex: 0 0 auto;
+    flex: 0 0 auto;
 }
 
 .brand-item img {
-  height: 40px;
-  width: auto;
+    height: 40px;
+    width: auto;
 }
 
 /* ========================= */
@@ -360,3 +364,138 @@
     }
 }
 
+
+
+/* Newww edits  */
+
+/* SECTION */
+.product-showcase {
+    padding: 60px 0;
+}
+
+/* HEADER */
+.product-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.section-heading {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--text-primary, #222);
+}
+
+/* SEE MORE BUTTON */
+.see-more-btn {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.see-more-btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* GRID */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+/* CARD */
+.product-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+}
+
+/* IMAGE */
+.product-image {
+    height: 260px;
+    background: #f6f6f6;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* FOOTER */
+.product-footer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    background: #F7F7F9;
+}
+
+.brand-logo {
+    width: 28px;
+}
+
+.brand-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* HIDDEN CARDS */
+.hidden {
+    display: none;
+}
+
+.product-card.hidden {
+    display: none;
+}
+
+.product-grid.expanded .product-card.hidden {
+    display: flex;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .product-image {
+        height: 160px;
+    }
+
+    .brand-name {
+        font-size: 13px;
+    }
+
+    .mobile-see-more {
+        display: block;
+    }
+
+    .product-card.hidden {
+        display: none;
+    }
+
+
+    .product-grid.expanded .product-card.hidden {
+        display: flex;
+    }
+}

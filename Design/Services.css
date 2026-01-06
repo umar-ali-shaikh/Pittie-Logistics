@@ -51,7 +51,6 @@
 }
 
 .services-header h2 {
-  margin-top: 12px;
   color: var(--text-primary);
 }
 
@@ -175,7 +174,6 @@
 }
 
 .services-text h3 {
-  font-size: 30px;
   color: var(--text-primary);
   margin-bottom: 12px;
 }
@@ -200,6 +198,16 @@
   object-fit: cover;
 }
 
+@media (max-width:576px) {
+  .services-header {
+    margin-bottom: 20px;
+  }
+
+  .services-card {
+    padding: 20px 10px;
+  }
+  
+}
 
 
 /*============= Our Collaboration section
@@ -207,6 +215,7 @@
 /* SECTION */
 .collaboration-section {
   padding: var(--pm48) 0;
+  margin: 10px;
   background: #ffffff;
   text-align: center;
 }
