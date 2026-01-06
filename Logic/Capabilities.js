@@ -101,7 +101,7 @@ function initMobileStack() {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".tech-stack",
-      start: "top+=100 top",
+      start: "top+=10 top",
       end: () => `+=${cards.length * 100}%`,
       scrub: true,
       pin: true,
