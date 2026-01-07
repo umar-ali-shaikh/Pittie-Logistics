@@ -1138,12 +1138,104 @@ img {
         top: 100%;
     }
 
+    .what-img-row2 {
+        display: none;
+    }
+
+    .what-we-do-section-btn {
+        justify-content: center;
+    }
+
     /* ---------- LOGISTIC CTA ---------- */
     .logistics-cta-wrapper {
         flex-direction: column;
         gap: var(--pm24);
         text-align: center;
         padding: var(--pm32);
+    }
+
+    /* --------- Services Section --------- */
+    .services-section {
+        padding: 50px 0;
+    }
+
+    .services-section h2 {
+        font-size: 28px;
+    }
+
+    .Services-box-item>div {
+        padding: 28px;
+    }
+
+    .services-Types {
+        padding: 0 !important;
+        margin-top: 10px;
+    }
+
+    .services-tabs {
+        display: flex;
+        /* justify-content: space-around; */
+        flex-wrap: wrap;
+        gap: 10px;
+        overflow-x: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .services-tabs .tab {
+        padding: 10px 16px;
+        border-radius: 30px;
+        background: transparent;
+        border: 1px solid var(--bg-danger);
+        width: calc(100% / 3 - 10px);
+        color: var(--bg-danger);
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .services-tabs .tab.active {
+        background: var(--bg-danger);
+        color: var(--text-white);
+    }
+
+    .Services-box {
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.45s ease;
+        position: absolute;
+    }
+
+    .Services-box.active {
+        max-height: fit-content;
+        position: relative;
+    }
+
+    .Services-box-item:has(img) {
+        order: 1;
+    }
+
+    .Services-box-item:has(.services-content) {
+        order: 2;
+    }
+
+    .Services-box-item.col-7,
+    .Services-box-item.col-5 {
+        padding: 0 !important;
+    }
+
+    /* image upar + content niche */
+    /* .Services-box {
+        flex-direction: column;
+    } */
+
+    .Services-box-item {
+        width: 100% !important;
+    }
+
+    .Services-box-item.col-7,
+    .Services-box-item.col-5 {
+        padding: 0 !important;
     }
 
     /* ---------- TESTIMONIALS ---------- */
@@ -1298,18 +1390,19 @@ img {
     }
 
     .services-section h2 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .Services-box-item>div {
         padding: 28px;
     }
 
-    services-Types
+    .services-Types {
+        padding: 0 !important;
+    }
 
     .services-tabs {
         display: flex;
-        justify-content: space-around;
         gap: 10px;
         overflow-x: auto;
         margin-top: 30px;
@@ -1319,6 +1412,7 @@ img {
     .services-tabs .tab {
         padding: 10px 16px;
         border-radius: 30px;
+        width: calc(100% / 2 - 10px);
         background: transparent;
         border: 1px solid var(--bg-danger);
         color: var(--bg-danger);
