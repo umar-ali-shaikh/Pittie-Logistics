@@ -88,50 +88,55 @@ startAutoSlide();
 
   animate();
 
-  // for mobile view 
+  // Our partners value for mobile view 
+document.addEventListener("DOMContentLoaded", function () {
 
-  document.addEventListener("DOMContentLoaded", function () {
+  const logos = document.querySelectorAll(".client-logos .logo");
+  const thumbnail = document.getElementById("videoThumbnail");
 
-    const logos = document.querySelectorAll(".client-logos .logo");
-    const thumbnail = document.getElementById("videoThumbnail");
+  let currentIndex = 0;
+  let interval;
 
-    let currentIndex = 0;
+  function activateLogo(index) {
+    const logo = logos[index];
+    if (!logo) return;
 
-    function activateLogo(index) {
-        logos.forEach((logo, i) => {
-            logo.classList.toggle("active", i === index);
-        });
+    const thumb = logo.dataset.thumb;
 
-        const activeLogo = logos[index];
-        const thumbSrc = activeLogo.getAttribute("data-thumb");
-
-        if (thumbSrc) {
-            thumbnail.src = thumbSrc;
-        }
-    }
-
-    // Initial state
-    activateLogo(currentIndex);
-
-    // Auto change logo every 4 seconds (optional)
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % logos.length;
-        activateLogo(currentIndex);
-    }, 4000);
-
-    // Manual click support
-    logos.forEach((logo, index) => {
-        logo.addEventListener("click", () => {
-            currentIndex = index;
-            activateLogo(index);
-        });
+    // 🔥 SAME FRAME UPDATE
+    requestAnimationFrame(() => {
+      logos.forEach(l => l.classList.remove("active"));
+      logo.classList.add("active");
+      thumbnail.src = thumb;
     });
+  }
+
+  function startAuto() {
+    interval = setInterval(() => {
+      currentIndex = (currentIndex + 1) % logos.length;
+      activateLogo(currentIndex);
+    }, 4000);
+  }
+
+  // initial
+  activateLogo(currentIndex);
+  startAuto();
+
+  // manual click
+  logos.forEach((logo, index) => {
+    logo.addEventListener("click", () => {
+      clearInterval(interval);
+      currentIndex = index;
+      activateLogo(index);
+      startAuto();
+    });
+  });
 
 });
 
 
 
-// New Edits
+// see more btn
 
 
 const seeMoreBtn = document.getElementById("seeMoreBtn");
