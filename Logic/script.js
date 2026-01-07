@@ -404,3 +404,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateBlogUI(0);
 });
+
+
+// services section 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".services-tabs .tab");
+  const boxes = document.querySelectorAll(".Services-box");
+
+  boxes[0].classList.add("active");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.target;
+
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      boxes.forEach(box => {
+        box.classList.remove("active");
+        if (box.dataset.service === target) {
+          box.classList.add("active");
+        }
+      });
+    });
+  });
+});
+

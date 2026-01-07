@@ -145,6 +145,128 @@ h6 {
 
 
 /* ==============================
+   Header Styles
+   ============================== */
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding-bottom: 6px;
+    /* line ke liye space */
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s ease;
+}
+
+/* ACTIVE link ke niche line */
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+/* Optional: hover par bhi line aaye */
+/* .navbar-nav .nav-link:hover::after {
+    width: 100%;
+} */
+
+.navbar-nav .nav-link.active {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.navbar-nav a {
+    color: var(--para-text);
+}
+
+
+/* ==============================
+   Logistics CTA – Transport Services
+   ============================== */
+
+/* .logistics-cta-section {
+    border-radius: var(--radius24);
+    background: linear-gradient(90deg,
+            #0B2E5F 0%,
+            #1A4174 60%,
+            #2C5FA6 100%);
+    margin: 50px 10px;
+} */
+
+.cta-transport {
+  border-radius: var(--radius24);
+  margin: var(--pm48) 10px;
+
+  /* Blue gradient exactly like image */
+  background: linear-gradient(90deg,
+      #0B2E5F 0%,
+      #1A4174 60%,
+      #2C5FA6 100%);
+}
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--bg-primary);
+}
+
+/* LEFT TEXT */
+.cta-text {
+  max-width: 650px;
+}
+
+.cta-text h4 {
+  color: var(--bg-primary);
+  margin-bottom: var(--pm8);
+}
+
+.cta-text p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: clamp(14px, 1.2vw, 16px);
+  margin-bottom: 0px;
+}
+
+/* BUTTON */
+.cta-action .btn-primary {
+  background-color: var(--bg-danger);
+  /* box-shadow: 0 10px 24px rgba(233, 41, 47, 0.35); */
+}
+
+/* Arrow inside button */
+.cta-arrow {
+  font-size: 16px;
+  margin-left: 4px;
+  transform: translateY(-1px);
+}
+
+.cta-transport .container {
+  padding: 40px 0;
+}
+
+.services-layout {
+  padding: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .cta-wrapper {
+    flex-direction: column;
+    gap: var(--pm24);
+    text-align: center;
+    padding: var(--pm32);
+  }
+}
+
+
+
+
+/* ==============================
    Universal Button System
    ============================== */
 
@@ -452,6 +574,9 @@ button.btn-primary:hover a svg {
 }
 
 @media (max-width: 576px) {
+    .snap-section{
+        min-height: 100% !important;
+    }
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;

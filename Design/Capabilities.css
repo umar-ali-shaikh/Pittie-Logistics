@@ -323,68 +323,6 @@
     }
 }
 
-/* ==============================
-   CTA – Transport Services
-   ============================== */
-
-.cta-transport {
-    border-radius: var(--radius24);
-    margin: 50px 10px 0px 10px;
-
-
-    /* Blue gradient exactly like image */
-    background: linear-gradient(90deg,
-            #0B2E5F 0%,
-            #1A4174 60%,
-            #2C5FA6 100%);
-}
-
-.cta-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--bg-primary);
-}
-
-/* LEFT TEXT */
-.cta-text {
-    max-width: 650px;
-    padding: 30px 0;
-}
-
-.cta-text h4 {
-    color: var(--bg-primary);
-    margin-bottom: var(--pm8);
-}
-
-.cta-text p {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: clamp(14px, 1.2vw, 16px);
-    margin-bottom: 0px;
-}
-
-/* BUTTON */
-.cta-action .btn-primary {
-    background-color: var(--bg-danger);
-    /* box-shadow: 0 10px 24px rgba(233, 41, 47, 0.35); */
-}
-
-/* Arrow inside button */
-.cta-arrow {
-    font-size: 16px;
-    margin-left: 4px;
-    transform: translateY(-1px);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .cta-wrapper {
-        flex-direction: column;
-        gap: var(--pm24);
-        text-align: center;
-        padding: var(--pm32);
-    }
-}
 
 
 .op-header svg {

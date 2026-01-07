@@ -443,7 +443,7 @@ img {
 .milestone-stat-item h3 {
     font-size: 42px;
     font-weight: 700;
-    color: var(--bg-danger) !important;
+    color: #FA4318 !important;
     margin-bottom: 8px;
 }
 
@@ -930,64 +930,6 @@ img {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
 }
 
-
-
-
-/* ==============================
-   Logistics CTA – Transport Services
-   ============================== */
-
-.logistics-cta-section {
-    border-radius: var(--radius24);
-    background: linear-gradient(90deg,
-            #0B2E5F 0%,
-            #1A4174 60%,
-            #2C5FA6 100%);
-    margin: 50px 10px;
-}
-
-/* Wrapper */
-.logistics-cta-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: var(--pm32) var(--pm48);
-    color: var(--bg-primary);
-}
-
-/* LEFT TEXT */
-.logistics-cta-content {
-    max-width: 650px;
-    padding: 30px 0;
-}
-
-.logistics-cta-content h4 {
-    color: var(--bg-primary);
-    margin-bottom: var(--pm8);
-}
-
-.logistics-cta-content p {
-    color: rgba(255, 255, 255, 0.85);
-    font-size: clamp(14px, 1.2vw, 16px);
-    margin-bottom: 0;
-}
-
-/* BUTTON */
-.logistics-cta-action .btn-primary {
-    background-color: var(--bg-danger);
-    border: none;
-}
-
-/* Arrow inside button */
-.logistics-cta-action svg {
-    margin-left: 6px;
-    transform: translateY(-1px);
-}
-
-
-
-
 /* =========================================================
    RESPONSIVE BREAKPOINTS
    Mobile-first adjustments grouped by screen size
@@ -1363,6 +1305,74 @@ img {
         padding: 28px;
     }
 
+    services-Types
+
+    .services-tabs {
+        display: flex;
+        justify-content: space-around;
+        gap: 10px;
+        overflow-x: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .services-tabs .tab {
+        padding: 10px 16px;
+        border-radius: 30px;
+        background: transparent;
+        border: 1px solid var(--bg-danger);
+        color: var(--bg-danger);
+        white-space: nowrap;
+        cursor: pointer;
+    }
+
+    .services-tabs .tab.active {
+        background: var(--bg-danger);
+        color: var(--text-white);
+    }
+
+    .Services-box {
+        flex-direction: column;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.45s ease;
+        position: absolute;
+    }
+
+    .Services-box.active {
+        max-height: fit-content;
+        position: relative;
+    }
+
+    .Services-box-item:has(img) {
+        order: 1;
+    }
+
+    .Services-box-item:has(.services-content) {
+        order: 2;
+    }
+
+    .Services-box-item.col-7,
+    .Services-box-item.col-5 {
+        padding: 0 !important;
+    }
+
+    /* image upar + content niche */
+    /* .Services-box {
+        flex-direction: column;
+    } */
+
+    .Services-box-item {
+        width: 100% !important;
+    }
+
+    .Services-box-item.col-7,
+    .Services-box-item.col-5 {
+        padding: 0 !important;
+    }
+
+
+
     /* ---------- WHY CHOOSE US ---------- */
     .about-grid .row {
         grid-template-columns: 1fr;
@@ -1406,7 +1416,7 @@ img {
     .blogs-section-wrapper {
         flex-direction: column;
         gap: 24px;
-        overflow: hidden !important;
+        /* overflow: hidden !important; */
     }
 
     .blogs-section-column {
