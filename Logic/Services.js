@@ -30,55 +30,90 @@ const navItems = document.querySelectorAll(".services-nav li");
   }
 
   startAutoSlide();
+ 
+ 
+  // Collaboration section overlays and hotspots
+document.addEventListener("DOMContentLoaded", () => {
 
+  const overlays = [
+    "overlayImage",
+    "overlayImage1",
+    "overlayImage2",
+    "overlayImage3",
+    "overlayImage4",
+    "overlayImage5",
+    "overlayImage6",
+    "overlayImage7",
+    "overlayImage8",
+    "overlayImage9",
+    "overlayImage10",
+    "overlayImage11"
+  ].map(id => document.getElementById(id));
 
-  // function toggleOverlay() {
-  //   document.getElementById("overlayImage").classList.toggle("active");
-  //   document.getElementById("overlayImage1").classList.toggle("active");
-  // }
+  const hotspots = [
+    ".hotspot",
+    ".hotspot1",
+    ".hotspot2",
+    ".hotspot3",
+    ".hotspot4",
+    ".hotspot5",
+    ".hotspot6",
+    ".hotspot7",
+    ".hotspot8",
+    ".hotspot9",
+    ".hotspot10",
+    ".hotspot11"
+  ].map(cls => document.querySelector(cls));
 
-function toggleOverlay(event) {
-  event.stopPropagation();
+  let currentStep = -1;
+  let interval;
 
-  const overlay0 = document.getElementById("overlayImage");   // 01.png
-  const overlay1 = document.getElementById("overlayImage1");  // 02.png
+  function activateChain(index) {
+    overlays.forEach((img, i) => {
+      img.classList.toggle("active", i <= index);
+    });
+    currentStep = index;
+  }
 
-  const isHotspot0 = event.currentTarget.classList.contains("hotspot");
-  const isHotspot1 = event.currentTarget.classList.contains("hotspot1");
+  function toggleOverlay(event) {
+    event.stopPropagation();
 
-  /* =========================
-     HOTSPOT (01)
-     ========================= */
-  if (isHotspot0) {
-    // Case: both active → only turn off second
-    if (overlay0.classList.contains("active") && overlay1.classList.contains("active")) {
-      overlay1.classList.remove("active");
+    const index = hotspots.findIndex(h => h === event.currentTarget);
+    if (index === -1) return;
+
+    // if clicked same active → reset
+    if (currentStep === index) {
+      overlays.forEach(img => img.classList.remove("active"));
+      currentStep = -1;
       return;
     }
 
-    // Normal toggle for first
-    overlay0.classList.toggle("active");
-
-    // If first turns off → second must also be off
-    if (!overlay0.classList.contains("active")) {
-      overlay1.classList.remove("active");
-    }
+    activateChain(index);
   }
 
-  /* =========================
-     HOTSPOT1 (02)
-     ========================= */
-  if (isHotspot1) {
-    // If second already active → turn everything off
-    if (overlay1.classList.contains("active")) {
-      overlay1.classList.remove("active");
-      overlay0.classList.remove("active");
-    } 
-    // Otherwise → activate chain
-    else {
-      overlay0.classList.add("active");
-      overlay1.classList.add("active");
-    }
+  // attach clicks
+  hotspots.forEach(h => {
+    h.addEventListener("click", toggleOverlay);
+  });
+
+  // 🔥 AUTO CHAIN EVERY 10 SECONDS
+  function startAuto() {
+    interval = setInterval(() => {
+      currentStep++;
+      if (currentStep >= overlays.length) {
+        overlays.forEach(img => img.classList.remove("active"));
+        currentStep = -1;
+      } else {
+        activateChain(currentStep);
+      }
+    }, 10000);
   }
-}
+
+  startAuto();
+
+});
+
+
+
+
 

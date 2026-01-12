@@ -1451,11 +1451,6 @@ img {
         padding: 0 !important;
     }
 
-    /* image upar + content niche */
-    /* .Services-box {
-        flex-direction: column;
-    } */
-
     .Services-box-item {
         width: 100% !important;
     }
@@ -1468,21 +1463,97 @@ img {
 
 
     /* ---------- WHY CHOOSE US ---------- */
+
+    /* --------------------------------
+     ROW = HORIZONTAL SLIDER
+  -------------------------------- */
     .about-grid .row {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        gap: 16px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        padding-right: 40px;
     }
 
-    .why-choose-section-item {
-        width: 100%;
+    .about-grid .row::-webkit-scrollbar {
+        display: none;
     }
 
-    .why-choose-section-item:first-child {
-        grid-column: span 1;
+    /* --------------------------------
+     FIRST BLOCK (Heading + para)
+     Full width + break line
+  -------------------------------- */
+    .why-choose-section-item1 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        scroll-snap-align: start;
     }
 
+    /* --------------------------------
+     SLIDER CARDS
+  -------------------------------- */
+    .why-choose-section-item:not(.why-choose-section-item1) {
+        flex: 0 0 85%;
+        max-width: 85%;
+        scroll-snap-align: start;
+    }
+
+    /* --------------------------------
+     Typography fix
+  -------------------------------- */
     .why-choose-section-item h2 {
         font-size: 26px;
     }
+
+
+    .why-choose-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        margin-top: 16px;
+    }
+
+    .slide-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .slide-btn:active {
+        transform: scale(0.95);
+    }
+
+    .why-choose-dots {
+        display: flex;
+        gap: 8px;
+    }
+
+    .why-choose-dots span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        transition: 0.3s;
+    }
+
+    .why-choose-dots span.active {
+        width: 20px;
+        border-radius: 20px;
+        background: #fff;
+    }
+
+
+
+
 
 
     /* ---------- CONTACT ---------- */

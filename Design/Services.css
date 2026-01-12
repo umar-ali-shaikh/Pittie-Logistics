@@ -285,9 +285,111 @@
   width: 15%;
   height: 20%;
   cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot2 {
+  position: absolute;
+  top: 18%;
+  left: 53%;
+  width: 17%;
+  height: 22%;
   cursor: pointer;
   background: rgba(255, 255, 255, 0);
 }
+
+.hotspot3 {
+  position: absolute;
+  top: 31%;
+  left: 41%;
+  width: 14%;
+  height: 19%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot4 {
+  position: absolute;
+  top: 44%;
+  left: 29%;
+  width: 16%;
+  height: 19%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+  ;
+}
+
+.hotspot5 {
+  position: absolute;
+  top: 43%;
+  left: 6%;
+  width: 22%;
+  height: 27%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot6 {
+  position: absolute;
+  top: 74%;
+  left: 31%;
+  width: 17%;
+  height: 23%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot7 {
+  position: absolute;
+  top: 61%;
+  left: 43%;
+  width: 15%;
+  height: 21%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot8 {
+  position: absolute;
+  top: 49%;
+  left: 55%;
+  width: 16%;
+  height: 22%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot9 {
+  position: absolute;
+  top: 34%;
+  left: 67%;
+  width: 18.7%;
+  height: 24%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot10 {
+  position: absolute;
+  top: 56%;
+  left: 80%;
+  width: 16%;
+  height: 24%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+.hotspot11 {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  width: 13%;
+  height: 23%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+}
+
+
 
 
 /* ==============================

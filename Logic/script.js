@@ -431,3 +431,81 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+// why choose us section mobile view slide 
+const slider = document.querySelector('.about-grid .row');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('touchstart', e => {
+  isDown = true;
+  startX = e.touches[0].pageX;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('touchmove', e => {
+  if (!isDown) return;
+  const x = e.touches[0].pageX;
+  const walk = (startX - x);
+  slider.scrollLeft = scrollLeft + walk;
+});
+
+slider.addEventListener('touchend', () => {
+  isDown = false;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const row = document.querySelector(".about-grid .row");
+  const cards = row.querySelectorAll(
+    ".why-choose-section-item:not(.why-choose-section-item1)"
+  );
+
+  const dotsWrap = document.querySelector(".why-choose-dots");
+  const prevBtn = document.querySelector(".slide-btn.prev");
+  const nextBtn = document.querySelector(".slide-btn.next");
+
+  let index = 0;
+  const gap = 16;
+
+  // Create dots
+  cards.forEach((_, i) => {
+    const dot = document.createElement("span");
+    if (i === 0) dot.classList.add("active");
+    dotsWrap.appendChild(dot);
+  });
+
+  const dots = dotsWrap.querySelectorAll("span");
+
+  function updateSlider() {
+    const cardWidth = cards[0].offsetWidth + gap;
+    row.scrollTo({
+      left: cardWidth * index,
+      behavior: "smooth",
+    });
+
+    dots.forEach(d => d.classList.remove("active"));
+    if (dots[index]) dots[index].classList.add("active");
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (index < cards.length - 1) index++;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (index > 0) index--;
+    updateSlider();
+  });
+
+  row.addEventListener("scroll", () => {
+    const cardWidth = cards[0].offsetWidth + gap;
+    index = Math.round(row.scrollLeft / cardWidth);
+
+    dots.forEach(d => d.classList.remove("active"));
+    if (dots[index]) dots[index].classList.add("active");
+  });
+});
+
+
