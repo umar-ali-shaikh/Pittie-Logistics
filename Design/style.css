@@ -112,7 +112,7 @@ img {
 
 
 .hero .overlay-bg .image1 {
-    background: url("../Assests/home/Bg-image-herosection.webp") no-repeat center / cover;
+    background: url("../Assests/home/Bg-image-herosection.jpg") no-repeat center / cover;
 }
 
 .hero .overlay-bg .image2 {
@@ -120,7 +120,7 @@ img {
 }
 
 .hero .overlay-bg .image3 {
-    background: url("../Assests/home/Bg-image-herosection2.png") no-repeat center / cover;
+    background: url("../Assests/home/Bg-image-herosection2.jpg") no-repeat center / cover;
 }
 
 
@@ -1306,7 +1306,7 @@ img {
 
 
     .hero .overlay-bg .image1 {
-        background: url("../Assests/home/Bg-image-herosection4.png") no-repeat center / cover !important;
+        background: url("../Assests/home/Bg-image-herosection4.jpg") no-repeat center / cover !important;
     }
 
     .hero .overlay-bg .image2 {
@@ -1314,7 +1314,7 @@ img {
     }
 
     .hero .overlay-bg .image3 {
-        background: url("../Assests/home/Bg-image-herosection6.png") no-repeat center / cover !important;
+        background: url("../Assests/home/Bg-image-herosection6.jpg") no-repeat center / cover !important;
     }
 
     .hero .hero-arrow {
