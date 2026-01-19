@@ -183,10 +183,17 @@ h6 {
 .navbar-nav .nav-link.active {
     color: var(--text-primary);
     font-weight: 700;
+
 }
 
 .navbar-nav a {
     color: var(--para-text);
+}
+
+.navbar-nav a:hover {
+    color: var(--text-primary);
+    font-weight: 700;
+    transition: 0.5s ease;
 }
 
 

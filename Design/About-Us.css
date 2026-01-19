@@ -245,6 +245,64 @@
     color: var(--para-text);
 }
 
+/* linear-gradient(#1A4174, #1A4174) left top,
+    linear-gradient(#1A4174, #1A4174) right top,
+    linear-gradient(#1A4174, #1A4174) right bottom,
+    linear-gradient(#1A4174, #1A4174) left bottom; */
+
+.feature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+/* REAL BORDER LAYER */
+.feature-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    border: 3px solid #1A4174;
+    border-radius: var(--radius16);
+
+    pointer-events: none;
+
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+}
+
+/* Hover trigger */
+.feature-card:hover::after {
+    animation: borderTrace 0.9s linear forwards;
+}
+
+/* BORDER DRAW PATH */
+@keyframes borderTrace {
+
+    /* Top */
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+    }
+
+    25% {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    /* Right */
+    50% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
+    }
+
+    /* Bottom */
+    75% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    /* Left */
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+
 /* Responsive */
 @media (max-width: 1024px) {
     .feature-grid {
@@ -304,7 +362,7 @@
 /* RIGHT – Scrollable Timeline */
 .journey-timeline {
     position: relative;
-    max-height: 520px;
+    max-height: 570px;
     /* controls scroll area */
     overflow-y: auto;
     padding-left: 38px;
@@ -407,28 +465,35 @@
     }
 
     .journey-timeline::before {
-        height: 165%;
+        height: 100%;
+        left: 26px;
+    }
+}
+
+@media (max-width: 990px) {
+    .journey-timeline::before {
+        height: 180%;
         left: 26px;
     }
 }
 
 @media (max-width: 768px) {
     .journey-timeline::before {
-        height: 178%;
+        height: 200%;
         left: 26px;
     }
 }
 
 @media (max-width: 576px) {
     .journey-timeline::before {
-        height: 225%;
+        height: 260%;
         left: 26px;
     }
 }
 
 @media (max-width: 375px) {
     .journey-timeline::before {
-        height: 270%;
+        height: 285%;
         left: 26px;
     }
 }
@@ -1233,7 +1298,7 @@ select {
 /* Layout */
 .best-at-wrapper {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
 }
 

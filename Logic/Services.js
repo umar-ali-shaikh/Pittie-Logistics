@@ -26,10 +26,37 @@ const navItems = document.querySelectorAll(".services-nav li");
     interval = setInterval(() => {
       let nextIndex = (currentIndex + 1) % contents.length;
       showContent(nextIndex);
-    }, 5000); // change time here
+    }, 5000); 
   }
 
   startAutoSlide();
+
+// URL redirect handling (without breaking existing logic)
+
+const params = new URLSearchParams(window.location.search);
+const serviceIndex = params.get("service");
+
+if (serviceIndex !== null && contents[serviceIndex]) {
+
+  clearInterval(interval);
+
+  // Open correct service
+  showContent(Number(serviceIndex));
+
+  // Smooth scroll AFTER page render
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.querySelector("#services-content").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }, 300);
+  });
+
+  // Restart slider
+  startAutoSlide();
+}
+
  
  
   // Collaboration section overlays and hotspots
@@ -112,6 +139,13 @@ document.addEventListener("DOMContentLoaded", () => {
   startAuto();
 
 });
+
+
+
+
+// 
+
+
 
 
 

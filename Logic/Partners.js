@@ -15,6 +15,10 @@ function activateLogo(index) {
 
   logos[index].classList.add("active");
   thumb.src = logos[index].dataset.thumb;
+  //New Line for text update to stop at hover
+  document.getElementById("thumbText").innerText =
+  logos[index].dataset.text || "";
+
   currentIndex = index;
 }
 
@@ -62,6 +66,19 @@ modal.addEventListener("click", e => {
 // ---- INIT ----
 activateLogo(0);
 startAutoSlide();
+
+
+//Pause slider on hover 
+const videoThumb = document.querySelector(".video-thumb");
+
+videoThumb.addEventListener("mouseenter", () => {
+  clearInterval(autoSlide);
+});
+
+videoThumb.addEventListener("mouseleave", () => {
+  startAutoSlide();
+});
+
 
 
 // image carousal 

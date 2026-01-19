@@ -1,45 +1,175 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+/* =====================
+   COLOR VARIABLES
+===================== */
+:root {
+  --primary: #D4A373;   /* Golden/Earthy */
+  --secondary: #9C6644; /* Brown */
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #FFFFFF;
+  --border-light: #E5E5E5;
 }
 
-html,
+/* =====================
+   GLOBAL STYLES
+===================== */
 body {
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
 }
 
-.navbar {
-    padding: 30px 70px;
-
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: black;
-    font-size: 25px;
-    margin-right: 30px;
-
+/* =====================
+   HERO SECTION
+===================== */
+.hero-certificates {
+  text-align: center;
+  padding: 40px 20px;
+  background: #fff;
 }
 
-.main h1 {
-    font-size: 200px;
+.hero-certificates h1 {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 10px;
 }
 
-.btm-left {
-    position: absolute;
-    bottom: 15%;
-    left: 5%;
-    width: 300px
+.hero-certificates p {
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 30px;
 }
 
-.btm-left h3 {
-    font-size: 20px;
+.hero-certificates button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.btm-left h4 {
-    margin-top: 30px;
-    font-size: 20px;
+.hero-certificates button:hover {
+  background: var(--secondary);
+}
+
+/* =====================
+   CERTIFICATES GRID
+===================== */
+/* .certificates-section {
+  padding: 60px 0;
+} */
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.certificate-card {
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
+  transition: 0.3s ease;
+}
+
+.certificate-card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+.certificate-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.certificate-card h3 {
+  font-size: 20px;
+  color: var(--secondary);
+  margin-bottom: 10px;
+}
+
+.certificate-card p {
+  font-size: 15px;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+.certificate-card a {
+  display: inline-block;
+  padding: 10px 22px;
+  background: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.certificate-card a:hover {
+  background: var(--secondary);
+}
+
+/* =====================
+   INFO SECTION
+===================== */
+.certificate-info {
+  background: #FAFAFA;
+  padding: 40px 20px;
+}
+
+.certificate-info h2 {
+  text-align: center;
+  font-size: 30px;
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.info-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+.info-list li {
+  font-size: 16px;
+  color: var(--text-light);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* =====================
+   CTA SECTION
+===================== */
+.cta-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.cta-section a {
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.cta-section a:hover {
+  background: var(--secondary);
 }

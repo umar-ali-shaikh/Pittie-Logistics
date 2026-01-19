@@ -16,37 +16,37 @@
 /* Hero Section */
 
 .page-banner {
-  /* min-height: 311px;   */
-  border-radius: 16px;
-  overflow: hidden;
-  background-image: url("../Assests/partner_clients/header-bg-img.png");
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  background-repeat: no-repeat;
-  min-height: clamp(220px, 40vh, 311px);
-  padding: var(--pm32);
+    /* min-height: 311px;   */
+    border-radius: 16px;
+    overflow: hidden;
+    background-image: url("../Assests/partner_clients/header-bg-img.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    min-height: clamp(220px, 40vh, 311px);
+    padding: var(--pm32);
 }
 
 /* Content */
 .page-banner-content {
-  color: #ffffff;
+    color: #ffffff;
 }
 
 /* Breadcrumb */
 .breadcrumb {
-  font-size: 16px;
-  margin-bottom: 10px;
-  opacity: 0.9;
+    font-size: 16px;
+    margin-bottom: 10px;
+    opacity: 0.9;
 }
 
 .breadcrumb a {
-  color: #ffffff;
-  text-decoration: none;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .breadcrumb span img {
-  margin: 0 6px;
+    margin: 0 6px;
 }
 
 
@@ -151,6 +151,41 @@
     left: 20px;
     color: #fff;
     font-size: 28px;
+}
+
+.thumb-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.65);
+    /* WHITE GLASS */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.thumb-overlay p {
+    margin: 0;
+    color: #141415;
+    /* strong black */
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 85%;
+}
+
+/* Show on hover */
+.video-thumb:hover .thumb-overlay {
+    opacity: 1;
+}
+
+/* Mobile always visible */
+@media (max-width: 767px) {
+    .thumb-overlay {
+        opacity: 1;
+    }
 }
 
 /* PLAY BUTTON */
@@ -321,7 +356,7 @@
 } */
 
 .see-more-btn {
-    padding: 8px 15px!important;
+    padding: 8px 15px !important;
 }
 
 /* GRID */
