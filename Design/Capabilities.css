@@ -576,6 +576,7 @@
     display: flex;
     gap: 64px;
     align-items: flex-start;
+    min-height: 630px;
 }
 
 /* LEFT */
@@ -643,8 +644,8 @@
 
 /* SVG ARROW */
 .op-header svg {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     stroke: #ffffff;
     flex-shrink: 0;
     transition: transform 0.35s ease;
@@ -652,27 +653,45 @@
 
 /* BODY */
 .op-body {
-    max-height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
+
     overflow: hidden;
+
     opacity: 0;
-    transition: max-height 0.45s ease, opacity 0.35s ease;
+    transform: translateY(-10px) scale(0.98);
+
+    transition:
+        grid-template-rows 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.3s ease,
+        transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Inner wrapper needed for grid trick */
+.op-body>* {
+    overflow: hidden;
+}
+
+.op-item.active p {
+    margin-top: 16px;
 }
 
 .op-body p {
-    margin-top: 16px;
     max-width: 520px;
+    margin-bottom: 0;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.85);
 }
 
 /* ACTIVE STATE */
 .op-item.active .op-body {
-    max-height: 300px;
+    grid-template-rows: 1fr;
     opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .op-item.active .op-header svg {
-    transform: rotate(50deg);
+    transform: rotate(45deg);
 }
 
 /* RIGHT IMAGE */
