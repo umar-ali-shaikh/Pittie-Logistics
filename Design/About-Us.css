@@ -1402,6 +1402,7 @@ select {
     display: flex;
     align-items: start;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .best-at-image-mobile {
