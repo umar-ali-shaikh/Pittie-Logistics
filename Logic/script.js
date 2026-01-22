@@ -433,43 +433,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // why choose us section mobile view slide 
-const slider = document.querySelector('.about-grid .row');
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener('touchstart', e => {
-  isDown = true;
-  startX = e.touches[0].pageX;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener('touchmove', e => {
-  if (!isDown) return;
-  const x = e.touches[0].pageX;
-  const walk = (startX - x);
-  slider.scrollLeft = scrollLeft + walk;
-});
-
-slider.addEventListener('touchend', () => {
-  isDown = false;
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+
   const row = document.querySelector(".about-grid .row");
-  const cards = row.querySelectorAll(
-    ".why-choose-section-item:not(.why-choose-section-item1)"
-  );
+  const cards = row.querySelectorAll(".why-choose-section-item");
 
   const dotsWrap = document.querySelector(".why-choose-dots");
   const prevBtn = document.querySelector(".slide-btn.prev");
   const nextBtn = document.querySelector(".slide-btn.next");
 
   let index = 0;
-  const gap = 16;
+  let startX = 0;
+  let currentTranslate = 0;
+  let isDragging = false;
 
-  // Create dots
+  const GAP = 16; // ✅ spacing between cards
+
+  // -----------------------------
+  // CARD WIDTH + GAP CALCULATION
+  // -----------------------------
+
+  function getCardWidth() {
+    const card = cards[0];
+    const width = card.getBoundingClientRect().width;
+    return width + GAP;
+  }
+
+  // -----------------------------
+  // CREATE DOTS
+  // -----------------------------
+
+  dotsWrap.innerHTML = "";
+
   cards.forEach((_, i) => {
     const dot = document.createElement("span");
     if (i === 0) dot.classList.add("active");
@@ -478,38 +473,104 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const dots = dotsWrap.querySelectorAll("span");
 
+  // -----------------------------
+  // UPDATE SLIDER
+  // -----------------------------
+
   function updateSlider() {
-    const cardWidth = cards[0].offsetWidth + gap;
-    row.scrollTo({
-      left: cardWidth * index,
-      behavior: "smooth",
-    });
+
+    const cardWidth = getCardWidth();
+
+    // Total width of all cards
+    const totalWidth = cardWidth * cards.length;
+
+    // Visible area width
+    const containerWidth = row.parentElement.offsetWidth;
+
+    // Normal translate
+    let translate = -(cardWidth * index);
+
+    // ✅ FIX FOR LAST SLIDE EMPTY SPACE
+    const maxTranslate = totalWidth - containerWidth;
+
+    if (Math.abs(translate) > maxTranslate) {
+      translate = -maxTranslate;
+    }
+
+    currentTranslate = translate;
+
+    row.style.transform = `translateX(${currentTranslate}px)`;
+    row.style.transition = "transform 0.4s ease";
 
     dots.forEach(d => d.classList.remove("active"));
     if (dots[index]) dots[index].classList.add("active");
   }
 
+
+  // -----------------------------
+  // BUTTON CONTROLS
+  // -----------------------------
+
   nextBtn.addEventListener("click", () => {
-    if (index < cards.length - 1) index++;
-    updateSlider();
+    if (index < cards.length - 1) {
+      index++;
+      updateSlider();
+    }
   });
 
   prevBtn.addEventListener("click", () => {
-    if (index > 0) index--;
+    if (index > 0) {
+      index--;
+      updateSlider();
+    }
+  });
+
+  // -----------------------------
+  // TOUCH SLIDE
+  // -----------------------------
+
+  row.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    row.style.transition = "none";
+  });
+
+  row.addEventListener("touchmove", (e) => {
+
+    if (!isDragging) return;
+
+    const currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+
+    row.style.transform = `translateX(${currentTranslate + diff}px)`;
+
+  });
+
+  row.addEventListener("touchend", (e) => {
+
+    isDragging = false;
+
+    const endX = e.changedTouches[0].clientX;
+    const movedBy = endX - startX;
+
+    if (movedBy < -40 && index < cards.length - 1) {
+      index++;
+    }
+    else if (movedBy > 40 && index > 0) {
+      index--;
+    }
+
     updateSlider();
+
   });
 
-  row.addEventListener("scroll", () => {
-    const cardWidth = cards[0].offsetWidth + gap;
-    index = Math.round(row.scrollLeft / cardWidth);
-
-    dots.forEach(d => d.classList.remove("active"));
-    if (dots[index]) dots[index].classList.add("active");
-  });
 });
 
 
+
+
 // Our Services Power Logistics Across Businesses - Read More buttons
+
 
 
 

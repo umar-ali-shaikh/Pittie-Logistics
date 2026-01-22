@@ -60,7 +60,7 @@
           <!-- Slide 1 -->
           <div class="swiper-slide">
             <div class="hero-content col-8">
-              <span class="sub-heading-outline">Think Logistics Think Pittie</span>
+              <span class="sub-heading-outline">Think Logistics, Think Pittie</span>
 
               <h1>Wherever Your Business Is, Our Network Will Follow</h1>
 
@@ -106,7 +106,7 @@
           <!-- Slide 2 -->
           <div class="swiper-slide">
             <div class="hero-content col-8">
-              <span class="sub-heading-outline">Think Logistics Think Pittie</span>
+              <span class="sub-heading-outline">Think Logistics, Think Pittie</span>
 
               <h1>Wherever Your Business Is, Our Network Will Follow</h1>
 
@@ -152,7 +152,7 @@
           <!-- Slide 3 -->
           <div class="swiper-slide">
             <div class="hero-content col-8">
-              <span class="sub-heading-outline">Think Logistics Think Pittie</span>
+              <span class="sub-heading-outline">Think Logistics, Think Pittie</span>
 
               <h1>Wherever Your Business Is, Our Network Will Follow</h1>
 
@@ -260,7 +260,7 @@
                 <img src="Assests/home/what-we-Right-icon.svg" alt="" />
               </span>
               <h6>E-Commerce</h6>
-              <p>End-to-end e-commerce logistics solutions</p>
+              <p>End To End e-commerce logistics solutions</p>
             </div>
 
             <div class="what-item">
@@ -393,7 +393,7 @@
         <div class="services-tabs d-md-none">
           <button class="tab active" data-target="cf">Carry & Forward</button>
           <button class="tab" data-target="ss">Super Stockist</button>
-          <button class="tab" data-target="bts">Build-to-Suit</button>
+          <button class="tab" data-target="bts">Built To Suit</button>
         </div>
       </div>
 
@@ -458,9 +458,9 @@
           </div>
           <div class="Services-box-item col-7 ps-4">
             <div class="services-content">
-              <h3>Build-to-Suit Solutions</h3>
+              <h3>Built To Suit Solutions</h3>
               <p>
-                Pittie Logistics offers Build-to-Suit warehousing solutions
+                Pittie Logistics offers Built To Suit warehousing solutions
                 designed to match your specific operational and business
                 requirements.
               </p>
@@ -754,41 +754,55 @@
         <!-- Right Form -->
         <div class="col-lg p-0">
           <div class="contact-form-card">
-            <form class="row flex-wrap g-3">
+
+            <form id="contactForm" type="hidden" value="home" class="row flex-wrap g-3" action="submit.php"
+              method="POST">
+              <!-- Hidden Field For Page Source -->
+              <input type="hidden" name="form_type" value="home">
+              
+              <!-- Name -->
               <div class="col-12">
                 <label class="form-label">Your Name</label>
-                <input type="text" class="form-control-hlp" placeholder="Name" />
+                <input type="text" name="full_name" class="form-control-hlp" placeholder="Name" required>
               </div>
 
+              <!-- Phone -->
               <div class="col-md-6">
                 <label class="form-label">Phone Number</label>
-                <input type="tel" class="form-control-hlp" placeholder="+91 0000000000" />
+                <input type="tel" name="phone" class="form-control-hlp" placeholder="+91 0000000000" required>
               </div>
 
+              <!-- Email -->
               <div class="col-md-6">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control-hlp" placeholder="example@gmail.com" />
+                <input type="email" name="email" class="form-control-hlp" placeholder="example@gmail.com" required>
               </div>
 
+              <!-- Message -->
               <div class="col-12">
                 <label class="form-label">Your Message</label>
-                <textarea class="form-control-hlp" rows="4" placeholder="Write to here..."></textarea>
+                <textarea name="message" class="form-control-hlp" rows="4" placeholder="Write here..."
+                  required></textarea>
               </div>
 
+              <!-- Submit Button -->
               <div class="col-12">
-                <button class="btn btn-primary">
-                  <a href="#">
-                    Submit
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
+                <button type="submit" class="btn btn-primary">
+                  Submit
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6.92757 16.8242L16.8242 6.92757
+                     M16.8242 6.92757H6.92757
+                     M16.8242 6.92757V16.8242" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    </path>
+                  </svg>
                 </button>
               </div>
+
             </form>
+
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -958,7 +972,7 @@
           <ul class="footer-links">
             <li><a href="#">Carry & Forward Partners</a></li>
             <li><a href="#">Superstockist</a></li>
-            <li><a href="#">Build-to-suit</a></li>
+            <li><a href="#">Built To Suit</a></li>
           </ul>
         </div>
 

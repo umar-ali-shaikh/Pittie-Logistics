@@ -302,28 +302,28 @@
         <div class="best-at-col left">
           <div class="feature-box">
             <div class="text">
-              <h4>Consumer Goods Packaging</h4>
+              <h4>End-to-End Logistics Solutions</h4>
               <p>
-                Completely synergize resource sucking relationships via
-                premier niche markets. Professionally cultivate one.
+                From first mile to last mile, we manage the complete logistics lifecycle with precision, reliability,
+                and speed so your business moves without interruptions.
               </p>
             </div>
-            <div class="icon hex">
+            <!-- <div class="icon hex">
               <img src="Assests/about-us/weare-best-one.png" alt="" />
-            </div>
+            </div> -->
           </div>
 
           <div class="feature-box">
             <div class="text">
-              <h4>Fuel and Gas Carrier</h4>
+              <h4>Fast & Reliable Deliveries</h4>
               <p>
-                Interactively procrastinate high-payoff content without
-                backward compatible data. Quickly cultivate optimal.
+                We specialize in time-critical transportation, ensuring on-time deliveries across urban and remote
+                locations through optimized routes and strong execution.
               </p>
             </div>
-            <div class="icon hex">
+            <!-- <div class="icon hex">
               <img src="Assests/about-us/weare-best-two.png" alt="" />
-            </div>
+            </div> -->
           </div>
         </div>
 
@@ -335,27 +335,27 @@
         <!-- Right -->
         <div class="best-at-col right">
           <div class="feature-box">
-            <div class="icon hex">
+            <!-- <div class="icon hex">
               <img src="Assests/about-us/weare-best-three.png" alt="" />
-            </div>
+            </div> -->
             <div class="text">
-              <h4>Reaching Large Destinations</h4>
+              <h4>Pan-India Network Reach</h4>
               <p>
-                Globally incubate standards compliant channels before scalable
-                benefits. Quickly disseminate superior.
+                With a strong nationwide presence, we ensure consistent service quality across metros, Tier 2, and
+                emerging markets.
               </p>
             </div>
           </div>
 
           <div class="feature-box">
-            <div class="icon hex">
+            <!-- <div class="icon hex">
               <img src="Assests/about-us/weare-best-four.png" alt="" />
-            </div>
+            </div> -->
             <div class="text">
-              <h4>Goods Tracking Support</h4>
+              <h4>Technology-Driven Operations</h4>
               <p>
-                Collaboratively administrate empowered markets via
-                plug-and-play networks. Dynamically procrastinate.
+                Real-time tracking, data-led planning, and smart logistics tools help us deliver transparency,
+                efficiency, and control at every stage.
               </p>
             </div>
           </div>
@@ -742,16 +742,14 @@
             <h5>Mr. Rahul Bhatnakar</h5>
             <p>Vice President & Head - Human Resources</p>
             <p>
-              Mr. Rahul Bhatnagar is Vice President at Pittie Group. An
-              experienced HR Professional with qualitative experience in
-              talent acquisition, Rahul started his career a catalyst to hire
-              talent for Etihad and Jet Airways. He has his own HR agency
-              which provides staff across industries in India. Recognized by
-              business world to be amongst the top 40 HR leaders under the age
-              of 40, Rahul holds an MBA in International Business from
-              National Business of Management. He currently heads the Human
-              Resources department where he leads the HR function across all
-              verticals.
+              Mr. Rahul Bhatnagar is the Vice President & Head of Human Resources at the Pittie Group. A seasoned HR
+              professional with extensive experience in talent acquisition, Rahul began his career as a catalyst in
+              hiring talent for the reservation centres of leading airlines such as Etihad Airways and Jet Airways.
+              He later went on to establish and manage his own recruitment agency, where he successfully catered to a
+              wide range of clients, including ITC Hotels, Motilal Oswal, Kotak Securities, IIFL, and several others.
+              Recognized by Business World as one of the Top 40 HR Leaders under the Age of 40, Rahul holds an MBA along
+              with an International Business Degree from Auckland, New Zealand. In his current role, Leads the Human
+              Resources function at the Pittie Group, driving strategic HR initiatives and organizational growth.
             </p>
           </div>
         </div>
@@ -969,34 +967,45 @@
 
           <!-- RIGHT FORM -->
           <div class="career-right">
-            <form class="career-form">
+
+            <form id="contactForm" class="career-form" action="career-submit.php" method="POST"
+              enctype="multipart/form-data">
+
+              <!-- Name -->
               <div class="form-group">
                 <label>Your Name</label>
-                <input class="form-text" type="text" placeholder="Enter Your Name" />
+                <input class="form-text" type="text" name="full_name" placeholder="Enter Your Name" required>
               </div>
 
               <div class="form-row">
+
+                <!-- Email -->
                 <div class="form-group">
                   <label>Your Email</label>
-                  <input class="form-text" type="email" placeholder="example@pittiegroup.com" />
+                  <input class="form-text" type="email" name="email" placeholder="example@pittiegroup.com" required>
                 </div>
 
+                <!-- Job Role -->
                 <div class="form-group">
                   <label>Job Role</label>
-                  <select required>
+                  <select name="job_role" required>
                     <option value="" disabled selected hidden>
                       Select Job Role
                     </option>
                     <option value="XYZ">XYZ</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Driver">Driver</option>
                   </select>
                 </div>
+
               </div>
 
               <div class="form-row">
+
+                <!-- Location -->
                 <div class="form-group">
                   <label>Location</label>
-
-                  <select required>
+                  <select name="location" required>
                     <option value="" disabled selected hidden>
                       Select Location
                     </option>
@@ -1006,30 +1015,50 @@
                   </select>
                 </div>
 
+                <!-- Resume Upload -->
                 <div class="form-group upload-group">
                   <label>Upload Resume</label>
 
                   <label class="file-field">
                     <span>Choose File</span>
-                    <input type="file" />
+
+                    <input type="file" name="resume" accept=".pdf,.doc,.docx" required id="resumeInput">
+
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                       <path d="M12 16V4M12 4L8 8M12 4L16 8M4 16V20H20V16" stroke="#9CA3AF" stroke-width="2"
-                        stroke-linecap="round" />
+                        stroke-linecap="round"></path>
                     </svg>
                   </label>
+
+                  <!-- File Name Show Here -->
+                  <small id="fileName" style="display:block;margin-top:8px;color:#555;"></small>
+
                 </div>
+
+
               </div>
 
-              <button class="btn btn-primary apply-btn">
-                <a href="">Apply Now
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
+              <!-- Message -->
+              <div class="col-12">
+                <label class="form-label">Your Message</label>
+                <textarea name="message" class="form-control-hlp" rows="4" placeholder="Write here..."
+                  required></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary apply-btn">
+                Apply Now
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M6.92757 16.8242L16.8242 6.92757
+                 M16.8242 6.92757H6.92757
+                 M16.8242 6.92757V16.8242" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
               </button>
+
             </form>
+
           </div>
+
         </div>
       </div>
     </div>
@@ -1208,7 +1237,7 @@
           <ul class="footer-links">
             <li><a href="#">Carry & Forward Partners</a></li>
             <li><a href="#">Superstockist</a></li>
-            <li><a href="#">Build-to-suit</a></li>
+            <li><a href="#">Built To Suit</a></li>
           </ul>
         </div>
 

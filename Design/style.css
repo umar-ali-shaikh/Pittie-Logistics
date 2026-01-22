@@ -566,6 +566,7 @@ img {
 .why-choose-section-item {
     width: calc(100% / 3 - 20px);
     padding: 0;
+    height: 400px;
 }
 
 .why-choose-section-item.d-flex {
@@ -588,6 +589,10 @@ img {
 .why-choose-section-item.d-flex h2 {
     font-size: 20px;
     margin-bottom: 6px;
+}
+
+.why-choose-controls {
+    display: none;
 }
 
 
@@ -1467,14 +1472,15 @@ img {
     /* --------------------------------
      ROW = HORIZONTAL SLIDER
   -------------------------------- */
+    .why-choose-section {
+        overflow: hidden;
+    }
+
     .about-grid .row {
         display: flex !important;
         flex-wrap: nowrap !important;
-        overflow-x: auto;
+        /* clip-path: inset(-100px 0 -100px 0); */
         gap: 16px;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch;
-        padding-right: 40px;
     }
 
     .about-grid .row::-webkit-scrollbar {
@@ -1486,7 +1492,7 @@ img {
      Full width + break line
   -------------------------------- */
     .why-choose-section-item1 {
-        flex: 0 0 100%;
+        flex: 0 0 90%;
         max-width: 100%;
         scroll-snap-align: start;
     }
@@ -1495,8 +1501,8 @@ img {
      SLIDER CARDS
   -------------------------------- */
     .why-choose-section-item:not(.why-choose-section-item1) {
-        flex: 0 0 85%;
-        max-width: 85%;
+        flex: 0 0 90%;
+        max-width: 90%;
         scroll-snap-align: start;
     }
 

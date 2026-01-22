@@ -33,3 +33,20 @@ document.querySelectorAll(".team-card").forEach(card => {
 });
 
 
+
+
+// resume file
+document.getElementById("resumeInput").addEventListener("change", function () {
+
+  if (this.files.length > 0) {
+
+    document.getElementById("fileName").textContent =
+      "Selected File: " + this.files[0].name;
+
+  } else {
+
+    document.getElementById("fileName").textContent = "";
+
+  }
+
+});

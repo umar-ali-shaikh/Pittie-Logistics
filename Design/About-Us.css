@@ -742,7 +742,8 @@
     gap: var(--pm8);
 }
 
-.form-group label {
+.form-group label,
+.form-label {
     font-size: 14px;
     color: var(--para-text);
 }
@@ -751,7 +752,7 @@
 .form-group select {
     border: none;
     border-bottom: 1px solid #E5E7EB;
-    padding: 10px 4px;
+    padding: 10px 0px;
     font-family: var(--font-primary);
     font-size: 15px;
     outline: none;
@@ -810,6 +811,20 @@ select {
     cursor: pointer;
 }
 
+.career-right .form-control-hlp::placeholder {
+    color: #9CA3AF;
+}
+
+.career-right .form-control-hlp {
+    border: none;
+    border-bottom: 1px solid #E5E7EB;
+    padding: 10px 4px;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    outline: none;
+    width: 100%;
+    color: #9CA3AF;
+}
 
 
 
