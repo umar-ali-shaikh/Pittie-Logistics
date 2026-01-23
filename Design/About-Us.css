@@ -1427,7 +1427,7 @@ select {
 
 .best-at-col.left .feature-box {
     justify-content: flex-end;
-    text-align: right;
+    text-align: left;
 }
 
 .best-at-col.right .feature-box {
@@ -1484,7 +1484,7 @@ select {
 }
 
 .best-at-image img {
-    width: 100%;
+    width: 90%;
 }
 
 
