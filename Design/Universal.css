@@ -57,7 +57,7 @@ body {
     font-weight: 400;
     background-color: var(--bg-primary);
     line-height: 1.5;
-    overscroll-behavior: none;
+    overscroll-behavior: smooth;
 }
 
 
@@ -571,6 +571,14 @@ button.btn-primary:hover a svg {
     color: var(--bg-danger);
 }
 
+.mobile-get-in-touch {
+    display: none;
+}
+
+.consumer-rights {
+    display: none;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .sub-heading {
@@ -621,5 +629,80 @@ button.btn-primary:hover a svg {
     .footer-tagline {
         font-size: 16px;
     }
+
+    /* optional: hide existing footer contact column */
+    .footer-grid .footer-col:last-child {
+        display: none;
+    }
+
+    .mobile-get-in-touch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .icon-circle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile-get-in-touch .First {
+        margin-bottom: 0px;
+    }
+
+    .mobile-get-in-touch .address {
+        color: #141415;
+        font-size: 16px;
+        max-width: 320px;
+    }
+
+    .mobile-get-in-touch .divider {
+        width: 50px;
+        height: 2px;
+        background: var(--bg-dark);
+        display: block;
+    }
+
+    .mobile-get-in-touch .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .mobile-get-in-touch .contact-row a {
+        text-decoration: none;
+        color: #141415
+    }
+
+    .footer-col-quicks {
+        display: none;
+    }
+
+    .footer-col-services {
+        display: none;
+    }
+
+    .consumer-rights p {
+        font-size: 18px;
+        color: #141415;
+   
+        padding: 50px 10px 0 10px;
+    }
+
+    .consumer-rights {
+        display: contents;
+    }
+
+    .footer-section {
+        padding: 0;
+    }
+
+
 
 }
