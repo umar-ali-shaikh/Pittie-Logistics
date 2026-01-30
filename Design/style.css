@@ -116,7 +116,7 @@ img {
 }
 
 .hero .overlay-bg .image2 {
-    background: url("../Assests/home/Bg-image-herosection1.png") no-repeat center / cover;
+    background: url("../Assests/home/Bg-image-herosection1.jpg") no-repeat center / cover;
 }
 
 .hero .overlay-bg .image3 {
@@ -971,20 +971,13 @@ img {
     }
 
     .what-img-row1 {
-        height: 200px;
+        height: 400px;
     }
 
     .what-img-row2 {
         grid-template-columns: 1fr;
     }
 
-    .what-img-col1 {
-        height: 256px;
-    }
-
-    .what-img-col2 .what-img {
-        height: 120px;
-    }
 
     /* ---------- OUR MILESTONE ---------- */
     .milestone-services,
@@ -1315,7 +1308,7 @@ img {
     }
 
     .hero .overlay-bg .image2 {
-        background: url("../Assests/home/Bg-image-herosection5.png") no-repeat center / cover !important;
+        background: url("../Assests/home/Bg-image-herosection1.jpg") no-repeat center / cover !important;
     }
 
     .hero .overlay-bg .image3 {
