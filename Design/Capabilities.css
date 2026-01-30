@@ -574,7 +574,8 @@
     background: linear-gradient(135deg, #1f5fa9, #1a4f91);
     border-radius: 28px;
     padding: 64px;
-    margin: 40px 10px;
+    margin: 50px 10px;
+    margin-bottom: 100px;
 }
 
 .op-container {
