@@ -417,7 +417,7 @@
 }
 
 /* ==============================
-   Journey Section
+   Journey Section / Office Location Timeline
    ============================== */
 
 .journey {
@@ -444,6 +444,19 @@
 
 .journey-desc {
     color: var(--para-text);
+}
+
+.journey-content .image-section {
+    margin-top: var(--pm32);
+    border-radius: var(--radius16);
+    overflow: hidden;
+
+}
+
+.journey-content .image-section img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* RIGHT – Scrollable Timeline */
@@ -1576,5 +1589,5 @@ select {
         margin: auto;
         width: 60%;
     }
-    
+
 }

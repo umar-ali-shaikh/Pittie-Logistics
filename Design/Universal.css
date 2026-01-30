@@ -598,6 +598,10 @@ button.btn-primary:hover a svg {
         min-height: 100% !important;
     }
 
+    .footer-logo {
+        margin-top: 40px;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -691,7 +695,7 @@ button.btn-primary:hover a svg {
     .consumer-rights p {
         font-size: 18px;
         color: #141415;
-   
+
         padding: 50px 10px 0 10px;
     }
 

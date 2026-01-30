@@ -463,6 +463,11 @@
     .advanced-technology {
         margin-bottom: -120px !important;
     }
+
+    .tech-image img {
+        /* height: auto; */
+        object-fit: contain;
+    }
 }
 
 
