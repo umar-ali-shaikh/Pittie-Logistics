@@ -385,6 +385,14 @@ button.btn-primary:hover a svg {
     stroke: var(--bg-primary);
 }
 
+button.btn-primary svg {
+    stroke: var(--bg-primary);
+}
+
+button.btn-primary:hover svg {
+    stroke: var(--bg-primary);
+}
+
 /* classes */
 .container {
     width: 100%;
