@@ -8,12 +8,13 @@
     --text-primary: #1A4174;
     --bg-primary: #FFFFFF;
     --bg-sections: #EAEEF4;
-    --bg-danger: #E9292F;
+    /* --bg-danger: #E9292F; */
     --para-text: #4B5563;
+    --bg-danger: #C81E1E;
     --bg-dark: #010169;
     --strong-black: #141415;
     --bg-light-blue: #0D4ABC;
-    --bg-red-dark: #9D1015;
+    --bg-red-dark: #E9292F;
 
     /* ---------- Font Family ---------- */
     --font-primary: 'Poppins', sans-serif;

@@ -8,6 +8,7 @@
     /* Button Red (Contrast Safe) */
     --bg-danger: #C81E1E;
 
+
     /* Paragraph / Muted Text (WCAG PASS) */
     --para-text: #4B5563;
 
@@ -18,21 +19,20 @@
 }
 
 .skip-link {
-    position: absolute;
-    top: -50px;
-    left: 10px;
+    position: fixed;
+    top: -60px;
+    left: 12px;
     background: #000;
     color: #fff;
     padding: 8px 14px;
     text-decoration: none;
     border-radius: 6px;
-    z-index: 9999;
+    z-index: 99999;
 }
 
 .skip-link:focus {
-    top: 10px;
+    top: 12px;
 }
-
 
 /* Hero Section */
 
@@ -99,6 +99,11 @@
 
 .contact-form {
     margin-left: 20px;
+}
+
+.contact-form .btn.btn-primary {
+    font-size: 16px;
+    font-weight: 600;
 }
 
 /* LEFT IMAGE CARD */
