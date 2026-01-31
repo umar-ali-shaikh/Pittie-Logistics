@@ -65,10 +65,11 @@ img {
     position: relative;
     height: 100vh;
     max-height: 600px;
+    max-width: 1340px;
     border-radius: var(--radius16);
     overflow: hidden;
     color: var(--text-white);
-    margin: 0 10px;
+    margin: 0 auto;
 }
 
 .hero .overlay-bg {
@@ -1286,12 +1287,14 @@ img {
 @media (max-width: 576px) {
 
     /* ---------- HERO ---------- */
+
     .hero .swiper-slide {
         padding-left: 0;
     }
 
     .hero {
         min-height: 600px;
+        margin: 0 10px;
     }
 
     .hero-wrapper {
@@ -1308,7 +1311,7 @@ img {
     }
 
     .hero .overlay-bg .image2 {
-        background: url("../Assests/home/Bg-image-herosection1.jpg") no-repeat center / cover !important;
+        background: url("../Assests/home/Bg-image-herosection5.jpg") no-repeat center / cover !important;
     }
 
     .hero .overlay-bg .image3 {
