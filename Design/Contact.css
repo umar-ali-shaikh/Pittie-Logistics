@@ -117,7 +117,8 @@
 
 .form-group label {
     font-size: 13px;
-    color: var(--para-text);
+    /* color: var(--para-text); */
+    color: #4b5563;
     margin-bottom: var(--pm8);
 }
 
@@ -218,9 +219,10 @@
     font-size: 26px;
 }
 
-.contact-card h4 {
+.contact-card h3 {
     color: var(--text-primary);
     font-weight: 600;
+    font-size: clamp(18px, 3vw, 24px);
     margin-bottom: var(--pm16);
 }
 
