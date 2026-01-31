@@ -61,6 +61,24 @@ body {
     overscroll-behavior: smooth;
 }
 
+/* header skip part for seo */
+.skip-link {
+    position: fixed;
+    top: -60px;
+    left: 12px;
+    background: #000;
+    color: #fff;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    z-index: 99999;
+}
+
+.skip-link:focus {
+    top: 12px;
+}
+
+
 
 h1,
 h2,

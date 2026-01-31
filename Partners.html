@@ -25,10 +25,16 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar navbar-expand-lg">
+
+  <!-- Skip Navigation Link (REQUIRED) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+
+
+  <header class="header" role="banner">
+    <nav class="navbar navbar-expand-lg" role="navigation">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="Assests/home/PittieLogistics.png" alt="Pittie Logistics Logo" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -49,93 +55,97 @@
     </nav>
   </header>
 
-  <!-- Hero Section  -->
-  <section class="page-banner hero-section justify-content-center align-items-center d-flex">
-    <div class="page-banner-content container">
-      <nav class="breadcrumb d-flex align-items-center gap-1">
-        <a href="#">Home</a>
-        <span><img src="Assests/about-us/lessor-sign.svg" alt="Icon" loading="eager" /></span>
-        <span>Partners & Clients</span>
-      </nav>
-      <h1>
-        Trusted by leading brands and long-term partners across industries.
-      </h1>
-    </div>
-  </section>
 
-  <!-- Our Top 5 Brands -->
-  <section class="client-video-section bg-color-blue section">
-    <div class="container">
-      <div class="row">
-        <div class="section-head">
-          <h2 class="reveal-chars">Our Valued Clients</h2>
-          <p>
-            Trust Pittie Logistics for reliable, efficient, and scalable
-            supply chain solutions. We take pride in building long-term
-            partnerships that support growth and operational excellence.
-          </p>
-        </div>
+
+  <!-- MAIN CONTENT LANDMARK -->
+  <main id="main-content" role="main">
+    <!-- Hero Section  -->
+    <section class="page-banner hero-section justify-content-center align-items-center d-flex">
+      <div class="page-banner-content container">
+        <nav class="breadcrumb d-flex align-items-center gap-1">
+          <a href="#">Home</a>
+          <span><img src="Assests/about-us/lessor-sign.svg" alt="Icon" loading="eager" /></span>
+          <span>Partners & Clients</span>
+        </nav>
+        <h1>
+          Trusted by leading brands and long-term partners across industries.
+        </h1>
       </div>
+    </section>
 
-      <div class="row">
-        <div class="client-logos">
-          <button class="logo active" data-thumb="Assests/partner_clients/Brand-img1.jpg"
-            data-video="https://www.youtube.com/embed/ysz5S6PUM-U" data-title="PATANJALI"
-            data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem.">
-            <img src="Assests/partner_clients/Patanjali_Logo.png" />
-          </button>
-
-          <button class="logo" data-thumb="Assests/partner_clients/Brand-img2.jpg"
-            data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem."
-            data-title="NAIR">
-            <img src="Assests/partner_clients/shubhkart.png" />
-          </button>
-
-          <button class="logo" data-thumb="Assests/partner_clients/Brand-img3.jpg"
-            data-video="https://www.youtube.com/embed/ScMzIvxBSi4" data-title="BIKANO"
-            data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem.">
-            <img src="Assests/partner_clients/chakachaak.png" />
-          </button>
-
-          <button class="logo" data-thumb="Assests/partner_clients/Brand-img4.jpg"
-            data-video="https://www.youtube.com/embed/ScMzIvxBSi4" data-title="BIKANO"
-            data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem.">
-            <img src="Assests/partner_clients/Coolberg.png" />
-          </button>
-
-          <button class="logo malaki-logo" data-thumb="Assests/partner_clients/Brand-img5.jpg"
-            data-video="https://www.youtube.com/embed/ScMzIvxBSi4" data-title="BIKANO"
-            data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem.">
-            <img src="Assests/partner_clients/ocean.png" />
-          </button>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="video-thumb">
-          <img id="videoThumbnail" src="Assests/partner_clients/Brand-img1.jpg" />
-          <!-- Overlay Effect  -->
-          <div class="thumb-overlay">
-            <p id="thumbText"></p>
+    <!-- Our Top 5 Brands -->
+    <section class="client-video-section bg-color-blue section">
+      <div class="container">
+        <div class="row">
+          <div class="section-head">
+            <h2 class="reveal-chars">Our Valued Clients</h2>
+            <p>
+              Trust Pittie Logistics for reliable, efficient, and scalable
+              supply chain solutions. We take pride in building long-term
+              partnerships that support growth and operational excellence.
+            </p>
           </div>
+        </div>
 
-          <div class="play-btn" id="playVideo"></div>
+        <div class="row">
+          <div class="client-logos">
+            <button class="logo active" data-thumb="Assests/partner_clients/Brand-img1.jpg"
+              data-video="https://www.youtube.com/embed/ysz5S6PUM-U" data-title="PATANJALI"
+              data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem.">
+              <img src="Assests/partner_clients/Patanjali_Logo.png" />
+            </button>
+
+            <button class="logo" data-thumb="Assests/partner_clients/Brand-img2.jpg"
+              data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem."
+              data-title="NAIR">
+              <img src="Assests/partner_clients/shubhkart.png" />
+            </button>
+
+            <button class="logo" data-thumb="Assests/partner_clients/Brand-img3.jpg"
+              data-video="https://www.youtube.com/embed/ScMzIvxBSi4" data-title="BIKANO"
+              data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem.">
+              <img src="Assests/partner_clients/chakachaak.png" />
+            </button>
+
+            <button class="logo" data-thumb="Assests/partner_clients/Brand-img4.jpg"
+              data-video="https://www.youtube.com/embed/ScMzIvxBSi4" data-title="BIKANO"
+              data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem.">
+              <img src="Assests/partner_clients/Coolberg.png" />
+            </button>
+
+            <button class="logo malaki-logo" data-thumb="Assests/partner_clients/Brand-img5.jpg"
+              data-video="https://www.youtube.com/embed/ScMzIvxBSi4" data-title="BIKANO"
+              data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda culpa quis blanditiis laborum praesentium quam at nulla impedit exercitationem.">
+              <img src="Assests/partner_clients/ocean.png" />
+            </button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="video-thumb">
+            <img id="videoThumbnail" src="Assests/partner_clients/Brand-img1.jpg" />
+            <!-- Overlay Effect  -->
+            <div class="thumb-overlay">
+              <p id="thumbText"></p>
+            </div>
+
+            <div class="play-btn" id="playVideo"></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- MODAL Our 5 Brands -->
-  <div class="video-modal" id="videoModal">
-    <div class="video-modal-content">
-      <span class="close">&times;</span>
-      <iframe id="videoFrame" allow="autoplay; encrypted-media" allowfullscreen>
-      </iframe>
+    <!-- MODAL Our 5 Brands -->
+    <div class="video-modal" id="videoModal">
+      <div class="video-modal-content">
+        <span class="close">&times;</span>
+        <iframe id="videoFrame" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+      </div>
     </div>
-  </div>
 
-  <!-- Out Top 4 Brands  -->
-  <!-- <section class="product-showcase section">
+    <!-- Out Top 4 Brands  -->
+    <!-- <section class="product-showcase section">
       <div class="container">
         <h3 class="section-heading">Others</h3>
         <div class="row">
@@ -209,121 +219,126 @@
       </div>
     </section> -->
 
-  <!-- Test 4 Brands new section  -->
-  <section class="product-showcase section">
-    <div class="container">
-      <!-- HEADER ROW -->
-      <div class="product-header">
-        <h2 class="section-heading reveal-chars">Others</h2>
-        <button class="see-more-btn btn btn-primary" id="seeMoreBtn">
-          See more
-        </button>
-      </div>
-
-      <!-- PRODUCTS -->
-      <div class="product-grid" id="productGrid">
-        <!-- CARD 1 -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="Assests/partner_clients/image 2342.jpg" alt="Doritos" />
-          </div>
-          <div class="product-footer">
-            <img src="Assests/partner_clients/doritos.png" class="brand-logo" />
-            <span class="brand-name">Doritos</span>
-          </div>
+    <!-- Test 4 Brands new section  -->
+    <section class="product-showcase section">
+      <div class="container">
+        <!-- HEADER ROW -->
+        <div class="product-header">
+          <h2 class="section-heading reveal-chars">Others</h2>
+          <button class="see-more-btn btn btn-primary" id="seeMoreBtn">
+            See more
+          </button>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="Assests/partner_clients/image 2345.jpg" alt="2pm" />
-          </div>
-          <div class="product-footer">
-            <img src="Assests/partner_clients/brand-footer-logo3.png" class="brand-logo" />
-            <span class="brand-name">2pm</span>
-          </div>
-        </div>
-
-        <!-- CARD 3 -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="Assests/partner_clients/image 2344.jpg" alt="Bikano" />
-          </div>
-          <div class="product-footer">
-            <img src="Assests/partner_clients/bikano-logo.png" class="brand-logo" />
-            <span class="brand-name">Bikano</span>
-          </div>
-        </div>
-
-        <!-- CARD 4 -->
-        <div class="product-card">
-          <div class="product-image">
-            <img src="Assests/partner_clients/image 2343.jpg" alt="Diamond" />
-          </div>
-          <div class="product-footer">
-            <img src="Assests/partner_clients/brand-footer-logo4.png" class="brand-logo" />
-            <span class="brand-name">Diamond</span>
-          </div>
-        </div>
-
-        <!-- EXTRA CARDS -->
-        <div class="product-card hidden">
-          <div class="product-image">
-            <img src="Assests/partner_clients/image 2342.jpg" />
-          </div>
-          <div class="product-footer hookup">
-            <img src="Assests/partner_clients/doritos.png" class="brand-logo" />
-            <span class="brand-name">Doritos</span>
-          </div>
-        </div>
-
-        <div class="product-card hidden">
-          <div class="product-image">
-            <img src="Assests/partner_clients/image 2344.jpg" />
-          </div>
-          <div class="product-footer">
-            <img src="Assests/partner_clients/bikano-logo.png" class="brand-logo" />
-            <span class="brand-name">Bikano</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Brands Image Carousal -->
-  <section class="brand-section section">
-    <div class="container">
-      <h3 class="section-heading">More</h3>
-      <div class="row">
-        <!-- CAROUSEL (NOW LIMITED TO CONTAINER WIDTH) -->
-        <div class="brand-carousel" id="brandCarousel">
-          <div class="brand-track" id="brandTrack">
-            <div class="brand-item">
-              <img src="Assests/partner_clients/Patanjali_Logo.png" />
+        <!-- PRODUCTS -->
+        <div class="product-grid" id="productGrid">
+          <!-- CARD 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Assests/partner_clients/image 2342.jpg" alt="Doritos" />
             </div>
-            <div class="brand-item">
-              <img src="Assests/partner_clients/Nair-Logo.png" />
+            <div class="product-footer">
+              <img src="Assests/partner_clients/doritos.png" class="brand-logo" />
+              <span class="brand-name">Doritos</span>
             </div>
-            <div class="brand-item">
-              <img src="Assests/partner_clients/carousal-img1.png" />
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Assests/partner_clients/image 2345.jpg" alt="2pm" />
             </div>
-            <div class="brand-item">
-              <img src="Assests/partner_clients/carousal-img2.png" />
+            <div class="product-footer">
+              <img src="Assests/partner_clients/brand-footer-logo3.png" class="brand-logo" />
+              <span class="brand-name">2pm</span>
             </div>
-            <div class="brand-item">
-              <img src="Assests/partner_clients/Patanjali_Logo.png" />
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Assests/partner_clients/image 2344.jpg" alt="Bikano" />
             </div>
-            <div class="brand-item">
-              <img src="Assests/partner_clients/Nair-Logo.png" />
+            <div class="product-footer">
+              <img src="Assests/partner_clients/bikano-logo.png" class="brand-logo" />
+              <span class="brand-name">Bikano</span>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="Assests/partner_clients/image 2343.jpg" alt="Diamond" />
+            </div>
+            <div class="product-footer">
+              <img src="Assests/partner_clients/brand-footer-logo4.png" class="brand-logo" />
+              <span class="brand-name">Diamond</span>
+            </div>
+          </div>
+
+          <!-- EXTRA CARDS -->
+          <div class="product-card hidden">
+            <div class="product-image">
+              <img src="Assests/partner_clients/image 2342.jpg" />
+            </div>
+            <div class="product-footer hookup">
+              <img src="Assests/partner_clients/doritos.png" class="brand-logo" />
+              <span class="brand-name">Doritos</span>
+            </div>
+          </div>
+
+          <div class="product-card hidden">
+            <div class="product-image">
+              <img src="Assests/partner_clients/image 2344.jpg" />
+            </div>
+            <div class="product-footer">
+              <img src="Assests/partner_clients/bikano-logo.png" class="brand-logo" />
+              <span class="brand-name">Bikano</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Brands Image Carousal -->
+    <section class="brand-section section">
+      <div class="container">
+        <h3 class="section-heading">More</h3>
+        <div class="row">
+          <!-- CAROUSEL (NOW LIMITED TO CONTAINER WIDTH) -->
+          <div class="brand-carousel" id="brandCarousel">
+            <div class="brand-track" id="brandTrack">
+              <div class="brand-item">
+                <img src="Assests/partner_clients/Patanjali_Logo.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/Nair-Logo.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/carousal-img1.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/carousal-img2.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/Patanjali_Logo.png" />
+              </div>
+              <div class="brand-item">
+                <img src="Assests/partner_clients/Nair-Logo.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
 
   <!-- Footer -->
-  <footer class="footer-section">
+  <footer class="footer-section" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <!-- Company Info -->
@@ -393,7 +408,7 @@
 
         <!-- Quick Links -->
         <div class="footer-col footer-col-quicks">
-          <h6 class="footer-title">Quick Links</h6>
+          <h3 class="footer-title">Quick Links</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="About-Us.html">About Us</a></li>
@@ -405,7 +420,7 @@
 
         <!-- Services -->
         <div class="footer-col footer-col-services">
-          <h6 class="footer-title">Services</h6>
+          <h3 class="footer-title">Services</h3>
           <ul class="footer-links">
             <li><a href="#">Carry & Forward Partners</a></li>
             <li><a href="#">Superstockist</a></li>
@@ -415,7 +430,7 @@
 
         <!-- Contact -->
         <div class="footer-col">
-          <h6 class="footer-title">Contact Us</h6>
+          <h3 class="footer-title">Contact Us</h3>
           <ul class="footer-contact">
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 25" fill="none">
@@ -452,7 +467,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
   <!-- Main JS -->
-     <script src="Logic/Universal.js"></script>
+  <script src="Logic/Universal.js"></script>
   <script src="Logic/Partners.js"></script>
 </body>
 

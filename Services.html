@@ -30,11 +30,16 @@
 </head>
 
 <body>
+
+  <!-- Skip Navigation Link (REQUIRED) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+
   <!-- Header -->
-  <header class="header">
-    <nav class="navbar navbar-expand-lg">
+  <header class="header" role="banner">
+    <nav class="navbar navbar-expand-lg" role="navigation">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="Assests/home/PittieLogistics.png" alt="Pittie Logistics Logo" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -55,301 +60,312 @@
     </nav>
   </header>
 
-  <!-- Hero Section  -->
-  <section class="page-banner hero-section justify-content-center align-items-center d-flex">
-    <div class="page-banner-content container">
-      <nav class="breadcrumb d-flex align-items-center gap-1">
-        <a href="#">Home</a>
-        <span><img src="Assests/about-us/lessor-sign.svg" alt="Icon" loading="eager" /></span>
-        <span>Services</span>
-      </nav>
-      <h1>
-        Trusted by leading brands and long-term partners across industries.
-      </h1>
-    </div>
-  </section>
-
-  <!-- Our Services Section  -->
-  <section class="logistics-services" id="services-content">
-    <div class="container">
-      <div class="row">
-        <div class="services-header">
-          <span class="badge sub-heading mb-3">Our Services</span>
-          <h2 class="reveal-chars">End-to-End Logistics Services</h2>
-        </div>
+  <!-- MAIN CONTENT LANDMARK -->
+  <main id="main-content" role="main">
+    <!-- Hero Section  -->
+    <section class="page-banner hero-section justify-content-center align-items-center d-flex">
+      <div class="page-banner-content container">
+        <nav class="breadcrumb d-flex align-items-center gap-1">
+          <a href="#">Home</a>
+          <span><img src="Assests/about-us/lessor-sign.svg" alt="Icon" loading="eager" /></span>
+          <span>Services</span>
+        </nav>
+        <h1>
+          Trusted by leading brands and long-term partners across industries.
+        </h1>
       </div>
-      <div class="row">
-        <div class="services-layout">
-          <!-- LEFT MENU -->
-          <div class="services-nav">
-            <ul>
-              <li class="active" data-index="0">Carry & Forward Partners</li>
-              <li data-index="1">Superstockist</li>
-              <li data-index="2">Built To Suit</li>
-              <li data-index="3">Modern Trade</li>
-              <li data-index="4">General Trade</li>
-              <li data-index="5">E-Commerce</li>
-              <li data-index="6">Transportation</li>
-              <li data-index="7">Quick Commerce</li>
-              <li data-index="8">Exports</li>
-            </ul>
-          </div>
+    </section>
 
-          <!-- RIGHT CONTENT -->
-          <div class="services-card">
-            <!-- CONTENT 1 -->
-            <div class="service-content active">
-              <div class="services-text">
-                <h3>Carry & Forward Partners</h3>
-                <p>
-                  Ideally recommended for new brands to partner with us and
-                  utilize our widespread network of warehouses & supplies across
-                  India. We build the business model considering the early life
-                  cycle of the brand, thus letting it focus its margin investments
-                  on sales growth as well as ensuring the achievement of
-                  distribution KPIs. A win-win long-term sustainable model.
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-1.png" alt="Carry & Forward Partners" />
-              </div>
-            </div>
-
-            <!-- CONTENT 2 -->
-            <div class="service-content">
-              <div class="services-text">
-                <h3>Superstockist</h3>
-                <p>
-                  Pittie brings in the financial appetite to cater to the growth of its partner brands. A brand's
-                  developing sales momentum calls for strategic financial holdings in inventory to keep the working
-                  capital steady and achieve scale. Our team makes this complex model easy by recommending precise stock
-                  placement against observed sales & rolling forecasts, operations, fulfilling SLA's in your value
-                  chain, and much more.
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-2.jpg" alt="" />
-              </div>
-            </div>
-
-            <!-- CONTENT 3 -->
-            <div class="service-content">
-              <div class="services-text">
-                <h3>Built To Suit</h3>
-                <p>
-                  The dynamics of the market demand intelligent customized business models that require a skilled task
-                  force to analyze our partners' needs and design tailor-made business models. Our robust capabilities
-                  ensure the seamless execution of bespoke solutions with utmost efficiency. We focus on designing and
-                  discovering standard operating procedures for our clients to implement, closely measure, and
-                  continually improvise to optimize their personalized business needs and costs.
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-3.jpg" alt="" />
-              </div>
-            </div>
-
-            <!-- CONTENT 4 -->
-            <div class="service-content">
-              <div class="services-text">
-                <h3>Modern Trade Store Presence</h3>
-                <p>
-                  Pittie Group has long-standing relationships with all the Modern Trade Retail outlets. Affiliation
-                  with Pittie aids the entry of our clients into the toughest Retailers of India.
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-4.jpg" alt="" />
-              </div>
-            </div>
-
-            <!-- CONTENT 5 -->
-            <div class="service-content">
-              <div class="services-text">
-                <h3>General Trade Store Presence</h3>
-                <p>
-                  Pittie Group’s extensive General Trade reach across the remotest corners of India caters to a variety
-                  of sectors such as Food & Beverages, Personal Care, Hygiene, Home Care, Kitchen Care, Spiritual,
-                  Wellness and other Consumer Goods.
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-5.jpg" alt="" />
-              </div>
-            </div>
-
-            <!-- CONTENT 6 -->
-            <div class="service-content">
-              <div class="services-text">
-                <h3>Gateway to the World</h3>
-                <p>
-                  Pittie Group has a strong global presence, and exports a variety of products to different parts of the
-                  globe in its endeavour to mark its presence. Our expertise will ensure an end to end solution for you
-                  and help increase your reach in the global market through our set channels.
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-6.jpg" alt="" />
-              </div>
-            </div>
-
-            <!-- CONTENT 7 -->
-            <div class="service-content">
-              <div class="services-text">
-                <h3>Transportation</h3>
-                <p>
-                  <span class="table-wrap">
-                    <span class="table-row table-head">
-                      <span>Service</span>
-                      <span>Advantage</span>
-                    </span>
-
-                    <span class="table-row">
-                      <span>Route Planning</span>
-                      <span>Transport Management System</span>
-                    </span>
-
-                    <span class="table-row">
-                      <span>Long Haul</span>
-                      <span>Network Optimization</span>
-                    </span>
-
-                    <span class="table-row">
-                      <span>Reverse Logistic</span>
-                      <span>800+ Vehicle Across India</span>
-                    </span>
-
-                    <span class="table-row">
-                      <span>Transport Desk Model</span>
-                      <span>Transport Management System</span>
-                    </span>
-                  </span>
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-7.jpg" alt="" />
-              </div>
-            </div>
-
-            <!-- CONTENT 8 -->
-            <div class="service-content">
-              <div class="services-text">
-                <h3>Benefits of Quick Commerce</h3>
-                <p>
-                <ul>
-                  <li>Let us help you open doors to the Online Marketplace of the Future</li>
-                  <li>Achieve Massive Reach and Scalability</li>
-                  <li>Effortless Onboarding Process with Pittie Group</li>
-                  <li>Speedy Deliveries of your products all over India</li>
-                  <li>Stress-free Fulfilment of Orders with a Reputed and a Trusted Distribution Partner</li>
-                  <li>Entry into emerging quick commerce online stores with the backing of Pittie Group</li>
-                  <li>Quick Commerce</li>
-                </ul>
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-8.jpg" alt="" />
-              </div>
-            </div>
-
-            <!-- CONTENT 9 -->
-            <div class="service-content">
-              <div class="services-text">
-                <h3>Gateway to the World</h3>
-                <p>
-                  Pittie Group has a strong global presence, and exports a variety of products to different parts of the
-                  globe in its endeavour to mark its presence. Our expertise will ensure an end to end solution for you
-                  and help increase your reach in the global market through our set channels.
-                </p>
-              </div>
-              <div class="services-image">
-                <img src="Assests/service/service-img-9.jpg " alt="" />
-              </div>
-            </div>
+    <!-- Our Services Section  -->
+    <section class="logistics-services" id="services-content">
+      <div class="container">
+        <div class="row">
+          <div class="services-header">
+            <span class="badge sub-heading mb-3">Our Services</span>
+            <h2 class="reveal-chars">End-to-End Logistics Services</h2>
           </div>
         </div>
-      </div>
-    </div>
+        <div class="row">
+          <div class="services-layout">
+            <!-- LEFT MENU -->
+            <div class="services-nav">
+              <ul>
+                <li class="active" data-index="0">Carry & Forward Partners</li>
+                <li data-index="1">Superstockist</li>
+                <li data-index="2">Built To Suit</li>
+                <li data-index="3">Modern Trade</li>
+                <li data-index="4">General Trade</li>
+                <li data-index="5">E-Commerce</li>
+                <li data-index="6">Transportation</li>
+                <li data-index="7">Quick Commerce</li>
+                <li data-index="8">Exports</li>
+              </ul>
+            </div>
 
-  </section>
+            <!-- RIGHT CONTENT -->
+            <div class="services-card">
+              <!-- CONTENT 1 -->
+              <div class="service-content active">
+                <div class="services-text">
+                  <h3>Carry & Forward Partners</h3>
+                  <p>
+                    Ideally recommended for new brands to partner with us and
+                    utilize our widespread network of warehouses & supplies across
+                    India. We build the business model considering the early life
+                    cycle of the brand, thus letting it focus its margin investments
+                    on sales growth as well as ensuring the achievement of
+                    distribution KPIs. A win-win long-term sustainable model.
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-1.png" alt="Carry & Forward Partners" />
+                </div>
+              </div>
 
-  <!-- Collaboration Section  -->
-  <section class="collaboration-section">
-    <div class="container">
-      <span class="section-pill sub-heading mb-3">Collaboration</span>
+              <!-- CONTENT 2 -->
+              <div class="service-content">
+                <div class="services-text">
+                  <h3>Superstockist</h3>
+                  <p>
+                    Pittie brings in the financial appetite to cater to the growth of its partner brands. A brand's
+                    developing sales momentum calls for strategic financial holdings in inventory to keep the working
+                    capital steady and achieve scale. Our team makes this complex model easy by recommending precise
+                    stock
+                    placement against observed sales & rolling forecasts, operations, fulfilling SLA's in your value
+                    chain, and much more.
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-2.jpg" alt="" />
+                </div>
+              </div>
 
-      <h2 class="section-title reveal-chars">
-        Collaboration with Pittie<br />
-        Logistics
-      </h2>
-    </div>
+              <!-- CONTENT 3 -->
+              <div class="service-content">
+                <div class="services-text">
+                  <h3>Built To Suit</h3>
+                  <p>
+                    The dynamics of the market demand intelligent customized business models that require a skilled task
+                    force to analyze our partners' needs and design tailor-made business models. Our robust capabilities
+                    ensure the seamless execution of bespoke solutions with utmost efficiency. We focus on designing and
+                    discovering standard operating procedures for our clients to implement, closely measure, and
+                    continually improvise to optimize their personalized business needs and costs.
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-3.jpg" alt="" />
+                </div>
+              </div>
 
-    <!-- IMAGE AREA -->
-    <div class="collaboration-image">
-      <div class="collaboration-map">
+              <!-- CONTENT 4 -->
+              <div class="service-content">
+                <div class="services-text">
+                  <h3>Modern Trade Store Presence</h3>
+                  <p>
+                    Pittie Group has long-standing relationships with all the Modern Trade Retail outlets. Affiliation
+                    with Pittie aids the entry of our clients into the toughest Retailers of India.
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-4.jpg" alt="" />
+                </div>
+              </div>
 
-        <!-- Base dull image -->
-        <img src="Assests/service/collaboration-bg.png" class="base-image" alt="Collaboration Flow" />
+              <!-- CONTENT 5 -->
+              <div class="service-content">
+                <div class="services-text">
+                  <h3>General Trade Store Presence</h3>
+                  <p>
+                    Pittie Group’s extensive General Trade reach across the remotest corners of India caters to a
+                    variety
+                    of sectors such as Food & Beverages, Personal Care, Hygiene, Home Care, Kitchen Care, Spiritual,
+                    Wellness and other Consumer Goods.
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-5.jpg" alt="" />
+                </div>
+              </div>
 
-        <!-- Color overlay image -->
-        <img src="Assests/service/01.png" class="overlay-image" id="overlayImage" alt="Highlighted Step" />
-        <img src="Assests/service/02.png" class="overlay-image" id="overlayImage1" alt="Highlighted Step" />
-        <img src="Assests/service/03.png" class="overlay-image" id="overlayImage2" alt="Highlighted Step" />
-        <img src="Assests/service/04.png" class="overlay-image" id="overlayImage3" alt="Highlighted Step" />
-        <img src="Assests/service/05.png" class="overlay-image" id="overlayImage4" alt="Highlighted Step" />
-        <img src="Assests/service/06.png" class="overlay-image" id="overlayImage5" alt="Highlighted Step" />
-        <img src="Assests/service/07.png" class="overlay-image" id="overlayImage6" alt="Highlighted Step" />
-        <img src="Assests/service/08.png" class="overlay-image" id="overlayImage7" alt="Highlighted Step" />
-        <img src="Assests/service/09.png" class="overlay-image" id="overlayImage8" alt="Highlighted Step" />
-        <img src="Assests/service/10.png" class="overlay-image" id="overlayImage9" alt="Highlighted Step" />
-        <img src="Assests/service/11.png" class="overlay-image" id="overlayImage10" alt="Highlighted Step" />
-        <img src="Assests/service/12.png" class="overlay-image" id="overlayImage11" alt="Highlighted Step" />
+              <!-- CONTENT 6 -->
+              <div class="service-content">
+                <div class="services-text">
+                  <h3>Gateway to the World</h3>
+                  <p>
+                    Pittie Group has a strong global presence, and exports a variety of products to different parts of
+                    the
+                    globe in its endeavour to mark its presence. Our expertise will ensure an end to end solution for
+                    you
+                    and help increase your reach in the global market through our set channels.
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-6.jpg" alt="" />
+                </div>
+              </div>
 
-        <!-- Clickable hotspot -->
-        <div class="hotspot" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot1" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot2" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot3" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot4" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot5" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot6" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot7" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot8" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot9" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot10" onclick="toggleOverlay(event)"></div>
-        <div class="hotspot11" onclick="toggleOverlay(event)"></div>
-      </div>
-    </div>
-  </section>
+              <!-- CONTENT 7 -->
+              <div class="service-content">
+                <div class="services-text">
+                  <h3>Transportation</h3>
+                  <p>
+                    <span class="table-wrap">
+                      <span class="table-row table-head">
+                        <span>Service</span>
+                        <span>Advantage</span>
+                      </span>
 
-  <!-- CTA Container section -->
-  <section class="cta-transport">
-    <div class="container cta-wrapper">
-      <div class="row">
-        <div class="cta-text justify-content-center">
-          <h4 class="reveal-chars">Looking for the Best Transport Services?</h4>
-          <p>As a app web crawler expert, We will help to organize.</p>
+                      <span class="table-row">
+                        <span>Route Planning</span>
+                        <span>Transport Management System</span>
+                      </span>
+
+                      <span class="table-row">
+                        <span>Long Haul</span>
+                        <span>Network Optimization</span>
+                      </span>
+
+                      <span class="table-row">
+                        <span>Reverse Logistic</span>
+                        <span>800+ Vehicle Across India</span>
+                      </span>
+
+                      <span class="table-row">
+                        <span>Transport Desk Model</span>
+                        <span>Transport Management System</span>
+                      </span>
+                    </span>
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-7.jpg" alt="" />
+                </div>
+              </div>
+
+              <!-- CONTENT 8 -->
+              <div class="service-content">
+                <div class="services-text">
+                  <h3>Benefits of Quick Commerce</h3>
+                  <p>
+                  <ul>
+                    <li>Let us help you open doors to the Online Marketplace of the Future</li>
+                    <li>Achieve Massive Reach and Scalability</li>
+                    <li>Effortless Onboarding Process with Pittie Group</li>
+                    <li>Speedy Deliveries of your products all over India</li>
+                    <li>Stress-free Fulfilment of Orders with a Reputed and a Trusted Distribution Partner</li>
+                    <li>Entry into emerging quick commerce online stores with the backing of Pittie Group</li>
+                    <li>Quick Commerce</li>
+                  </ul>
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-8.jpg" alt="" />
+                </div>
+              </div>
+
+              <!-- CONTENT 9 -->
+              <div class="service-content">
+                <div class="services-text">
+                  <h3>Gateway to the World</h3>
+                  <p>
+                    Pittie Group has a strong global presence, and exports a variety of products to different parts of
+                    the
+                    globe in its endeavour to mark its presence. Our expertise will ensure an end to end solution for
+                    you
+                    and help increase your reach in the global market through our set channels.
+                  </p>
+                </div>
+                <div class="services-image">
+                  <img src="Assests/service/service-img-9.jpg " alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="cta-action">
-          <button class="btn btn-primary">
-            <a href="#">
-              Get a Quote
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </a>
-          </button>
+    </section>
+
+    <!-- Collaboration Section  -->
+    <section class="collaboration-section">
+      <div class="container">
+        <span class="section-pill sub-heading mb-3">Collaboration</span>
+
+        <h2 class="section-title reveal-chars">
+          Collaboration with Pittie<br />
+          Logistics
+        </h2>
+      </div>
+
+      <!-- IMAGE AREA -->
+      <div class="collaboration-image">
+        <div class="collaboration-map">
+
+          <!-- Base dull image -->
+          <img src="Assests/service/collaboration-bg.png" class="base-image" alt="Collaboration Flow" />
+
+          <!-- Color overlay image -->
+          <img src="Assests/service/01.png" class="overlay-image" id="overlayImage" alt="Highlighted Step" />
+          <img src="Assests/service/02.png" class="overlay-image" id="overlayImage1" alt="Highlighted Step" />
+          <img src="Assests/service/03.png" class="overlay-image" id="overlayImage2" alt="Highlighted Step" />
+          <img src="Assests/service/04.png" class="overlay-image" id="overlayImage3" alt="Highlighted Step" />
+          <img src="Assests/service/05.png" class="overlay-image" id="overlayImage4" alt="Highlighted Step" />
+          <img src="Assests/service/06.png" class="overlay-image" id="overlayImage5" alt="Highlighted Step" />
+          <img src="Assests/service/07.png" class="overlay-image" id="overlayImage6" alt="Highlighted Step" />
+          <img src="Assests/service/08.png" class="overlay-image" id="overlayImage7" alt="Highlighted Step" />
+          <img src="Assests/service/09.png" class="overlay-image" id="overlayImage8" alt="Highlighted Step" />
+          <img src="Assests/service/10.png" class="overlay-image" id="overlayImage9" alt="Highlighted Step" />
+          <img src="Assests/service/11.png" class="overlay-image" id="overlayImage10" alt="Highlighted Step" />
+          <img src="Assests/service/12.png" class="overlay-image" id="overlayImage11" alt="Highlighted Step" />
+
+          <!-- Clickable hotspot -->
+          <div class="hotspot" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot1" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot2" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot3" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot4" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot5" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot6" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot7" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot8" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot9" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot10" onclick="toggleOverlay(event)"></div>
+          <div class="hotspot11" onclick="toggleOverlay(event)"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer  -->
-  <footer class="footer-section">
+    <!-- CTA Container section -->
+    <section class="cta-transport">
+      <div class="container cta-wrapper">
+        <div class="row">
+          <div class="cta-text justify-content-center">
+            <h4 class="reveal-chars">Looking for the Best Transport Services?</h4>
+            <p>As a app web crawler expert, We will help to organize.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="cta-action">
+            <button class="btn btn-primary">
+              <a href="#">
+                Get a Quote
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer-section" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <!-- Company Info -->
@@ -419,7 +435,7 @@
 
         <!-- Quick Links -->
         <div class="footer-col footer-col-quicks">
-          <h6 class="footer-title">Quick Links</h6>
+          <h3 class="footer-title">Quick Links</h3>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="About-Us.html">About Us</a></li>
@@ -431,7 +447,7 @@
 
         <!-- Services -->
         <div class="footer-col footer-col-services">
-          <h6 class="footer-title">Services</h6>
+          <h3 class="footer-title">Services</h3>
           <ul class="footer-links">
             <li><a href="#">Carry & Forward Partners</a></li>
             <li><a href="#">Superstockist</a></li>
@@ -441,7 +457,7 @@
 
         <!-- Contact -->
         <div class="footer-col">
-          <h6 class="footer-title">Contact Us</h6>
+          <h3 class="footer-title">Contact Us</h3>
           <ul class="footer-contact">
             <li>
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 25" fill="none">
@@ -487,7 +503,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
   <!-- Main JS -->
-    <script src="Logic/Universal.js"></script>
+  <script src="Logic/Universal.js"></script>
   <script src="Logic/Services.js"></script>
 </body>
 
