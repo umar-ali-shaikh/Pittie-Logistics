@@ -4,7 +4,6 @@
 <head>
   <!-- Basic Meta -->
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO -->
@@ -13,34 +12,63 @@
     content="Pittie Logistics provides reliable transportation, warehousing and end-to-end supply chain solutions with fast delivery and trusted service." />
   <meta name="theme-color" content="#0d6efd" />
 
-  <!-- Google Fonts Optimization -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
-
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/webfonts/fa-solid-900.woff2"
-    as="font" type="font/woff2" crossorigin />
+  <!-- ================= PRECONNECT ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
 
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <!-- ================= GOOGLE FONT (NON-BLOCKING) ================= -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    onload="this.onload=null;this.rel='stylesheet'">
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  </noscript>
 
-  <!-- Main Styles -->
-  <link rel="stylesheet" href="Design/Universal.css" />
-  <link rel="stylesheet" href="Design/style.css" />
+  <!-- ================= NON-BLOCKING CSS ================= -->
 
-  <!-- Nordan AI Widget (Deferred) -->
+  <!-- Bootstrap -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Swiper -->
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Font Awesome -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- ================= CRITICAL CSS ================= -->
+  <link rel="stylesheet" href="Design/Universal.css">
+
+  <!-- Main CSS -->
+  <link rel="preload" as="style" href="Design/style.css" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- ================= NOSCRIPT FALLBACK ================= -->
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="Design/style.css">
+  </noscript>
+
+  <!-- ================= THIRD PARTY SCRIPT ================= -->
   <script src="https://backend.nordanai.com/public/widget.js" defer nordankey="Z4hQ5Ib5teZZH"></script>
+  <script>
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied'
+    });
+  </script>
 
 </head>
+
+
 
 
 <body>
@@ -125,12 +153,13 @@
         </div>
 
         <!-- Slider Arrows -->
-        <button class="icon-arrow hero-arrow left">
-          <i class="fa-solid fa-angle-left"></i>
+        <button class="icon-arrow hero-arrow left" aria-label="Previous Slide">
+          <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
         </button>
-        <button class="icon-arrow hero-arrow right">
-          <i class="fa-solid fa-angle-right"></i>
+        <button class="icon-arrow hero-arrow right" aria-label="Next Slide">
+          <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
         </button>
+
 
         <!-- Dots -->
         <div class="hero-dots">
@@ -170,7 +199,7 @@
                 <span>
                   <img src="Assests/home/what-we-Right-icon.svg" alt="" />
                 </span>
-                <h6>Modern Trade</h6>
+                <h3>Modern Trade</h3>
                 <p>Smart logistics for modern retail</p>
               </div>
 
@@ -178,7 +207,7 @@
                 <span>
                   <img src="Assests/home/what-we-Right-icon.svg" alt="" />
                 </span>
-                <h6>General Trade</h6>
+                <h3>General Trade</h3>
                 <p>Trusted general trade logistics services</p>
               </div>
 
@@ -186,7 +215,7 @@
                 <span>
                   <img src="Assests/home/what-we-Right-icon.svg" alt="" />
                 </span>
-                <h6>E-Commerce</h6>
+                <h3>E-Commerce</h3>
                 <p>End To End e-commerce logistics solutions</p>
               </div>
 
@@ -194,7 +223,7 @@
                 <span>
                   <img src="Assests/home/what-we-Right-icon.svg" alt="" />
                 </span>
-                <h6>Transportation</h6>
+                <h3>Transportation</h3>
                 <p>Safe, timely, cost-effective transportation</p>
               </div>
 
@@ -202,7 +231,7 @@
                 <span>
                   <img src="Assests/home/what-we-Right-icon.svg" alt="" />
                 </span>
-                <h6>Quick Commerce</h6>
+                <h3>Quick Commerce</h3>
                 <p>Rapid fulfillment for quick commerce</p>
               </div>
 
@@ -210,7 +239,7 @@
                 <span>
                   <img src="Assests/home/what-we-Right-icon.svg" alt="" />
                 </span>
-                <h6>Exports</h6>
+                <h3>Exports</h3>
                 <p>Reliable cross-border logistics solutions</p>
               </div>
             </div>
@@ -220,7 +249,7 @@
                 <a href="Contact.html">
                   Get Qoute
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757h3.92757M16.8242 6.92757V16.8242"
                       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
@@ -229,7 +258,7 @@
                 <a href="About-Us.html#best-at-sections">
                   Read More
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757h3.92757M16.8242 6.92757V16.8242"
                       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </a>
@@ -345,7 +374,7 @@
                   <a href="services.html?service=0#services-content">
                     Read More
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757h3.92757M16.8242 6.92757V16.8242"
                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </a>
@@ -368,7 +397,7 @@
                   <a href="services.html?service=1#services-content">
                     Read More
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757h3.92757M16.8242 6.92757V16.8242"
                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </a>
@@ -397,7 +426,7 @@
                   <a href="services.html?service=2#services-content">
                     Read More
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757h3.92757M16.8242 6.92757V16.8242"
                         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                   </a>
@@ -495,17 +524,25 @@
                     <span><i class="fa-solid fa-star"></i></span>
                   </div>
                   <p>
-                    Pittie Logistics has been instrumental in optimizing our
-                    nationwide distribution network. Their warehousing
-                    efficiency and transparent communication have helped us
-                    reduce delivery time by 30%. We consider them not just a
-                    service provider, but a true logistics partner.
+                    We are pleased to provide this testimonial in recognition of our operational partnership with
+                    Probody Balance PVT LTD
+
+                    Since the beginning of our collaboration, Probody Balance PVT LTD has consistently demonstrated a
+                    high level of professionalism, reliability, and operational excellence. Their team has shown strong
+                    expertise in managing day-to-day operations and adapting efficiently to changing requirements.
+
+                    What we value most is their proactive communication and problem-solving approach. Challenges are
+                    addressed promptly and thoughtfully, ensuring smooth operations and minimal disruption.
+
+                    Based on our experience, we confidently recommend Probody Balance PVT LTD as an operational partner
+                    to any organization seeking efficiency, accountability, and strong collaborative support.
                   </p>
                   <div class="testimonials-section-profile">
                     <img src="Assests/home/testimonials-man1.svg" alt="" />
                     <div>
-                      <h6>Prathamesh Dalvi</h6>
-                      <span>Supply Chain Manager</span>
+                      <h3>Manish Bhatia</h3>
+                      <span>Associate General Manager<br />
+                        PATANJALI FOOD LIMITED</span>
                     </div>
                   </div>
                 </div>
@@ -519,17 +556,18 @@
                     <span><i class="fa-solid fa-star"></i></span>
                   </div>
                   <p>
-                    Pittie Logistics has been instrumental in optimizing our
-                    nationwide distribution network. Their warehousing
-                    efficiency and transparent communication have helped us
-                    reduce delivery time by 30%. We consider them not just a
-                    service provider, but a true logistics partner.
+                    Pittie Group has been a reliable warehousing and logistics partner for Coolberg, supporting our
+                    growing distribution needs with efficiency and scale. Their structured processes, strong warehousing
+                    infrastructure, and technology-led systems have helped ensure inventory accuracy and timely
+                    dispatches. The team has been responsive and solution-oriented, especially during periods of
+                    expansion. Their pan-India network has enabled smoother market reach for the brand. Overall, Pittie
+                    Group has played a key role in strengthening our supply chain operations.
                   </p>
                   <div class="testimonials-section-profile">
                     <img src="Assests/home/testimonials-man2.svg" alt="" />
                     <div>
-                      <h6>Prathamesh Dalvi</h6>
-                      <span>Supply Chain Manager</span>
+                      <h3>Yashika Keswani</h3>
+                      <span>Founder <br /> Coolberg Beverages Pvt. Ltd</span>
                     </div>
                   </div>
                 </div>
@@ -555,7 +593,7 @@
                   <div class="testimonials-section-profile">
                     <img src="Assests/home/testimonials-man1.svg" alt="" />
                     <div>
-                      <h6>Prathamesh Dalvi</h6>
+                      <h3>Prathamesh Dalvi</h3>
                       <span>Supply Chain Manager</span>
                     </div>
                   </div>
@@ -579,7 +617,7 @@
                   <div class="testimonials-section-profile">
                     <img src="Assests/home/testimonials-man2.svg" alt="" />
                     <div>
-                      <h6>Prathamesh Dalvi</h6>
+                      <h3>Prathamesh Dalvi</h3>
                       <span>Supply Chain Manager</span>
                     </div>
                   </div>
@@ -606,7 +644,7 @@
                   <div class="testimonials-section-profile">
                     <img src="Assests/home/testimonials-man1.svg" alt="" />
                     <div>
-                      <h6>Prathamesh Dalvi</h6>
+                      <h3>Prathamesh Dalvi</h3>
                       <span>Supply Chain Manager</span>
                     </div>
                   </div>
@@ -630,7 +668,7 @@
                   <div class="testimonials-section-profile">
                     <img src="Assests/home/testimonials-man2.svg" alt="" />
                     <div>
-                      <h6>Prathamesh Dalvi</h6>
+                      <h3>Prathamesh Dalvi</h3>
                       <span>Supply Chain Manager</span>
                     </div>
                   </div>
@@ -717,7 +755,7 @@
                     <span>Submit</span>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                       <path d="M6.92757 16.8242L16.8242 6.92757
-       M16.8242 6.92757H6.92757
+       M16.8242 6.92757h3.92757
        M16.8242 6.92757V16.8242" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                         stroke-linejoin="round"></path>
                     </svg>
@@ -757,10 +795,9 @@
                       <i class="fa-regular fa-calendar"></i>
                       <span>31st Jan 2026</span>
                     </div>
-                    <h6>
-                      Logistics Companies in Noida: Best Options for Efficient
-                      Delivery
-                    </h6>
+                    <h3>
+                      Transport Companies in Chennai Offering Reliable Logistics
+                    </h3>
                     <p>
                       India’s logistics market is expanding rapidly, driven by
                       rising demand across transportation, warehousing, and
@@ -781,10 +818,10 @@
                       <i class="fa-regular fa-calendar"></i>
                       <span>31st Jan 2026</span>
                     </div>
-                    <h6>
+                    <h3>
                       Logistics Companies in Trivandrum: Top Providers and
                       Services
-                    </h6>
+                    </h3>
                     <p>
                       Logistics companies in Trivandrum play a critical role
                       in supporting domestic trade, international shipping,
@@ -805,9 +842,81 @@
                       <i class="fa-regular fa-calendar"></i>
                       <span>31st Jan 2026</span>
                     </div>
-                    <h6>
+                    <h3>
                       Transport Companies in Hyderabad for Business Deliveries
-                    </h6>
+                    </h3>
+                    <p>
+                      Businesses depend on reliable transport partners to move
+                      goods on time and without damage. The right logistics
+                      company can simplify daily operations and reduce delays.
+                    </p>
+                    <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                  </div>
+                </div>
+              </div>
+              <div class="blogs-section-column swiper-slide d-flex">
+                <div class="blog-card">
+                  <div class="blog-card-img">
+                    <img src="Assests/home/blog-1.jpg" alt="Blog Image" />
+                  </div>
+                  <div class="blog-card-content">
+                    <div class="blog-date">
+                      <i class="fa-regular fa-calendar"></i>
+                      <span>31st Jan 2026</span>
+                    </div>
+                    <h3>
+                      Logistics Companies in Noida: Best Options for Efficient
+                      Delivery
+                    </h3>
+                    <p>
+                      India’s logistics market is expanding rapidly, driven by
+                      rising demand across transportation, warehousing, and
+                      distribution.
+                    </p>
+                    <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                  </div>
+                </div>
+
+                <div class="blog-card">
+                  <div class="blog-card-img">
+                    <img src="Assests/home/blog-2.jpg" alt="Blog Image" />
+                  </div>
+                  <div class="blog-card-content">
+                    <div class="blog-date">
+                      <i class="fa-regular fa-calendar"></i>
+                      <span>31st Jan 2026</span>
+                    </div>
+                    <h3>
+                      Logistics Companies in Trivandrum: Top Providers and
+                      Services
+                    </h3>
+                    <p>
+                      Logistics companies in Trivandrum play a critical role
+                      in supporting domestic trade, international shipping,
+                      and regional supply chains.
+                    </p>
+                    <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                  </div>
+                </div>
+
+                <div class="blog-card">
+                  <div class="blog-card-img">
+                    <img src="Assests/home/blog-3.jpg" alt="Blog Image" />
+                  </div>
+                  <div class="blog-card-content">
+                    <div class="blog-date">
+                      <i class="fa-regular fa-calendar"></i>
+                      <span>31st Jan 2026</span>
+                    </div>
+                    <h3>
+                      Transport Companies in Hyderabad for Business Deliveries
+                    </h3>
                     <p>
                       Businesses depend on reliable transport partners to move
                       goods on time and without damage. The right logistics
@@ -860,7 +969,7 @@
               <a href="Contact.html">
                 Get a Quote
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                  <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757h3.92757M16.8242 6.92757V16.8242"
                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </a>
@@ -989,23 +1098,19 @@
       </div>
     </div>
   </footer>
-
   <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 
   <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
-  <!-- GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- GSAP Core -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
 
-  <!-- Lenis (Smooth Scroll) -->
-  <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+  <!-- Your JS Files (LAST) -->
+  <script src="Logic/Universal.js" defer></script>
+  <script src="Logic/script.js" defer></script>
 
-  <!-- Your JS -->
-  <script src="Logic/Universal.js"></script>
-  <script src="Logic/script.js"></script>
 </body>
 
 </html>

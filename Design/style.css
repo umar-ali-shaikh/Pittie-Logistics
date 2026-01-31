@@ -50,20 +50,48 @@ body {
 
 }
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.container {
+    min-height: 1px;
 }
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.testimonials-section-box {
+    min-height: 300px;
+}
+
+.blog-card {
+    min-height: 600px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 /* ==============================
    Hero Section
    ============================== */
+.swiper {
+    min-height: 400px;
+}
+
+.hero .swiper {
+    min-height: 650px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 650px;
     max-height: 650px;
+    height: 100vh;
     max-width: 1330px;
     border-radius: var(--radius16);
     overflow: hidden;
@@ -76,6 +104,7 @@ img {
     inset: 0;
     width: 100%;
     height: 100%;
+    min-height: 650px;
     left: 0;
     top: 0;
     z-index: -1;
@@ -293,9 +322,10 @@ img {
     max-width: 520px;
 }
 
-.what-item h6 {
-
+.what-item h3 {
     width: calc(100% - 40px);
+    font-size: clamp(18px, 3vw, 24px);
+    line-height: clamp(26px, 3.4vw, 38px);
 }
 
 .what-item {
@@ -650,6 +680,7 @@ img {
     background: var(--bg-sections);
     backdrop-filter: blur(8px);
     padding: 30px;
+    width: calc(100% / 2 - 12px);
     border-radius: var(--radius16);
     transition: all 0.35s ease;
 }
@@ -683,6 +714,7 @@ img {
     gap: 14px;
 }
 
+
 .testimonials-section-profile img {
     width: 48px;
     height: 48px;
@@ -691,7 +723,7 @@ img {
     background: rgba(255, 255, 255, 0.25);
 }
 
-.testimonials-section-profile h6 {
+.testimonials-section-profile h3 {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 2px;
@@ -1326,6 +1358,14 @@ img {
         overflow: hidden;
     }
 
+
+    /* Testimonials Section */
+    .testimonials-swiper .swiper-slide {
+        width: 90%;
+    }
+
+
+
     /* ---------- WHAT WE DO ---------- */
     .what-we-do-section-btn {
         flex-direction: column;
@@ -1474,7 +1514,6 @@ img {
     .about-grid .row {
         display: flex !important;
         flex-wrap: nowrap !important;
-        /* clip-path: inset(-100px 0 -100px 0); */
         gap: 16px;
     }
 
@@ -1482,28 +1521,18 @@ img {
         display: none;
     }
 
-    /* --------------------------------
-     FIRST BLOCK (Heading + para)
-     Full width + break line
-  -------------------------------- */
     .why-choose-section-item1 {
         flex: 0 0 90%;
         max-width: 100%;
         scroll-snap-align: start;
     }
 
-    /* --------------------------------
-     SLIDER CARDS
-  -------------------------------- */
     .why-choose-section-item:not(.why-choose-section-item1) {
         flex: 0 0 90%;
         max-width: 90%;
         scroll-snap-align: start;
     }
 
-    /* --------------------------------
-     Typography fix
-  -------------------------------- */
     .why-choose-section-item h2 {
         font-size: 26px;
     }
@@ -1582,7 +1611,6 @@ img {
     .blogs-section-wrapper {
         flex-direction: column;
         gap: 24px;
-        /* overflow: hidden !important; */
     }
 
     .blogs-section-column {
@@ -1595,8 +1623,12 @@ img {
         padding: 24px;
     }
 
+    .blogs-section-wrapper .swiper-slide {
+        width: 90% !important;
+    }
+
     .blog-card-slide {
-        width: 80% !important;
+        width: 100% !important;
     }
 
     .blogs-icon,

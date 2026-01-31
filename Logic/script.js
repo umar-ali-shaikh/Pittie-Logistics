@@ -104,15 +104,16 @@ function initCounter() {
   const counters = document.querySelectorAll(".milestone-stat-item h3");
   const section = document.querySelector(".milestone-section");
 
-  if (!section || !counters.length) return;
+  if (!section || counters.length === 0) return;
 
   let started = false;
 
-  function animateCounters(counter) {
+  function animateCounter(counter) {
 
-    const target = +counter.dataset.target;
+    const target = Number(counter.dataset.target);
+    const suffix = counter.querySelector("span")?.innerText || "";
+
     const speed = target > 1000 ? 200 : 100;
-
     let current = 0;
 
     function update() {
@@ -121,11 +122,23 @@ function initCounter() {
       current += increment;
 
       if (current >= target) {
-        counter.childNodes[0].nodeValue = target / 1000;
+
+        // FINAL VALUE SET
+        if (suffix === "K") {
+          counter.childNodes[0].nodeValue = Math.floor(target / 1000);
+        } else {
+          counter.childNodes[0].nodeValue = target;
+        }
+
         return;
       }
 
-      counter.childNodes[0].nodeValue = Math.floor(current / 1000);
+      // RUNNING VALUE SET
+      if (suffix === "K") {
+        counter.childNodes[0].nodeValue = Math.floor(current / 1000);
+      } else {
+        counter.childNodes[0].nodeValue = current;
+      }
 
       requestAnimationFrame(update);
     }
@@ -133,12 +146,16 @@ function initCounter() {
     update();
   }
 
-
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver((entries) => {
 
     if (entries[0].isIntersecting && !started) {
+
       started = true;
-      animateCounters();
+
+      counters.forEach(counter => {
+        animateCounter(counter);
+      });
+
     }
 
   }, { threshold: 0.4 });
@@ -250,8 +267,13 @@ function initBlogs() {
     wrapper.innerHTML = "";
 
     const width = window.innerWidth;
-    const cards = [...document.createRange().createContextualFragment(desktopHTML).querySelectorAll(".blog-card")];
 
+    const cards = [...document
+      .createRange()
+      .createContextualFragment(desktopHTML)
+      .querySelectorAll(".blog-card")];
+
+    // ================= MOBILE =================
     if (width <= 576) {
 
       cards.forEach(card => {
@@ -261,7 +283,10 @@ function initBlogs() {
         wrapper.appendChild(slide);
       });
 
-    } else if (width <= 992) {
+    }
+
+    // ================= TABLET =================
+    else if (width <= 992) {
 
       for (let i = 0; i < cards.length; i += 2) {
 
@@ -274,17 +299,26 @@ function initBlogs() {
         wrapper.appendChild(slide);
       }
 
-    } else {
+    }
+
+    // ================= DESKTOP =================
+    else {
 
       wrapper.innerHTML = desktopHTML;
 
     }
 
     swiper = new Swiper(".blogs-section-wrapper", {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      speed: 800,
+      slidesPerView: "auto", // REQUIRED
+      spaceBetween: 16,
+      speed: 700,
       loop: true,
+
+      loopedSlides: cards.length,
+      loopAdditionalSlides: 3,
+
+      observer: true,
+      observeParents: true,
 
       navigation: {
         nextEl: ".blogs-icon .right",
@@ -292,13 +326,18 @@ function initBlogs() {
       },
 
       on: {
-        slideChange: s => updateDots(s.realIndex)
+        slideChange(swiper) {
+          updateDots(swiper.realIndex);
+        }
       }
     });
+
 
   }
 
   function updateDots(index) {
+
+    if (!dots.length) return;
 
     const active = index % dots.length;
 
@@ -312,7 +351,7 @@ function initBlogs() {
   });
 
   setup();
-  window.addEventListener("resize", debounce(setup, 200));
+  window.addEventListener("resize", debounce(setup, 250));
 
 }
 
