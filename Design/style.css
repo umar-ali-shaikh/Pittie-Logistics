@@ -991,6 +991,17 @@ body {
     color: var(--para-text);
 }
 
+.blog-card {
+    height: fit-content !important;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.blog-card-img {
+    display: none;
+}
+
 .blog-card-img img {
     width: 100%;
     height: 100%;
