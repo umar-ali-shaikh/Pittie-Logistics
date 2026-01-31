@@ -1415,12 +1415,20 @@ body {
     }
 
     .hero .overlay-bg .image2 {
-        background: url("../Assests/home/Bg-image-herosection5.jpg") no-repeat center / cover !important;
+        background: url("../Assests/home/Bg-image-herosection1.jpg") no-repeat right / cover !important;
     }
 
     .hero .overlay-bg .image3 {
-        background: url("../Assests/home/Bg-image-herosection6.jpg") no-repeat center / cover !important;
+        background:
+            linear-gradient(110deg,
+                rgba(10, 60, 140, 0.9) 0%,
+                rgba(10, 60, 140, 0.85) 35%,
+                rgba(10, 60, 140, 0.6) 55%,
+                rgba(10, 60, 140, 0.3) 70%,
+                rgba(10, 60, 140, 0) 100%),
+            url("../Assests/home/Bg-image-herosection2.jpg") no-repeat center / cover !important;
     }
+
 
     .hero .hero-arrow {
         display: none;
