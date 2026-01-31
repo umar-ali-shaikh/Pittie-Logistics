@@ -26,10 +26,15 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="navbar navbar-expand-lg">
+
+  <!-- Skip Navigation Link (REQUIRED) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+
+  <header class="header" role="banner">
+    <nav class="navbar navbar-expand-lg" role="navigation">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="Assests/home/PittieLogistics.png" alt="Pittie Logistics Logo" />
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -50,169 +55,173 @@
     </nav>
   </header>
 
-  <!-- Hero Section  -->
-  <section class="page-banner hero-section justify-content-center align-items-center d-flex">
-    <div class="page-banner-content container">
-      <nav class="breadcrumb d-flex align-items-center gap-1">
-        <a href="#">Home</a>
-        <span><img src="Assests/about-us/lessor-sign.svg" alt="Icon" loading="eager" /></span>
-        <span>Contact Us</span>
-      </nav>
-      <h1>
-        Trusted by leading brands and long-term partners across industries.
-      </h1>
-    </div>
-  </section>
+  <!-- MAIN CONTENT LANDMARK -->
+  <main id="main-content" role="main">
+    <!-- Hero Section  -->
+    <section class="page-banner hero-section justify-content-center align-items-center d-flex">
+      <div class="page-banner-content container">
+        <nav class="breadcrumb d-flex align-items-center gap-1">
+          <a href="#">Home</a>
+          <span><img src="Assests/about-us/lessor-sign.svg" alt="Icon" loading="eager" /></span>
+          <span>Contact Us</span>
+        </nav>
+        <h1>
+          Trusted by leading brands and long-term partners across industries.
+        </h1>
+      </div>
+    </section>
 
-  <section class="contact-section">
-    <div class="container">
-      <h2 class="reveal-chars">Get in Touch</h2>
-      <div class="row">
-        <!-- LEFT IMAGE -->
-        <div class="contact-image col-lg-4">
-          <img src="Assests/Contact_us/-900X600.webp" alt="Office" />
-        </div>
+    <section class="contact-section">
+      <div class="container">
+        <h2 class="reveal-chars">Get in Touch</h2>
+        <div class="row">
+          <!-- LEFT IMAGE -->
+          <div class="contact-image col-lg-4">
+            <img src="Assests/Contact_us/-900X600.webp" alt="Office" />
+          </div>
 
-        <!-- RIGHT FORM -->
-        <div class="contact-form col-lg-8">
-          <form id="contactForm" action="submit.php" method="POST">
-            <input type="hidden" name="form_type" value="contact" />
+          <!-- RIGHT FORM -->
+          <div class="contact-form col-lg-8">
+            <form id="contactForm" action="submit.php" method="POST">
+              <input type="hidden" name="form_type" value="contact" />
 
-            <div class="form-row">
-              <!-- First Name -->
-              <div class="form-group">
-                <label>First Name</label>
-                <input type="text" name="full_name" placeholder="Enter first name" required />
+              <div class="form-row">
+                <!-- First Name -->
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" name="full_name" placeholder="Enter first name" required />
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                  <label>Phone Number</label>
+                  <input type="text" name="phone" placeholder="+91 XXXXX XXXXX" required />
+                </div>
               </div>
 
-              <!-- Phone -->
-              <div class="form-group">
-                <label>Phone Number</label>
-                <input type="text" name="phone" placeholder="+91 XXXXX XXXXX" required />
+              <div class="form-row">
+                <!-- Email -->
+                <div class="form-group">
+                  <label>Email</label>
+                  <input type="email" name="email" placeholder="example@email.com" required />
+                </div>
+
+                <!-- Company -->
+                <div class="form-group">
+                  <label>Company</label>
+                  <input type="text" name="company" placeholder="Company name" />
+                </div>
               </div>
-            </div>
 
-            <div class="form-row">
-              <!-- Email -->
-              <div class="form-group">
-                <label>Email</label>
-                <input type="email" name="email" placeholder="example@email.com" required />
+              <!-- Message -->
+              <div class="form-group full">
+                <label>Message</label>
+                <textarea name="message" placeholder="Write your message" required></textarea>
               </div>
 
-              <!-- Company -->
-              <div class="form-group">
-                <label>Company</label>
-                <input type="text" name="company" placeholder="Company name" />
-              </div>
-            </div>
-
-            <!-- Message -->
-            <div class="form-group full">
-              <label>Message</label>
-              <textarea name="message" placeholder="Write your message" required></textarea>
-            </div>
-
-            <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary">
-              Submit
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <path d="M6.92757 16.8242L16.8242 6.92757
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary">
+                Submit
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M6.92757 16.8242L16.8242 6.92757
          M16.8242 6.92757H6.92757
          M16.8242 6.92757V16.8242" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                  stroke-linejoin="round">
-                </path>
-              </svg>
-            </button>
+                    stroke-linejoin="round">
+                  </path>
+                </svg>
+              </button>
 
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-info-section py-5">
-    <div class="container">
-      <div class="row g-4">
-        <!-- Call Us -->
-        <div class="col-lg-4 col-md-6">
-          <div class="contact-card text-center">
-            <div class="icon-box">
-              <i class="bi bi-telephone"></i>
-            </div>
-
-            <h3 class="reveal-chars">Call Us</h3>
-
-            <p class="label">Customer Support:</p>
-            <p class="highlight">+91 22 4260 4260</p>
-
-            <p class="muted">
-              Assistance hours:<br />
-              Monday – Saturday<br />
-              10 am to 7 pm IST
-            </p>
-          </div>
-        </div>
-
-        <!-- Email -->
-        <div class="col-lg-4 col-md-6">
-          <div class="contact-card text-center">
-            <div class="icon-box">
-              <i class="bi bi-envelope"></i>
-            </div>
-
-            <h3 class="reveal-chars">Email Address</h3>
-
-            <p class="label">General Inquiries:</p>
-            <a href="mailto:contact@pittiegroup.com">contact@pittiegroup.com</a>
-
-            <p class="label mt-3">Customer Support:</p>
-            <a href="mailto:support@pittiegroup.com">support@pittiegroup.com</a>
-
-            <p class="label mt-3">Careers:</p>
-            <a href="mailto:hr@pittiegroup.com">hr@pittiegroup.com</a>
-          </div>
-        </div>
-
-        <!-- Visit Us -->
-        <div class="col-lg-4 col-md-12">
-          <div class="contact-card text-center">
-            <div class="icon-box">
-              <i class="bi bi-geo-alt"></i>
-            </div>
-
-            <h3 class="reveal-chars">Visit Us</h3>
-
-            <p class="label">Head Office</p>
-            <p class="muted">
-              Vaibhav Chambers, Bandra Kurla Complex, Bandra – East,<br />
-              Mumbai – 400051.
-            </p>
-
-            <p class="label mt-3">Corporate Office</p>
-            <p class="muted">
-              Raheja District I, B3 & B4, RICC, Plot Gen-2/1/B, D Block,<br />
-              T.T.C. Industrial Area, Juinagar, Navi Mumbai,<br />
-              Maharashtra 400706.
-            </p>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contact-map">
-    <div class="container">
-      <div class="row">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2490715312956!2d73.02454767418358!3d19.052783652702995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3224c69f42b%3A0xa35cbeb05c435333!2sPittie%20Group!5e0!3m2!1sen!2sin!4v1750157827451!5m2!1sen!2sin"
-          width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade" title="Company Location"></iframe>
+    <section class="contact-info-section py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Call Us -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-card text-center">
+              <div class="icon-box">
+                <i class="bi bi-telephone"></i>
+              </div>
+
+              <h3 class="reveal-chars">Call Us</h3>
+
+              <p class="label">Customer Support:</p>
+              <p class="highlight">+91 22 4260 4260</p>
+
+              <p class="muted">
+                Assistance hours:<br />
+                Monday – Saturday<br />
+                10 am to 7 pm IST
+              </p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="col-lg-4 col-md-6">
+            <div class="contact-card text-center">
+              <div class="icon-box">
+                <i class="bi bi-envelope"></i>
+              </div>
+
+              <h3 class="reveal-chars">Email Address</h3>
+
+              <p class="label">General Inquiries:</p>
+              <a href="mailto:contact@pittiegroup.com">contact@pittiegroup.com</a>
+
+              <p class="label mt-3">Customer Support:</p>
+              <a href="mailto:support@pittiegroup.com">support@pittiegroup.com</a>
+
+              <p class="label mt-3">Careers:</p>
+              <a href="mailto:hr@pittiegroup.com">hr@pittiegroup.com</a>
+            </div>
+          </div>
+
+          <!-- Visit Us -->
+          <div class="col-lg-4 col-md-12">
+            <div class="contact-card text-center">
+              <div class="icon-box">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+
+              <h3 class="reveal-chars">Visit Us</h3>
+
+              <p class="label">Head Office</p>
+              <p class="muted">
+                Vaibhav Chambers, Bandra Kurla Complex, Bandra – East,<br />
+                Mumbai – 400051.
+              </p>
+
+              <p class="label mt-3">Corporate Office</p>
+              <p class="muted">
+                Raheja District I, B3 & B4, RICC, Plot Gen-2/1/B, D Block,<br />
+                T.T.C. Industrial Area, Juinagar, Navi Mumbai,<br />
+                Maharashtra 400706.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="contact-map">
+      <div class="container">
+        <div class="row">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.2490715312956!2d73.02454767418358!3d19.052783652702995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c3224c69f42b%3A0xa35cbeb05c435333!2sPittie%20Group!5e0!3m2!1sen!2sin!4v1750157827451!5m2!1sen!2sin"
+            width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Company Location"></iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-  <footer class="footer-section">
+  <footer class="footer-section" role="contentinfo">
     <div class="container">
       <div class="footer-grid">
         <!-- Company Info -->

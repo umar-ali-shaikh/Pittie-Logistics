@@ -17,6 +17,22 @@
     --bg-red-dark: #9D1015;
 }
 
+.skip-link {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 6px;
+    z-index: 9999;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
 
 /* Hero Section */
 
