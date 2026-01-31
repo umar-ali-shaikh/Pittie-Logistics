@@ -25,7 +25,7 @@
     /* min-height: 311px;   */
     border-radius: 16px;
     overflow: hidden;
-    background-image: url("../Assests/Contact_us/header-bg-img.png");
+    background-image: url("../Assests/Contact_us/header-bg-img.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -127,9 +127,8 @@
 }
 
 .form-group label {
-    font-size: 13px;
-    /* color: var(--para-text); */
-    color: #4b5563;
+    font-size: 18px;
+    color: var(--para-text);
     margin-bottom: var(--pm8);
 }
 
@@ -139,7 +138,7 @@
     border: none;
     border-bottom: 2px solid #d6dbe6;
     padding: var(--pm12) var(--pm4);
-    font-size: 14px;
+    font-size: 16px;
     font-family: var(--font-primary);
     background: transparent;
     outline: none;
