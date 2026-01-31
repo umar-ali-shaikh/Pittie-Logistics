@@ -228,9 +228,11 @@
 
 .contact-card .label {
     color: var(--para-text);
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: var(--pm4);
+    line-height: 1.4;
 }
+
 
 .contact-card .highlight {
     color: var(--text-primary);
@@ -239,7 +241,7 @@
 }
 
 .contact-card .muted {
-    color: var(--para-text);
+    color: #4b5563;
     line-height: 1.6;
     margin-bottom: 0;
 }
