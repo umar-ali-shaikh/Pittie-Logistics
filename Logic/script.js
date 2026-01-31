@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initTestimonials();
   initBlogs();
   initServicesTabs();
-  initWhyChoose();
 });
 
 
@@ -175,6 +174,11 @@ function initTestimonials() {
   const wrapper = swiperEl.querySelector(".swiper-wrapper");
   const dots = document.querySelectorAll(".testimonials-section .hero-dots span");
 
+  // Overlay Elements
+  const overlays = document.querySelectorAll(
+    ".testimonials-section-overlay > div"
+  );
+
   let swiper = null;
   let desktopHTML = wrapper.innerHTML;
 
@@ -191,8 +195,7 @@ function initTestimonials() {
 
     if (isMobile) {
 
-      const cards = desktopHTML;
-      wrapper.innerHTML = cards;
+      wrapper.innerHTML = desktopHTML;
 
       const items = wrapper.querySelectorAll(".testimonials-section-item");
 
@@ -213,15 +216,31 @@ function initTestimonials() {
       speed: isMobile ? 600 : 1200,
       loop: true,
 
-      navigation: {
+      // ✅ MOBILE ONLY TOUCH SLIDE
+      allowTouchMove: isMobile,
+      simulateTouch: isMobile,
+
+      // Prevent click blocking
+      touchStartPreventDefault: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+
+      // Desktop arrows only
+      navigation: isMobile ? false : {
         nextEl: ".testimonials-icon .right",
         prevEl: ".testimonials-icon .left"
       },
 
       on: {
-        slideChange: s => updateDots(s.realIndex)
+        slideChange: s => {
+          updateDots(s.realIndex);
+          updateOverlay(s.realIndex);
+        }
       }
     });
+
+    // Initial overlay state
+    updateOverlay(0);
 
   }
 
@@ -234,6 +253,15 @@ function initTestimonials() {
 
   }
 
+  function updateOverlay(index) {
+
+    const active = index % overlays.length;
+
+    overlays.forEach(o => o.classList.remove("active"));
+    overlays[active]?.classList.add("active");
+
+  }
+
   dots.forEach((dot, i) => {
     dot.addEventListener("click", () => swiper.slideToLoop(i));
   });
@@ -242,6 +270,27 @@ function initTestimonials() {
   window.addEventListener("resize", debounce(setup, 200));
 
 }
+
+// INIT
+initTestimonials();
+
+
+
+document.addEventListener("click", function (e) {
+
+  const text = e.target.closest(".ellipsis-text");
+
+  if (!text) return;
+
+  e.preventDefault();
+  e.stopPropagation();
+
+  text.classList.toggle("expanded");
+
+});
+
+
+
 
 
 // ================= BLOGS =================
@@ -387,21 +436,38 @@ function initServicesTabs() {
 
 
 // ================= WHY CHOOSE SLIDER =================
-
-function initWhyChoose() {
+function initWhyChooseMobileSlider() {
 
   const row = document.querySelector(".about-grid .row");
-  if (!row) return;
+  const dotsWrap = document.querySelector(".why-choose-dots");
+  const prevBtn = document.querySelector(".why-choose-controls .prev");
+  const nextBtn = document.querySelector(".why-choose-controls .next");
+
+  if (!row || !dotsWrap) return;
 
   const cards = row.querySelectorAll(".why-choose-section-item");
-  const dotsWrap = document.querySelector(".why-choose-dots");
 
   let index = 0;
   const GAP = 16;
+  let cardWidth = 0;
 
-  let cardWidth = cards[0].offsetWidth + GAP;
+  function isMobile() {
+    return window.innerWidth <= 576;
+  }
 
-  function update() {
+  function calcWidth() {
+    cardWidth = cards[0].offsetWidth + GAP;
+  }
+
+  function updateSlider() {
+
+    if (!isMobile()) {
+      row.style.transform = "translateX(0)";
+      dotsWrap.style.display = "none";
+      return;
+    }
+
+    dotsWrap.style.display = "flex";
 
     row.style.transform = `translateX(${-index * cardWidth}px)`;
 
@@ -410,27 +476,82 @@ function initWhyChoose() {
 
   }
 
-  dotsWrap.innerHTML = "";
+  function createDots() {
 
-  cards.forEach((_, i) => {
+    dotsWrap.innerHTML = "";
 
-    const dot = document.createElement("span");
-    if (i === 0) dot.classList.add("active");
+    cards.forEach((_, i) => {
 
-    dot.onclick = () => {
-      index = i;
-      update();
-    };
+      const dot = document.createElement("span");
+      if (i === 0) dot.classList.add("active");
 
-    dotsWrap.appendChild(dot);
+      dot.addEventListener("click", () => {
+        index = i;
+        updateSlider();
+      });
+
+      dotsWrap.appendChild(dot);
+
+    });
+
+  }
+
+  // Buttons
+
+  nextBtn?.addEventListener("click", () => {
+    if (index < cards.length - 1) {
+      index++;
+      updateSlider();
+    }
   });
 
+  prevBtn?.addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      updateSlider();
+    }
+  });
+
+  // Swipe Support
+
+  let startX = 0;
+
+  row.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  row.addEventListener("touchend", e => {
+
+    if (!isMobile()) return;
+
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+
+    if (diff > 50 && index < cards.length - 1) index++;
+    if (diff < -50 && index > 0) index--;
+
+    updateSlider();
+
+  });
+
+  // INIT
+
+  createDots();
+  calcWidth();
+  updateSlider();
+
   window.addEventListener("resize", () => {
-    cardWidth = cards[0].offsetWidth + GAP;
-    update();
+    index = 0;
+    calcWidth();
+    updateSlider();
   });
 
 }
+
+// INIT CALL
+initWhyChooseMobileSlider();
+
+
 
 
 // ================= UTILITY =================

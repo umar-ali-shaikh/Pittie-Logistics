@@ -702,6 +702,7 @@ button.btn-primary:hover svg {
         display: block;
     }
 
+
     .mobile-get-in-touch .contact-row svg {
         width: 30px;
         height: 24px;
@@ -709,6 +710,7 @@ button.btn-primary:hover svg {
 
     .mobile-get-in-touch h3 {
         font-size: calc(1.325rem + .9vw);
+        font-weight: 500;
     }
 
     .mobile-get-in-touch .contact-row {

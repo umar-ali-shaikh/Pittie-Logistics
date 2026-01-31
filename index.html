@@ -1,675 +1,376 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <!-- Basic Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <!-- Basic Meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <title>
+      Pittie Logistics | Reliable Transportation & Supply Chain Solutions
+    </title>
+    <meta
+      name="description"
+      content="Pittie Logistics provides reliable transportation, warehousing and end-to-end supply chain solutions with fast delivery and trusted service."
+    />
+    <meta name="theme-color" content="#0d6efd" />
 
-  <!-- SEO -->
-  <title>Pittie Logistics | Reliable Transportation & Supply Chain Solutions</title>
-  <meta name="description"
-    content="Pittie Logistics provides reliable transportation, warehousing and end-to-end supply chain solutions with fast delivery and trusted service." />
-  <meta name="theme-color" content="#0d6efd" />
+    <!-- ================= PRECONNECT ================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
-  <!-- ================= PRECONNECT ================= -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <!-- ================= GOOGLE FONT (NON-BLOCKING) ================= -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
 
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      />
+    </noscript>
 
+    <!-- ================= NON-BLOCKING CSS ================= -->
 
-  <!-- ================= GOOGLE FONT (NON-BLOCKING) ================= -->
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-    onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Bootstrap -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
 
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-  </noscript>
+    <!-- Swiper -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
 
-  <!-- ================= NON-BLOCKING CSS ================= -->
+    <!-- Font Awesome -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
 
-  <!-- Bootstrap -->
-  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    onload="this.onload=null;this.rel='stylesheet'">
+    <!-- ================= CRITICAL CSS ================= -->
+    <link rel="stylesheet" href="Design/Universal.css" />
 
-  <!-- Swiper -->
-  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    onload="this.onload=null;this.rel='stylesheet'">
+    <!-- Main CSS -->
+    <link
+      rel="preload"
+      as="style"
+      href="Design/style.css"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
+    />
 
-  <!-- Font Awesome -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    onload="this.onload=null;this.rel='stylesheet'">
+    <!-- ================= NOSCRIPT FALLBACK ================= -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      />
+      <link rel="stylesheet" href="Design/style.css" />
+    </noscript>
 
-  <!-- ================= CRITICAL CSS ================= -->
-  <link rel="stylesheet" href="Design/Universal.css">
-
-  <!-- Main CSS -->
-  <link rel="preload" as="style" href="Design/style.css" onload="this.onload=null;this.rel='stylesheet'">
-
-  <!-- ================= NOSCRIPT FALLBACK ================= -->
-  <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="Design/style.css">
-  </noscript>
-
-  <!-- ================= THIRD PARTY SCRIPT ================= -->
-  <script src="https://backend.nordanai.com/public/widget.js" defer nordankey="Z4hQ5Ib5teZZH"></script>
+    <!-- ================= THIRD PARTY SCRIPT ================= -->
+    <!-- <script src="https://backend.nordanai.com/public/widget.js" defer nordankey="Z4hQ5Ib5teZZH"></script>
   <script>
     gtag('consent', 'default', {
       ad_storage: 'denied',
       analytics_storage: 'denied'
     });
-  </script>
+  </script> -->
+  </head>
 
-</head>
+  <body>
+    <!-- Skip Navigation Link (REQUIRED) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-
-
-
-<body>
-  <!-- Skip Navigation Link (REQUIRED) -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-
-  <header class="header" role="banner">
-    <nav class="navbar navbar-expand-lg" role="navigation">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="Assests/home/PittieLogistics.png" alt="Pittie Logistics Logo" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav gap-3">
-            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            <a class="nav-link" href="About-Us.html">About Us</a>
-            <a class="nav-link" href="Capabilities.html">Capabilities</a>
-            <a class="nav-link" href="Services.html">Services</a>
-            <a class="nav-link" href="Partners.html">Partners & Clients</a>
-            <a class="nav-link" href="Contact.html">Contact Us</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- MAIN CONTENT LANDMARK -->
-  <main id="main-content" role="main">
-    <!-- Hero Section -->
-    <section class="snap-section section hero bg-color-white">
-      <div class="container hero-wrapper">
-        <!-- Hero Swiper -->
-        <div class="swiper hero-swiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="hero-content col-8">
-                <span class="sub-heading-outline">Think Logistics, Think Pittie</span>
-
-                <h1>Wherever Your Business Is, Our Network Will Follow</h1>
-
-                <p>
-                  Strengthening Delivery Footprint through Transportation.
-                </p>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="swiper-slide">
-              <div class="hero-content col-8">
-                <span class="sub-heading-outline">Think Logistics, Think Pittie</span>
-
-                <h1>
-                  Strategic Partnership With Emerging Digital Superstores
-                </h1>
-
-                <p>Strengthening trade network through Quick Commerce.</p>
-
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="swiper-slide">
-              <div class="hero-content col-8">
-                <span class="sub-heading-outline">Think Logistics, Think Pittie</span>
-
-                <h1>Partnering India's Organized Retail</h1>
-
-                <p>
-                  From storage to stores – Pittie Logistics delivers seamless
-                  warehousing, transportation, and value-added logistics
-                  solutions.
-                </p>
-
-              </div>
+    <header class="header" role="banner">
+      <nav class="navbar navbar-expand-lg" role="navigation">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img
+              src="Assests/home/PittieLogistics.png"
+              alt="Pittie Logistics Logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav gap-3">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+              <a class="nav-link" href="About-Us.html">About Us</a>
+              <a class="nav-link" href="Capabilities.html">Capabilities</a>
+              <a class="nav-link" href="Services.html">Services</a>
+              <a class="nav-link" href="Partners.html">Partners & Clients</a>
+              <a class="nav-link" href="Contact.html">Contact Us</a>
             </div>
           </div>
         </div>
+      </nav>
+    </header>
 
-        <!-- Slider Arrows -->
-        <button class="icon-arrow hero-arrow left" aria-label="Previous Slide">
-          <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
-        </button>
-        <button class="icon-arrow hero-arrow right" aria-label="Next Slide">
-          <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
-        </button>
-
-
-        <!-- Dots -->
-        <div class="hero-dots">
-          <span class="active"></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-
-      <div class="overlay-bg">
-        <div class="image1 overlay-image"></div>
-        <div class="image2 overlay-image"></div>
-        <div class="image3 overlay-image"></div>
-      </div>
-    </section>
-
-    <!-- What We Do -->
-    <section class="snap-section section what-we-do-section">
-      <div class="container">
-        <div class="row align-items-center gap-4">
-          <!-- LEFT CONTENT -->
-          <div class="col div-pm">
-            <span class="badge sub-heading mb-3">What We Do</span>
-
-            <h2 class="what-title mb-3 reveal-chars">
-              Smart Logistics Solutions That Move Your Business Forward
-            </h2>
-
-            <p class="what-desc mb-4">
-              At Pittie Logistics, we simplify complex supply chains by
-              providing integrated logistics services tailored to your
-              business needs
-            </p>
-
-            <div class="d-flex flex-wrap gap-3 mb-4">
-              <div class="what-item">
-                <span>
-                  <img src="Assests/home/what-we-Right-icon.svg" alt="" />
-                </span>
-                <h3>Modern Trade</h3>
-                <p>Smart logistics for modern retail</p>
-              </div>
-
-              <div class="what-item">
-                <span>
-                  <img src="Assests/home/what-we-Right-icon.svg" alt="" />
-                </span>
-                <h3>General Trade</h3>
-                <p>Trusted general trade logistics services</p>
-              </div>
-
-              <div class="what-item">
-                <span>
-                  <img src="Assests/home/what-we-Right-icon.svg" alt="" />
-                </span>
-                <h3>E-Commerce</h3>
-                <p>End To End e-commerce logistics solutions</p>
-              </div>
-
-              <div class="what-item">
-                <span>
-                  <img src="Assests/home/what-we-Right-icon.svg" alt="" />
-                </span>
-                <h3>Transportation</h3>
-                <p>Safe, timely, cost-effective transportation</p>
-              </div>
-
-              <div class="what-item">
-                <span>
-                  <img src="Assests/home/what-we-Right-icon.svg" alt="" />
-                </span>
-                <h3>Quick Commerce</h3>
-                <p>Rapid fulfillment for quick commerce</p>
-              </div>
-
-              <div class="what-item">
-                <span>
-                  <img src="Assests/home/what-we-Right-icon.svg" alt="" />
-                </span>
-                <h3>Exports</h3>
-                <p>Reliable cross-border logistics solutions</p>
-              </div>
-            </div>
-
-            <div class="d-flex what-we-do-section-btn gap-3">
-              <button class="btn btn-primary">
-                <a href="Contact.html">
-                  Get Qoute
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </button>
-              <button class="btn btn-outline">
-                <a href="About-Us.html#best-at-sections">
-                  Read More
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                </a>
-              </button>
-            </div>
-          </div>
-          <!-- RIGHT IMAGES -->
-          <div class="col div-pm">
-            <div class="what-images-wrapper">
-              <!-- ROW 1 : Full width image -->
-              <div class="what-img what-img-row1">
-                <img src="Assests/home/Untitled design.jpg" alt="" />
-              </div>
-
-              <!-- ROW 2 -->
-              <div class="what-img-row2">
-                <!-- Column 1 -->
-                <div class="what-img what-img-col1">
-                  <img src="Assests/home/What-we-2.jpg" alt="" />
-                </div>
-
-                <!-- Column 2 -->
-                <div class="what-img-col2 col">
-                  <div class="what-img">
-                    <img src="Assests/home/What-we-3.png" alt="" />
-                  </div>
-                  <div class="what-img">
-                    <img src="Assests/home/home-warehouse-1.png" alt="" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Milestone -->
-    <section class="snap-section section milestone-section bg-color-blue">
-      <div class="container">
-        <!-- Milestone Heading -->
-        <div class="row flex-column align-items-center text-center">
-          <span class="badge sub-heading mb-3">Our Milestones</span>
-          <h2 class="reveal-chars">Power Logistics Across Business</h2>
-        </div>
-
-        <!-- Stats Block -->
-        <div class="row pt-5">
-          <div class="milestone-stats">
-            <div class="milestone-stat-item">
-              <h3 data-target="19">0<span>+</span></h3>
-              <p>Pan-India warehouses</p>
-            </div>
-
-            <div class="milestone-stat-item">
-              <h3 data-target="50000">0<span>K</span></h3>
-              <p>Cases per month handles</p>
-            </div>
-
-            <div class="milestone-stat-item">
-              <h3 data-target="200">0<span>+</span></h3>
-              <p>Tonnage handled</p>
-            </div>
-
-            <div class="milestone-stat-item">
-              <h3 data-target="500">0<span>+</span></h3>
-              <p>Vehicles</p>
-            </div>
-
-            <div class="milestone-stat-item">
-              <h3 data-target="25">0<span>+</span></h3>
-              <p>Global Countries Serviced via Exports</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services -->
-    <section class="snap-section section services-section bg-color-blue">
-      <div class="container">
-        <!-- Services Heading -->
-        <div class="row flex-column align-items-center text-center">
-          <span class="badge sub-heading mb-3">Our Services</span>
-          <h2 class="reveal-chars">Power Logistics Across Business</h2>
-
-          <!-- Mobile Heading Tabs -->
-          <div class="services-tabs d-md-none">
-            <button class="tab active" data-target="cf">
-              Carry & Forward
-            </button>
-            <button class="tab" data-target="ss">Super Stockist</button>
-            <button class="tab" data-target="bts">Built To Suit</button>
-          </div>
-        </div>
-
-        <!-- Services Types -->
-        <div class="services-Types flex-wrap pt-5">
-          <!-- Service 1 -->
-          <div class="Services-box mb-5" data-service="cf">
-            <div class="Services-box-item col-5">
-              <img src="Assests/home/services-forward.webp" alt="Freight Forwarding" />
-            </div>
-            <div class="Services-box-item col-7 ps-4">
-              <div class="services-content">
-                <h3>Carry & Forward (C&F) Partners</h3>
-                <p>
-                  Pittie Logistics operates as a reliable Carry & Forward
-                  partner, managing inventory, warehousing, dispatch, and
-                  secondary distribution with accuracy and efficiency.
-                </p>
-                <button class="btn btn-outline">
-                  <a href="services.html?service=0#services-content">
-                    Read More
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Service 2 -->
-          <div class="Services-box mb-5" data-service="ss">
-            <div class="Services-box-item col-7 pe-4">
-              <div class="services-content">
-                <h3>Super Stockist Services</h3>
-                <p>
-                  Pittie Logistics offers reliable Super Stockist solutions
-                  that ensure efficient bulk storage, inventory control, and
-                  timely distribution across territories.
-                </p>
-                <button class="btn btn-outline">
-                  <a href="services.html?service=1#services-content">
-                    Read More
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                </button>
-              </div>
-            </div>
-            <div class="Services-box-item col-5">
-              <img src="Assests/home/services-suit.webp" alt="Customs Clearance" />
-            </div>
-          </div>
-
-          <!-- Service 3 -->
-          <div class="Services-box" data-service="bts">
-            <div class="Services-box-item col-5">
-              <img src="Assests/home/services-superstock.webp" alt="Warehousing Solutions" />
-            </div>
-            <div class="Services-box-item col-7 ps-4">
-              <div class="services-content">
-                <h3>Built To Suit Solutions</h3>
-                <p>
-                  Pittie Logistics offers Built To Suit warehousing solutions
-                  designed to match your specific operational and business
-                  requirements.
-                </p>
-                <button class="btn btn-outline">
-                  <a href="services.html?service=2#services-content">
-                    Read More
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </a>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Choose Us-->
-    <section class="snap-section section why-choose-section bg-color-white">
-      <div class="container about-grid">
-        <div class="row flex-wrap align-items-center">
-          <div class="why-choose-section-item why-choose-section-item1">
-            <span class="sub-heading-outline">Why Choose Us</span>
-            <h2 class="reveal-chars">One Stop Solution For logistic</h2>
-            <p>
-              Pittie Logistics delivers premium logistics solutions built on
-              trust, performance, and precision. Backed by proven legacy, high
-              KPI ratings, and advanced technology, we ensure visibility,
-              reliability, efficiency, and transparent pricing for long-term
-              partnerships with measurable results.
-            </p>
-          </div>
-          <div class="why-choose-section-item d-flex flex-column">
-            <img src="Assests/home/why-choose-adv-technology.webp" alt="" />
-            <h5>Premium Logistics. Priority Performance.</h5>
-            <p>
-              Dedicated, high-standard logistics solutions for businesses that
-              expect more.
-            </p>
-          </div>
-          <div class="why-choose-section-item d-flex flex-column">
-            <img src="Assests/home/why-choose-long-standing.webp" alt="" />
-            <h5>A Legacy of Trust and Reliability</h5>
-            <p>
-              Years of proven expertise delivering consistent logistics
-              performance.
-            </p>
-          </div>
-          <div class="why-choose-section-item d-flex flex-column">
-            <img src="Assests/home/why-choose-highiest-rating.webp" alt="" />
-            <h5>Performance Proven by Results</h5>
-            <p>
-              Consistently high KPI scores across delivery, accuracy, and
-              reliability.
-            </p>
-          </div>
-          <div class="why-choose-section-item d-flex flex-column">
-            <img src="Assests/home/why-choose-pricing-model.webp" alt="" />
-            <h5>Technology-Driven Logistics Excellence</h5>
-            <p>
-              Smart systems that ensure visibility, control, and efficiency.
-            </p>
-          </div>
-          <div class="why-choose-section-item d-flex flex-column">
-            <img src="Assests/home/why-choose-primium-service.webp" alt="" />
-            <h5>Pricing model</h5>
-            <p>Sustainable pricing model.</p>
-          </div>
-        </div>
-      </div>
-      <div class="why-choose-controls">
-        <button class="slide-btn prev">‹</button>
-
-        <div class="why-choose-dots"></div>
-
-        <button class="slide-btn next">›</button>
-      </div>
-      <!-- <div class="why-choose-dots"></div> -->
-    </section>
-
-    <!-- Testimonials -->
-    <section class="snap-section testimonials-section section bg-color-blue">
-      <div class="container d-flex flex-column">
-        <div class="row testimonials-section-row1 flex-column col-lg-6">
-          <span class="badge sub-heading mb-3">Testimonials</span>
-          <h2 class="reveal-chars">Experiences Shared by Our Clients</h2>
-        </div>
-        <div class="row testimonials-section-row2">
-          <!-- Swiper Container -->
-          <div class="swiper testimonials-swiper">
-            <!-- Swiper Wrapper -->
-            <div class="swiper-wrapper testimonials-section-box-wrapper">
+    <!-- MAIN CONTENT LANDMARK -->
+    <main id="main-content" role="main">
+      <!-- Hero Section -->
+      <section class="snap-section section hero bg-color-white">
+        <div class="container hero-wrapper">
+          <!-- Hero Swiper -->
+          <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
               <!-- Slide 1 -->
-              <div class="swiper-slide testimonials-section-box d-flex">
-                <div class="testimonials-section-item">
-                  <div class="testimonials-section-rating">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                  </div>
+              <div class="swiper-slide">
+                <div class="hero-content col-8">
+                  <span class="sub-heading-outline"
+                    >Think Logistics, Think Pittie</span
+                  >
+
+                  <h1>Wherever Your Business Is, Our Network Will Follow</h1>
+
                   <p>
-                    We are pleased to provide this testimonial in recognition of our operational partnership with
-                    Probody Balance PVT LTD
-
-                    Since the beginning of our collaboration, Probody Balance PVT LTD has consistently demonstrated a
-                    high level of professionalism, reliability, and operational excellence. Their team has shown strong
-                    expertise in managing day-to-day operations and adapting efficiently to changing requirements.
-
-                    What we value most is their proactive communication and problem-solving approach. Challenges are
-                    addressed promptly and thoughtfully, ensuring smooth operations and minimal disruption.
-
-                    Based on our experience, we confidently recommend Probody Balance PVT LTD as an operational partner
-                    to any organization seeking efficiency, accountability, and strong collaborative support.
+                    Strengthening Delivery Footprint through Transportation.
                   </p>
-                  <div class="testimonials-section-profile">
-                    <img src="Assests/home/testimonials-man1.svg" alt="" />
-                    <div>
-                      <h3>Manish Bhatia</h3>
-                      <span>Associate General Manager<br />
-                        PATANJALI FOOD LIMITED</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="testimonials-section-item">
-                  <div class="testimonials-section-rating">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                  </div>
-                  <p>
-                    Pittie Group has been a reliable warehousing and logistics partner for Coolberg, supporting our
-                    growing distribution needs with efficiency and scale. Their structured processes, strong warehousing
-                    infrastructure, and technology-led systems have helped ensure inventory accuracy and timely
-                    dispatches. The team has been responsive and solution-oriented, especially during periods of
-                    expansion. Their pan-India network has enabled smoother market reach for the brand. Overall, Pittie
-                    Group has played a key role in strengthening our supply chain operations.
-                  </p>
-                  <div class="testimonials-section-profile">
-                    <img src="Assests/home/testimonials-man2.svg" alt="" />
-                    <div>
-                      <h3>Yashika Keswani</h3>
-                      <span>Founder <br /> Coolberg Beverages Pvt. Ltd</span>
-                    </div>
-                  </div>
                 </div>
               </div>
 
               <!-- Slide 2 -->
-              <div class="swiper-slide testimonials-section-box d-flex">
-                <div class="testimonials-section-item">
-                  <div class="testimonials-section-rating">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                  </div>
-                  <p>
-                    Pittie Logistics has been instrumental in optimizing our
-                    nationwide distribution network. Their warehousing
-                    efficiency and transparent communication have helped us
-                    reduce delivery time by 30%. We consider them not just a
-                    service provider, but a true logistics partner.
-                  </p>
-                  <div class="testimonials-section-profile">
-                    <img src="Assests/home/testimonials-man1.svg" alt="" />
-                    <div>
-                      <h3>Prathamesh Dalvi</h3>
-                      <span>Supply Chain Manager</span>
-                    </div>
-                  </div>
-                </div>
+              <div class="swiper-slide">
+                <div class="hero-content col-8">
+                  <span class="sub-heading-outline"
+                    >Think Logistics, Think Pittie</span
+                  >
 
-                <div class="testimonials-section-item">
-                  <div class="testimonials-section-rating">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                  </div>
-                  <p>
-                    Pittie Logistics has been instrumental in optimizing our
-                    nationwide distribution network. Their warehousing
-                    efficiency and transparent communication have helped us
-                    reduce delivery time by 30%. We consider them not just a
-                    service provider, but a true logistics partner.
-                  </p>
-                  <div class="testimonials-section-profile">
-                    <img src="Assests/home/testimonials-man2.svg" alt="" />
-                    <div>
-                      <h3>Prathamesh Dalvi</h3>
-                      <span>Supply Chain Manager</span>
-                    </div>
-                  </div>
+                  <h1>
+                    Strategic Partnership With Emerging Digital Superstores
+                  </h1>
+
+                  <p>Strengthening trade network through Quick Commerce.</p>
                 </div>
               </div>
 
               <!-- Slide 3 -->
-              <div class="swiper-slide testimonials-section-box d-flex">
-                <div class="testimonials-section-item">
-                  <div class="testimonials-section-rating">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                  </div>
+              <div class="swiper-slide">
+                <div class="hero-content col-8">
+                  <span class="sub-heading-outline"
+                    >Think Logistics, Think Pittie</span
+                  >
+
+                  <h1>Partnering India's Organized Retail</h1>
+
                   <p>
-                    Pittie Logistics has been instrumental in optimizing our
-                    nationwide distribution network. Their warehousing
-                    efficiency and transparent communication have helped us
-                    reduce delivery time by 30%. We consider them not just a
-                    service provider, but a true logistics partner.
+                    From storage to stores – Pittie Logistics delivers seamless
+                    warehousing, transportation, and value-added logistics
+                    solutions.
                   </p>
-                  <div class="testimonials-section-profile">
-                    <img src="Assests/home/testimonials-man1.svg" alt="" />
-                    <div>
-                      <h3>Prathamesh Dalvi</h3>
-                      <span>Supply Chain Manager</span>
-                    </div>
-                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slider Arrows -->
+          <button
+            class="icon-arrow hero-arrow left"
+            aria-label="Previous Slide"
+          >
+            <i class="fa-solid fa-angle-left" aria-hidden="true"></i>
+          </button>
+          <button class="icon-arrow hero-arrow right" aria-label="Next Slide">
+            <i class="fa-solid fa-angle-right" aria-hidden="true"></i>
+          </button>
+
+          <!-- Dots -->
+          <div class="hero-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="overlay-bg">
+          <div class="image1 overlay-image"></div>
+          <div class="image2 overlay-image"></div>
+          <div class="image3 overlay-image"></div>
+        </div>
+      </section>
+
+      <!-- What We Do -->
+      <section class="snap-section section what-we-do-section">
+        <div class="container">
+          <div class="row align-items-center gap-4">
+            <!-- LEFT CONTENT -->
+            <div class="col div-pm">
+              <span class="badge sub-heading mb-3">What We Do</span>
+
+              <h2 class="what-title mb-3 reveal-chars">
+                Smart Logistics Solutions That Move Your Business Forward
+              </h2>
+
+              <p class="what-desc mb-4">
+                At Pittie Logistics, we simplify complex supply chains by
+                providing integrated logistics services tailored to your
+                business needs
+              </p>
+
+              <div class="d-flex flex-wrap gap-3 mb-4">
+                <div class="what-item">
+                  <span>
+                    <img src="Assests/home/what-we-Right-icon.svg" alt="" />
+                  </span>
+                  <h3>Modern Trade</h3>
+                  <p>Smart logistics for modern retail</p>
                 </div>
 
-                <div class="testimonials-section-item">
-                  <div class="testimonials-section-rating">
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
-                    <span><i class="fa-solid fa-star"></i></span>
+                <div class="what-item">
+                  <span>
+                    <img src="Assests/home/what-we-Right-icon.svg" alt="" />
+                  </span>
+                  <h3>General Trade</h3>
+                  <p>Trusted general trade logistics services</p>
+                </div>
+
+                <div class="what-item">
+                  <span>
+                    <img src="Assests/home/what-we-Right-icon.svg" alt="" />
+                  </span>
+                  <h3>E-Commerce</h3>
+                  <p>End To End e-commerce logistics solutions</p>
+                </div>
+
+                <div class="what-item">
+                  <span>
+                    <img src="Assests/home/what-we-Right-icon.svg" alt="" />
+                  </span>
+                  <h3>Transportation</h3>
+                  <p>Safe, timely, cost-effective transportation</p>
+                </div>
+
+                <div class="what-item">
+                  <span>
+                    <img src="Assests/home/what-we-Right-icon.svg" alt="" />
+                  </span>
+                  <h3>Quick Commerce</h3>
+                  <p>Rapid fulfillment for quick commerce</p>
+                </div>
+
+                <div class="what-item">
+                  <span>
+                    <img src="Assests/home/what-we-Right-icon.svg" alt="" />
+                  </span>
+                  <h3>Exports</h3>
+                  <p>Reliable cross-border logistics solutions</p>
+                </div>
+              </div>
+
+              <div class="d-flex what-we-do-section-btn gap-3">
+                <button class="btn btn-primary">
+                  <a href="Contact.html">
+                    Get a Quote
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </a>
+                </button>
+                <button class="btn btn-outline">
+                  <a href="About-Us.html#best-at-sections">
+                    Read More
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </a>
+                </button>
+              </div>
+            </div>
+            <!-- RIGHT IMAGES -->
+            <div class="col div-pm">
+              <div class="what-images-wrapper">
+                <!-- ROW 1 : Full width image -->
+                <div class="what-img what-img-row1">
+                  <img src="Assests/home/Untitled design.jpg" alt="" />
+                </div>
+
+                <!-- ROW 2 -->
+                <div class="what-img-row2">
+                  <!-- Column 1 -->
+                  <div class="what-img what-img-col1">
+                    <img src="Assests/home/What-we-2.jpg" alt="" />
                   </div>
-                  <p>
-                    Pittie Logistics has been instrumental in optimizing our
-                    nationwide distribution network. Their warehousing
-                    efficiency and transparent communication have helped us
-                    reduce delivery time by 30%. We consider them not just a
-                    service provider, but a true logistics partner.
-                  </p>
-                  <div class="testimonials-section-profile">
-                    <img src="Assests/home/testimonials-man2.svg" alt="" />
-                    <div>
-                      <h3>Prathamesh Dalvi</h3>
-                      <span>Supply Chain Manager</span>
+
+                  <!-- Column 2 -->
+                  <div class="what-img-col2 col">
+                    <div class="what-img">
+                      <img src="Assests/home/What-we-3.png" alt="" />
+                    </div>
+                    <div class="what-img">
+                      <img src="Assests/home/home-warehouse-1.png" alt="" />
                     </div>
                   </div>
                 </div>
@@ -677,438 +378,1065 @@
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="testimonials-icon">
-          <!-- Slider Arrows -->
-          <button class="icon-arrow left">
-            <i class="fa-solid fa-angle-left"></i>
-          </button>
-          <button class="icon-arrow right">
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
+      <!-- Our Milestone -->
+      <section class="snap-section section milestone-section bg-color-blue">
+        <div class="container">
+          <!-- Milestone Heading -->
+          <div class="row flex-column align-items-center text-center">
+            <span class="badge sub-heading mb-3">Our Milestones</span>
+            <h2 class="reveal-chars">Power Logistics Across Business</h2>
+          </div>
+
+          <!-- Stats Block -->
+          <div class="row pt-5">
+            <div class="milestone-stats">
+              <div class="milestone-stat-item">
+                <h3 data-target="19">0<span>+</span></h3>
+                <p>Pan-India warehouses</p>
+              </div>
+
+              <div class="milestone-stat-item">
+                <h3 data-target="50000">0<span>K</span></h3>
+                <p>Cases per month handles</p>
+              </div>
+
+              <div class="milestone-stat-item">
+                <h3 data-target="200">0<span>+</span></h3>
+                <p>Tonnage handled</p>
+              </div>
+
+              <div class="milestone-stat-item">
+                <h3 data-target="500">0<span>+</span></h3>
+                <p>Vehicles</p>
+              </div>
+
+              <div class="milestone-stat-item">
+                <h3 data-target="25">0<span>+</span></h3>
+                <p>Global Countries Serviced via Exports</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hero-dots">
-          <span class="active"></span>
-          <span></span>
-          <span></span>
+      </section>
+
+      <!-- Services -->
+      <section class="snap-section section services-section bg-color-blue">
+        <div class="container">
+          <!-- Services Heading -->
+          <div class="row flex-column align-items-center text-center">
+            <span class="badge sub-heading mb-3">Our Services</span>
+            <h2 class="reveal-chars">Power Logistics Across Business</h2>
+
+            <!-- Mobile Heading Tabs -->
+            <div class="services-tabs d-md-none">
+              <button class="tab active" data-target="cf">
+                Carry & Forward
+              </button>
+              <button class="tab" data-target="ss">Super Stockist</button>
+              <button class="tab" data-target="bts">Built To Suit</button>
+            </div>
+          </div>
+
+          <!-- Services Types -->
+          <div class="services-Types flex-wrap pt-5">
+            <!-- Service 1 -->
+            <div class="Services-box mb-5" data-service="cf">
+              <div class="Services-box-item col-5">
+                <img
+                  src="Assests/home/services-forward.jpg"
+                  alt="Freight Forwarding"
+                />
+              </div>
+              <div class="Services-box-item col-7 ps-4">
+                <div class="services-content">
+                  <h3>Carry & Forward (C&F) Partners</h3>
+                  <p>
+                    Pittie Logistics operates as a reliable Carry & Forward
+                    partner, managing inventory, warehousing, dispatch, and
+                    secondary distribution with accuracy and efficiency.
+                  </p>
+                  <button class="btn btn-outline">
+                    <a href="services.html?service=0#services-content">
+                      Read More
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="Services-box mb-5" data-service="ss">
+              <div class="Services-box-item col-7 pe-4">
+                <div class="services-content">
+                  <h3>Super Stockist Services</h3>
+                  <p>
+                    Pittie Logistics offers reliable Super Stockist solutions
+                    that ensure efficient bulk storage, inventory control, and
+                    timely distribution across territories.
+                  </p>
+                  <button class="btn btn-outline">
+                    <a href="services.html?service=1#services-content">
+                      Read More
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </a>
+                  </button>
+                </div>
+              </div>
+              <div class="Services-box-item col-5">
+                <img
+                  src="Assests/home/services-superstock.webp"
+                  alt="Customs Clearance"
+                />
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="Services-box" data-service="bts">
+              <div class="Services-box-item col-5">
+                <img
+                  src="Assests/home/services-suit.jpg"
+                  alt="Warehousing Solutions"
+                />
+              </div>
+              <div class="Services-box-item col-7 ps-4">
+                <div class="services-content">
+                  <h3>Built To Suit Solutions</h3>
+                  <p>
+                    Pittie Logistics offers Built To Suit warehousing solutions
+                    designed to match your specific operational and business
+                    requirements.
+                  </p>
+                  <button class="btn btn-outline">
+                    <a href="services.html?service=2#services-content">
+                      Read More
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Contact Us -->
-    <section class="snap-section section contact-section py-5">
-      <div class="container">
-        <div class="contact-wrapper row align-items-center gap-5">
-          <!-- Left Content -->
-          <div class="col-lg p-0 text-white">
-            <span class="sub-heading-outline"> Contact Us </span>
+      <!-- Why Choose Us-->
+      <section class="snap-section section why-choose-section bg-color-white">
+        <div class="container about-grid">
+          <div class="row flex-wrap align-items-center">
+            <div class="why-choose-section-item why-choose-section-item1">
+              <span class="sub-heading-outline">Why Choose Us</span>
+              <h2 class="reveal-chars">One Stop Solution For logistic</h2>
+              <p>
+                Pittie Logistics delivers premium logistics solutions built on
+                trust, performance, and precision. Backed by proven legacy, high
+                KPI ratings, and advanced technology, we ensure visibility,
+                reliability, efficiency, and transparent pricing for long-term
+                partnerships with measurable results.
+              </p>
+            </div>
+            <div class="why-choose-section-item d-flex flex-column">
+              <img src="Assests/home/why-choose-adv-technology.webp" alt="" />
+              <h5>Premium Logistics. Priority Performance.</h5>
+              <p>
+                Dedicated, high-standard logistics solutions for businesses that
+                expect more.
+              </p>
+            </div>
+            <div class="why-choose-section-item d-flex flex-column">
+              <img src="Assests/home/why-choose-long-standing.webp" alt="" />
+              <h5>A Legacy of Trust and Reliability</h5>
+              <p>
+                Years of proven expertise delivering consistent logistics
+                performance.
+              </p>
+            </div>
+            <div class="why-choose-section-item d-flex flex-column">
+              <img src="Assests/home/why-choose-highiest-rating.webp" alt="" />
+              <h5>Performance Proven by Results</h5>
+              <p>
+                Consistently high KPI scores across delivery, accuracy, and
+                reliability.
+              </p>
+            </div>
+            <div class="why-choose-section-item d-flex flex-column">
+              <img src="Assests/home/why-choose-pricing-model.webp" alt="" />
+              <h5>Technology-Driven Logistics Excellence</h5>
+              <p>
+                Smart systems that ensure visibility, control, and efficiency.
+              </p>
+            </div>
+            <div class="why-choose-section-item d-flex flex-column">
+              <img src="Assests/home/why-choose-primium-service.jpg" alt="" />
+              <h5>Pricing model</h5>
+              <p>Sustainable pricing model.</p>
+            </div>
+          </div>
+        </div>
+        <div class="why-choose-controls">
+          <button class="slide-btn prev">‹</button>
 
-            <h2 class="contact-title mb-3 reveal-chars">
-              Let’s Build Smarter <br />
-              Supply Chain Solutions <br />
-              Together
+          <div class="why-choose-dots"></div>
+
+          <button class="slide-btn next">›</button>
+        </div>
+        <!-- <div class="why-choose-dots"></div> -->
+      </section>
+
+      <!-- Testimonials -->
+      <section class="snap-section testimonials-section section bg-color-blue">
+        <div class="container d-flex flex-column">
+          <div class="row testimonials-section-row1 flex-column col-lg-6">
+            <span class="badge sub-heading mb-3">Testimonials</span>
+            <h2 class="reveal-chars">Experiences Shared by Our Clients</h2>
+          </div>
+          <div class="row testimonials-section-row2">
+            <!-- Swiper Container -->
+            <div class="swiper testimonials-swiper">
+              <!-- Swiper Wrapper -->
+              <div class="swiper-wrapper testimonials-section-box-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide testimonials-section-box d-flex">
+                  <div class="testimonials-section-item">
+                    <!-- <div class="testimonials-section-rating">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div> -->
+                    <p class="ellipsis-text">
+                      Since the beginning of our collaboration, Probody Balance
+                      PVT LTD has consistently demonstrated a high level of
+                      professionalism, reliability, and operational excellence.
+                      Their team has shown strong expertise in managing
+                      day-to-day operations and adapting efficiently to changing
+                      requirements. What we value most is their proactive
+                      communication and problem-solving approach. Challenges are
+                      addressed promptly and thoughtfully, ensuring smooth
+                      operations and minimal disruption. Based on our
+                      experience, we confidently recommend Probody Balance PVT
+                      LTD as an operational partner to any organization seeking
+                      efficiency, accountability, and strong collaborative
+                      support.
+                    </p>
+                    <div class="testimonials-section-profile">
+                      <img src="Assests/home/testimonials-man1.svg" alt="" />
+                      <div>
+                        <h3>Manish Bhatia</h3>
+                        <span
+                          >Associate General Manager<br />
+                          PATANJALI FOOD LIMITED</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide testimonials-section-box d-flex">
+                  <div class="testimonials-section-item">
+                    <!-- <div class="testimonials-section-rating">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div> -->
+                    <p class="ellipsis-text">
+                      Pittie Group has been a reliable warehousing and logistics
+                      partner for Coolberg, supporting our growing distribution
+                      needs with efficiency and scale. Their structured
+                      processes, strong warehousing infrastructure, and
+                      technology-led systems have helped ensure inventory
+                      accuracy and timely dispatches. The team has been
+                      responsive and solution-oriented, especially during
+                      periods of expansion. Their pan-India network has enabled
+                      smoother market reach for the brand. Overall, Pittie Group
+                      has played a key role in strengthening our supply chain
+                      operations.
+                    </p>
+                    <div class="testimonials-section-profile">
+                      <img src="Assests/home/testimonials-man2.svg" alt="" />
+                      <div>
+                        <h3>Yashika Keswani</h3>
+                        <span
+                          >Founder <br />
+                          Coolberg Beverages Pvt. Ltd</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide testimonials-section-box d-flex">
+                  <div class="testimonials-section-item">
+                    <!-- <div class="testimonials-section-rating">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div> -->
+                    <p class="ellipsis-text">
+                      Since the beginning of our collaboration, Probody Balance
+                      PVT LTD has consistently demonstrated a high level of
+                      professionalism, reliability, and operational excellence.
+                      Their team has shown strong expertise in managing
+                      day-to-day operations and adapting efficiently to changing
+                      requirements. What we value most is their proactive
+                      communication and problem-solving approach. Challenges are
+                      addressed promptly and thoughtfully, ensuring smooth
+                      operations and minimal disruption. Based on our
+                      experience, we confidently recommend Probody Balance PVT
+                      LTD as an operational partner to any organization seeking
+                      efficiency, accountability, and strong collaborative
+                      support.
+                    </p>
+                    <div class="testimonials-section-profile">
+                      <img src="Assests/home/testimonials-man1.svg" alt="" />
+                      <div>
+                        <h3>Manish Bhatia</h3>
+                        <span
+                          >Associate General Manager<br />
+                          PATANJALI FOOD LIMITED</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide testimonials-section-box d-flex">
+                  <div class="testimonials-section-item">
+                    <!-- <div class="testimonials-section-rating">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div> -->
+                    <p class="ellipsis-text">
+                      Pittie Group has been a reliable warehousing and logistics
+                      partner for Coolberg, supporting our growing distribution
+                      needs with efficiency and scale. Their structured
+                      processes, strong warehousing infrastructure, and
+                      technology-led systems have helped ensure inventory
+                      accuracy and timely dispatches. The team has been
+                      responsive and solution-oriented, especially during
+                      periods of expansion. Their pan-India network has enabled
+                      smoother market reach for the brand. Overall, Pittie Group
+                      has played a key role in strengthening our supply chain
+                      operations.
+                    </p>
+                    <div class="testimonials-section-profile">
+                      <img src="Assests/home/testimonials-man2.svg" alt="" />
+                      <div>
+                        <h3>Yashika Keswani</h3>
+                        <span
+                          >Founder <br />
+                          Coolberg Beverages Pvt. Ltd</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Slide 1 -->
+                <div class="swiper-slide testimonials-section-box d-flex">
+                  <div class="testimonials-section-item">
+                    <!-- <div class="testimonials-section-rating">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div> -->
+                    <p class="ellipsis-text">
+                      Since the beginning of our collaboration, Probody Balance
+                      PVT LTD has consistently demonstrated a high level of
+                      professionalism, reliability, and operational excellence.
+                      Their team has shown strong expertise in managing
+                      day-to-day operations and adapting efficiently to changing
+                      requirements. What we value most is their proactive
+                      communication and problem-solving approach. Challenges are
+                      addressed promptly and thoughtfully, ensuring smooth
+                      operations and minimal disruption. Based on our
+                      experience, we confidently recommend Probody Balance PVT
+                      LTD as an operational partner to any organization seeking
+                      efficiency, accountability, and strong collaborative
+                      support.
+                    </p>
+                    <div class="testimonials-section-profile">
+                      <img src="Assests/home/testimonials-man1.svg" alt="" />
+                      <div>
+                        <h3>Manish Bhatia</h3>
+                        <span
+                          >Associate General Manager<br />
+                          PATANJALI FOOD LIMITED</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide testimonials-section-box d-flex">
+                  <div class="testimonials-section-item">
+                    <!-- <div class="testimonials-section-rating">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                  </div> -->
+                    <p class="ellipsis-text">
+                      Pittie Group has been a reliable warehousing and logistics
+                      partner for Coolberg, supporting our growing distribution
+                      needs with efficiency and scale. Their structured
+                      processes, strong warehousing infrastructure, and
+                      technology-led systems have helped ensure inventory
+                      accuracy and timely dispatches. The team has been
+                      responsive and solution-oriented, especially during
+                      periods of expansion. Their pan-India network has enabled
+                      smoother market reach for the brand. Overall, Pittie Group
+                      has played a key role in strengthening our supply chain
+                      operations.
+                    </p>
+                    <div class="testimonials-section-profile">
+                      <img src="Assests/home/testimonials-man2.svg" alt="" />
+                      <div>
+                        <h3>Yashika Keswani</h3>
+                        <span
+                          >Founder <br />
+                          Coolberg Beverages Pvt. Ltd</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonials-icon">
+            <!-- Slider Arrows -->
+            <button class="icon-arrow left">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="icon-arrow right">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+          <div class="hero-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="testimonials-section-overlay">
+          <div
+            class="testimonials-section-overlaybg1 testimonials-section-overlaybg"
+          ></div>
+          <div
+            class="testimonials-section-overlaybg2 testimonials-section-overlaybg"
+          ></div>
+          <div
+            class="testimonials-section-overlaybg1 testimonials-section-overlaybg"
+          ></div>
+          <div
+            class="testimonials-section-overlaybg2 testimonials-section-overlaybg"
+          ></div>
+        </div>
+      </section>
+
+      <!-- Contact Us -->
+      <section class="snap-section section contact-section py-5">
+        <div class="container">
+          <div class="contact-wrapper row align-items-center gap-5">
+            <!-- Left Content -->
+            <div class="col-lg p-0 text-white">
+              <span class="sub-heading-outline"> Contact Us </span>
+
+              <h2 class="contact-title mb-3 reveal-chars">
+                Let’s Build Smarter <br />
+                Supply Chain Solutions <br />
+                Together
+              </h2>
+
+              <p class="contact-text">
+                At Pittie Logistics, we’re always ready to support your business
+                with reliable and efficient logistics solutions.
+              </p>
+            </div>
+
+            <!-- Right Form -->
+            <div class="col-lg p-0">
+              <div class="contact-form-card">
+                <form
+                  id="contactForm"
+                  type="hidden"
+                  value="home"
+                  class="row flex-wrap g-3"
+                  action="submit.php"
+                  method="POST"
+                >
+                  <!-- Hidden Field For Page Source -->
+                  <input type="hidden" name="form_type" value="home" />
+
+                  <!-- Name -->
+                  <div class="col-12">
+                    <label class="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      name="full_name"
+                      class="form-control-hlp"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="col-md-6">
+                    <label class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      class="form-control-hlp"
+                      placeholder="+91 0000000000"
+                      required
+                    />
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control-hlp"
+                      placeholder="example@gmail.com"
+                      required
+                    />
+                  </div>
+
+                  <!-- Message -->
+                  <div class="col-12">
+                    <label class="form-label">Your Message</label>
+                    <textarea
+                      name="message"
+                      class="form-control-hlp"
+                      rows="4"
+                      placeholder="Write here..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <div class="col-12">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      aria-label="Submit Contact Form"
+                    >
+                      <span>Submit</span>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section class="snap-section blogs-section section bg-color-blue">
+        <div class="container d-flex flex-column">
+          <!-- Heading -->
+          <div class="row blogs-section-row1 flex-column col-lg-6">
+            <span class="badge sub-heading mb-3">Our Blogs</span>
+            <h2 class="reveal-chars">
+              Insights & Stories From Logistics Experts
             </h2>
+          </div>
 
-            <p class="contact-text">
-              At Pittie Logistics, we’re always ready to support your business
-              with reliable and efficient logistics solutions.
+          <!-- Blogs Slider -->
+          <div class="row blogs-section-row2">
+            <div class="blogs-section-wrapper swiper">
+              <!-- Swiper Wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Column 1 -->
+                <div class="blogs-section-column swiper-slide d-flex">
+                  <div class="blog-card">
+                    <div class="blog-card-img">
+                      <img src="Assests/home/blog-1.jpg" alt="Blog Image" />
+                    </div>
+                    <div class="blog-card-content">
+                      <div class="blog-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>31st Jan 2026</span>
+                      </div>
+                      <h3>
+                        Transport Companies in Chennai Offering Reliable
+                        Logistics
+                      </h3>
+                      <p>
+                        India’s logistics market is expanding rapidly, driven by
+                        rising demand across transportation, warehousing, and
+                        distribution.
+                      </p>
+                      <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                    </div>
+                  </div>
+
+                  <div class="blog-card">
+                    <div class="blog-card-img">
+                      <img src="Assests/home/blog-2.jpg" alt="Blog Image" />
+                    </div>
+                    <div class="blog-card-content">
+                      <div class="blog-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>31st Jan 2026</span>
+                      </div>
+                      <h3>
+                        Logistics Companies in Trivandrum: Top Providers and
+                        Services
+                      </h3>
+                      <p>
+                        Logistics companies in Trivandrum play a critical role
+                        in supporting domestic trade, international shipping,
+                        and regional supply chains.
+                      </p>
+                      <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                    </div>
+                  </div>
+
+                  <div class="blog-card">
+                    <div class="blog-card-img">
+                      <img src="Assests/home/blog-3.jpg" alt="Blog Image" />
+                    </div>
+                    <div class="blog-card-content">
+                      <div class="blog-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>31st Jan 2026</span>
+                      </div>
+                      <h3>
+                        Transport Companies in Hyderabad for Business Deliveries
+                      </h3>
+                      <p>
+                        Businesses depend on reliable transport partners to move
+                        goods on time and without damage. The right logistics
+                        company can simplify daily operations and reduce delays.
+                      </p>
+                      <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="blogs-section-column swiper-slide d-flex">
+                  <div class="blog-card">
+                    <div class="blog-card-img">
+                      <img src="Assests/home/blog-1.jpg" alt="Blog Image" />
+                    </div>
+                    <div class="blog-card-content">
+                      <div class="blog-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>31st Jan 2026</span>
+                      </div>
+                      <h3>
+                        Logistics Companies in Noida: Best Options for Efficient
+                        Delivery
+                      </h3>
+                      <p>
+                        India’s logistics market is expanding rapidly, driven by
+                        rising demand across transportation, warehousing, and
+                        distribution.
+                      </p>
+                      <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                    </div>
+                  </div>
+
+                  <div class="blog-card">
+                    <div class="blog-card-img">
+                      <img src="Assests/home/blog-2.jpg" alt="Blog Image" />
+                    </div>
+                    <div class="blog-card-content">
+                      <div class="blog-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>31st Jan 2026</span>
+                      </div>
+                      <h3>
+                        Logistics Companies in Trivandrum: Top Providers and
+                        Services
+                      </h3>
+                      <p>
+                        Logistics companies in Trivandrum play a critical role
+                        in supporting domestic trade, international shipping,
+                        and regional supply chains.
+                      </p>
+                      <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                    </div>
+                  </div>
+
+                  <div class="blog-card">
+                    <div class="blog-card-img">
+                      <img src="Assests/home/blog-3.jpg" alt="Blog Image" />
+                    </div>
+                    <div class="blog-card-content">
+                      <div class="blog-date">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>31st Jan 2026</span>
+                      </div>
+                      <h3>
+                        Transport Companies in Hyderabad for Business Deliveries
+                      </h3>
+                      <p>
+                        Businesses depend on reliable transport partners to move
+                        goods on time and without damage. The right logistics
+                        company can simplify daily operations and reduce delays.
+                      </p>
+                      <!-- <a href="#" class="blog-link">
+                      Learn More <i class="fa-solid fa-arrow-right"></i>
+                    </a> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="blogs-icon">
+            <button class="icon-arrow left">
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+            <button class="icon-arrow right">
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+          </div>
+
+          <!-- Dots -->
+          <div class="hero-dots">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Container section -->
+      <section class="cta-transport">
+        <div class="container cta-wrapper">
+          <div class="row">
+            <div class="cta-text justify-content-center">
+              <h4 class="reveal-chars">
+                Looking for the Best Transport Services?
+              </h4>
+              <p>As a app web crawler expert, We will help to organize.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="cta-action">
+              <button class="btn btn-primary">
+                <a href="Contact.html">
+                  Get a Quote
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </svg>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-section" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Company Info -->
+          <div class="footer-col footer-brand">
+            <img
+              src="Assests/home/PittieLogistics.png"
+              alt="Pittie Logistics Logo"
+              class="footer-logo"
+            />
+            <p class="footer-tagline">
+              Enhancing lives through innovative logistics solutions.
             </p>
           </div>
 
-          <!-- Right Form -->
-          <div class="col-lg p-0">
-            <div class="contact-form-card">
-              <form id="contactForm" type="hidden" value="home" class="row flex-wrap g-3" action="submit.php"
-                method="POST">
-                <!-- Hidden Field For Page Source -->
-                <input type="hidden" name="form_type" value="home" />
+          <!-- Mobile Get In Touch (ONLY for mobile) -->
+          <div class="mobile-get-in-touch">
+            <h3>Get in touch</h3>
 
-                <!-- Name -->
-                <div class="col-12">
-                  <label class="form-label">Your Name</label>
-                  <input type="text" name="full_name" class="form-control-hlp" placeholder="Name" required />
-                </div>
-
-                <!-- Phone -->
-                <div class="col-md-6">
-                  <label class="form-label">Phone Number</label>
-                  <input type="tel" name="phone" class="form-control-hlp" placeholder="+91 0000000000" required />
-                </div>
-
-                <!-- Email -->
-                <div class="col-md-6">
-                  <label class="form-label">Email</label>
-                  <input type="email" name="email" class="form-control-hlp" placeholder="example@gmail.com" required />
-                </div>
-
-                <!-- Message -->
-                <div class="col-12">
-                  <label class="form-label">Your Message</label>
-                  <textarea name="message" class="form-control-hlp" rows="4" placeholder="Write here..."
-                    required></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary" aria-label="Submit Contact Form">
-                    <span>Submit</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                  </button>
-                </div>
-              </form>
+            <div class="icon-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="30"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
+                <path
+                  d="M21 10.9112C21 17.9112 12 22.9112 12 22.9112C12 22.9112 3 17.9112 3 10.9112C3 6.4939 6.58172 2.91113 12 2.91113C17.4183 2.91113 21 6.4939 21 10.9112Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 13.9111C13.6569 13.9111 15 12.568 15 10.9111C15 9.25427 13.6569 7.91113 12 7.91113C10.3431 7.91113 9 9.25427 9 10.9111C9 12.568 10.3431 13.9111 12 13.9111Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Blog -->
-    <section class="snap-section blogs-section section bg-color-blue">
-      <div class="container d-flex flex-column">
-        <!-- Heading -->
-        <div class="row blogs-section-row1 flex-column col-lg-6">
-          <span class="badge sub-heading mb-3">Our Blogs</span>
-          <h2 class="reveal-chars">
-            Insights & Stories From Logistics Experts
-          </h2>
-        </div>
+            <p class="address First">
+              Vaibhav Chambers, Bandra Kurla Complex, Bandra - East, Mumbai -
+              400051.
+            </p>
 
-        <!-- Blogs Slider -->
-        <div class="row blogs-section-row2">
-          <div class="blogs-section-wrapper swiper">
-            <!-- Swiper Wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Column 1 -->
-              <div class="blogs-section-column swiper-slide d-flex">
-                <div class="blog-card">
-                  <div class="blog-card-img">
-                    <img src="Assests/home/blog-1.jpg" alt="Blog Image" />
-                  </div>
-                  <div class="blog-card-content">
-                    <div class="blog-date">
-                      <i class="fa-regular fa-calendar"></i>
-                      <span>31st Jan 2026</span>
-                    </div>
-                    <h3>
-                      Transport Companies in Chennai Offering Reliable Logistics
-                    </h3>
-                    <p>
-                      India’s logistics market is expanding rapidly, driven by
-                      rising demand across transportation, warehousing, and
-                      distribution.
-                    </p>
-                    <!-- <a href="#" class="blog-link">
-                      Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a> -->
-                  </div>
-                </div>
+            <span class="divider"></span>
 
-                <div class="blog-card">
-                  <div class="blog-card-img">
-                    <img src="Assests/home/blog-2.jpg" alt="Blog Image" />
-                  </div>
-                  <div class="blog-card-content">
-                    <div class="blog-date">
-                      <i class="fa-regular fa-calendar"></i>
-                      <span>31st Jan 2026</span>
-                    </div>
-                    <h3>
-                      Logistics Companies in Trivandrum: Top Providers and
-                      Services
-                    </h3>
-                    <p>
-                      Logistics companies in Trivandrum play a critical role
-                      in supporting domestic trade, international shipping,
-                      and regional supply chains.
-                    </p>
-                    <!-- <a href="#" class="blog-link">
-                      Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a> -->
-                  </div>
-                </div>
+            <p class="address">
+              Raheja District I, B3 & B4, RICC, Plot Gen-2/1/B, D Block, T.T.C.
+              Industrial Area, Juinagar, Navi Mumbai - 400705.
+            </p>
 
-                <div class="blog-card">
-                  <div class="blog-card-img">
-                    <img src="Assests/home/blog-3.jpg" alt="Blog Image" />
-                  </div>
-                  <div class="blog-card-content">
-                    <div class="blog-date">
-                      <i class="fa-regular fa-calendar"></i>
-                      <span>31st Jan 2026</span>
-                    </div>
-                    <h3>
-                      Transport Companies in Hyderabad for Business Deliveries
-                    </h3>
-                    <p>
-                      Businesses depend on reliable transport partners to move
-                      goods on time and without damage. The right logistics
-                      company can simplify daily operations and reduce delays.
-                    </p>
-                    <!-- <a href="#" class="blog-link">
-                      Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a> -->
-                  </div>
-                </div>
-              </div>
-              <div class="blogs-section-column swiper-slide d-flex">
-                <div class="blog-card">
-                  <div class="blog-card-img">
-                    <img src="Assests/home/blog-1.jpg" alt="Blog Image" />
-                  </div>
-                  <div class="blog-card-content">
-                    <div class="blog-date">
-                      <i class="fa-regular fa-calendar"></i>
-                      <span>31st Jan 2026</span>
-                    </div>
-                    <h3>
-                      Logistics Companies in Noida: Best Options for Efficient
-                      Delivery
-                    </h3>
-                    <p>
-                      India’s logistics market is expanding rapidly, driven by
-                      rising demand across transportation, warehousing, and
-                      distribution.
-                    </p>
-                    <!-- <a href="#" class="blog-link">
-                      Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a> -->
-                  </div>
-                </div>
-
-                <div class="blog-card">
-                  <div class="blog-card-img">
-                    <img src="Assests/home/blog-2.jpg" alt="Blog Image" />
-                  </div>
-                  <div class="blog-card-content">
-                    <div class="blog-date">
-                      <i class="fa-regular fa-calendar"></i>
-                      <span>31st Jan 2026</span>
-                    </div>
-                    <h3>
-                      Logistics Companies in Trivandrum: Top Providers and
-                      Services
-                    </h3>
-                    <p>
-                      Logistics companies in Trivandrum play a critical role
-                      in supporting domestic trade, international shipping,
-                      and regional supply chains.
-                    </p>
-                    <!-- <a href="#" class="blog-link">
-                      Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a> -->
-                  </div>
-                </div>
-
-                <div class="blog-card">
-                  <div class="blog-card-img">
-                    <img src="Assests/home/blog-3.jpg" alt="Blog Image" />
-                  </div>
-                  <div class="blog-card-content">
-                    <div class="blog-date">
-                      <i class="fa-regular fa-calendar"></i>
-                      <span>31st Jan 2026</span>
-                    </div>
-                    <h3>
-                      Transport Companies in Hyderabad for Business Deliveries
-                    </h3>
-                    <p>
-                      Businesses depend on reliable transport partners to move
-                      goods on time and without damage. The right logistics
-                      company can simplify daily operations and reduce delays.
-                    </p>
-                    <!-- <a href="#" class="blog-link">
-                      Learn More <i class="fa-solid fa-arrow-right"></i>
-                    </a> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Navigation -->
-        <div class="blogs-icon">
-          <button class="icon-arrow left">
-            <i class="fa-solid fa-angle-left"></i>
-          </button>
-          <button class="icon-arrow right">
-            <i class="fa-solid fa-angle-right"></i>
-          </button>
-        </div>
-
-        <!-- Dots -->
-        <div class="hero-dots">
-          <span class="active"></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Container section -->
-    <section class="cta-transport">
-      <div class="container cta-wrapper">
-        <div class="row">
-          <div class="cta-text justify-content-center">
-            <h4 class="reveal-chars">
-              Looking for the Best Transport Services?
-            </h4>
-            <p>As a app web crawler expert, We will help to organize.</p>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="cta-action">
-            <button class="btn btn-primary">
-              <a href="Contact.html">
-                Get a Quote
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
-                      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-              </a>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer-section" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Company Info -->
-        <div class="footer-col footer-brand">
-          <img src="Assests/home/PittieLogistics.png" alt="Pittie Logistics Logo" class="footer-logo" />
-          <p class="footer-tagline">
-            Enhancing lives through innovative logistics solutions.
-          </p>
-        </div>
-
-        <!-- Mobile Get In Touch (ONLY for mobile) -->
-        <div class="mobile-get-in-touch">
-          <h3>Get in touch</h3>
-
-          <div class="icon-circle">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" viewBox="0 0 24 25" fill="none">
-              <path
-                d="M21 10.9112C21 17.9112 12 22.9112 12 22.9112C12 22.9112 3 17.9112 3 10.9112C3 6.4939 6.58172 2.91113 12 2.91113C17.4183 2.91113 21 6.4939 21 10.9112Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-              <path
-                d="M12 13.9111C13.6569 13.9111 15 12.568 15 10.9111C15 9.25427 13.6569 7.91113 12 7.91113C10.3431 7.91113 9 9.25427 9 10.9111C9 12.568 10.3431 13.9111 12 13.9111Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </div>
-
-          <p class="address First">
-            Vaibhav Chambers, Bandra Kurla Complex, Bandra - East, Mumbai -
-            400051.
-          </p>
-
-          <span class="divider"></span>
-
-          <p class="address">
-            Raheja District I, B3 & B4, RICC, Plot Gen-2/1/B, D Block, T.T.C.
-            Industrial Area, Juinagar, Navi Mumbai - 400705.
-          </p>
-
-          <div class="contact-row">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 25" fill="none">
-              <path
-                d="M4 4.91113H20C21.1 4.91113 22 5.81113 22 6.91113V18.9111C22 20.0111 21.1 20.9111 20 20.9111H4C2.9 20.9111 2 20.0111 2 18.9111V6.91113C2 5.81113 2.9 4.91113 4 4.91113Z"
-                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M22 6.91113L12 13.9111L2 6.91113" stroke="black" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round"></path>
-            </svg>
-            <!-- <a href="mailto:contact@pittiegroup.com"
-                >contact@pittiegroup.com</a
-              > -->
-            <a href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;to=contact@pittiegroup.com">contact@pittiegroup.com
-            </a>
-          </div>
-
-          <div class="contact-row">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 25" fill="none">
-              <path
-                d="M21.9994 17.8312V20.8312C22.0006 21.1097 21.9435 21.3854 21.832 21.6406C21.7204 21.8958 21.5567 22.1248 21.3515 22.3131C21.1463 22.5014 20.904 22.6447 20.6402 22.7339C20.3764 22.8232 20.0968 22.8563 19.8194 22.8312C16.7423 22.4969 13.7864 21.4454 11.1894 19.7612C8.77327 18.2259 6.72478 16.1774 5.18945 13.7612C3.49942 11.1524 2.44769 8.18222 2.11944 5.09123C2.09446 4.8147 2.12732 4.53599 2.21595 4.27285C2.30457 4.00972 2.44702 3.76792 2.63421 3.56285C2.82141 3.35778 3.04925 3.19394 3.30324 3.08175C3.55722 2.96956 3.83179 2.91149 4.10945 2.91123H7.10945C7.59475 2.90645 8.06524 3.07831 8.43321 3.39476C8.80118 3.71122 9.04152 4.15068 9.10944 4.63123C9.23607 5.5913 9.47089 6.53396 9.80945 7.44123C9.94399 7.79915 9.97311 8.18814 9.89335 8.56211C9.8136 8.93608 9.62831 9.27934 9.35944 9.55123L8.08945 10.8212C9.513 13.3248 11.5859 15.3977 14.0894 16.8212L15.3594 15.5512C15.6313 15.2824 15.9746 15.0971 16.3486 15.0173C16.7225 14.9376 17.1115 14.9667 17.4694 15.1012C18.3767 15.4398 19.3194 15.6746 20.2794 15.8012C20.7652 15.8698 21.2088 16.1144 21.526 16.4887C21.8431 16.863 22.0116 17.3408 21.9994 17.8312Z"
-                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-            <a href="tel:+912242604260">+91 22 4260 4260</a>
-          </div>
-        </div>
-        <div class="consumer-rights">
-          <p class="logistics-policy">
-            © 2025 Pittie Logistics. All Rights Reserved.
-          </p>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-col footer-col-quicks">
-          <h3 class="footer-title">Quick Links</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About-Us.html">About Us</a></li>
-            <li><a href="Capabilities.html">Capabilities</a></li>
-            <li><a href="Partners.html">Partner & Clients</a></li>
-            <li><a href="Contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <!-- Services -->
-        <div class="footer-col footer-col-services">
-          <h3 class="footer-title">Services</h3>
-          <ul class="footer-links">
-            <li><a href="#">Carry & Forward Partners</a></li>
-            <li><a href="#">Carry & Forward Partners</a></li>
-            <li><a href="#">Superstockist</a></li>
-            <li><a href="#">Built To Suit</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact -->
-        <div class="footer-col">
-          <h3 class="footer-title">Contact Us</h3>
-          <ul class="footer-contact">
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 25" fill="none">
+            <div class="contact-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
                 <path
                   d="M4 4.91113H20C21.1 4.91113 22 5.81113 22 6.91113V18.9111C22 20.0111 21.1 20.9111 20 20.9111H4C2.9 20.9111 2 20.0111 2 18.9111V6.91113C2 5.81113 2.9 4.91113 4 4.91113Z"
-                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M22 6.91113L12 13.9111L2 6.91113" stroke="black" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round"></path>
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+                <path
+                  d="M22 6.91113L12 13.9111L2 6.91113"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
-              <a href="mailto:contact@pittiegroup.com">contact@pittiegroup.com</a>
-            </li>
-            <li>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 25" fill="none">
+              <!-- <a href="mailto:contact@pittiegroup.com"
+                >contact@pittiegroup.com</a
+              > -->
+              <a
+                href="https://mail.google.com/mail/u/0/?view=cm&amp;fs=1&amp;to=contact@pittiegroup.com"
+                >contact@pittiegroup.com
+              </a>
+            </div>
+
+            <div class="contact-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 25"
+                fill="none"
+              >
                 <path
                   d="M21.9994 17.8312V20.8312C22.0006 21.1097 21.9435 21.3854 21.832 21.6406C21.7204 21.8958 21.5567 22.1248 21.3515 22.3131C21.1463 22.5014 20.904 22.6447 20.6402 22.7339C20.3764 22.8232 20.0968 22.8563 19.8194 22.8312C16.7423 22.4969 13.7864 21.4454 11.1894 19.7612C8.77327 18.2259 6.72478 16.1774 5.18945 13.7612C3.49942 11.1524 2.44769 8.18222 2.11944 5.09123C2.09446 4.8147 2.12732 4.53599 2.21595 4.27285C2.30457 4.00972 2.44702 3.76792 2.63421 3.56285C2.82141 3.35778 3.04925 3.19394 3.30324 3.08175C3.55722 2.96956 3.83179 2.91149 4.10945 2.91123H7.10945C7.59475 2.90645 8.06524 3.07831 8.43321 3.39476C8.80118 3.71122 9.04152 4.15068 9.10944 4.63123C9.23607 5.5913 9.47089 6.53396 9.80945 7.44123C9.94399 7.79915 9.97311 8.18814 9.89335 8.56211C9.8136 8.93608 9.62831 9.27934 9.35944 9.55123L8.08945 10.8212C9.513 13.3248 11.5859 15.3977 14.0894 16.8212L15.3594 15.5512C15.6313 15.2824 15.9746 15.0971 16.3486 15.0173C16.7225 14.9376 17.1115 14.9667 17.4694 15.1012C18.3767 15.4398 19.3194 15.6746 20.2794 15.8012C20.7652 15.8698 21.2088 16.1144 21.526 16.4887C21.8431 16.863 22.0116 17.3408 21.9994 17.8312Z"
-                  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
               </svg>
               <a href="tel:+912242604260">+91 22 4260 4260</a>
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div class="consumer-rights">
+            <p class="logistics-policy">
+              © 2025 Pittie Logistics. All Rights Reserved.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col footer-col-quicks">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="About-Us.html">About Us</a></li>
+              <li><a href="Capabilities.html">Capabilities</a></li>
+              <li><a href="Partners.html">Partner & Clients</a></li>
+              <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="footer-col footer-col-services">
+            <h3 class="footer-title">Services</h3>
+            <ul class="footer-links">
+              <li><a href="#">Carry & Forward Partners</a></li>
+              <li><a href="#">Carry & Forward Partners</a></li>
+              <li><a href="#">Superstockist</a></li>
+              <li><a href="#">Built To Suit</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="footer-col">
+            <h3 class="footer-title">Contact Us</h3>
+            <ul class="footer-contact">
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                >
+                  <path
+                    d="M4 4.91113H20C21.1 4.91113 22 5.81113 22 6.91113V18.9111C22 20.0111 21.1 20.9111 20 20.9111H4C2.9 20.9111 2 20.0111 2 18.9111V6.91113C2 5.81113 2.9 4.91113 4 4.91113Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                  <path
+                    d="M22 6.91113L12 13.9111L2 6.91113"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <a href="mailto:contact@pittiegroup.com"
+                  >contact@pittiegroup.com</a
+                >
+              </li>
+              <li>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                >
+                  <path
+                    d="M21.9994 17.8312V20.8312C22.0006 21.1097 21.9435 21.3854 21.832 21.6406C21.7204 21.8958 21.5567 22.1248 21.3515 22.3131C21.1463 22.5014 20.904 22.6447 20.6402 22.7339C20.3764 22.8232 20.0968 22.8563 19.8194 22.8312C16.7423 22.4969 13.7864 21.4454 11.1894 19.7612C8.77327 18.2259 6.72478 16.1774 5.18945 13.7612C3.49942 11.1524 2.44769 8.18222 2.11944 5.09123C2.09446 4.8147 2.12732 4.53599 2.21595 4.27285C2.30457 4.00972 2.44702 3.76792 2.63421 3.56285C2.82141 3.35778 3.04925 3.19394 3.30324 3.08175C3.55722 2.96956 3.83179 2.91149 4.10945 2.91123H7.10945C7.59475 2.90645 8.06524 3.07831 8.43321 3.39476C8.80118 3.71122 9.04152 4.15068 9.10944 4.63123C9.23607 5.5913 9.47089 6.53396 9.80945 7.44123C9.94399 7.79915 9.97311 8.18814 9.89335 8.56211C9.8136 8.93608 9.62831 9.27934 9.35944 9.55123L8.08945 10.8212C9.513 13.3248 11.5859 15.3977 14.0894 16.8212L15.3594 15.5512C15.6313 15.2824 15.9746 15.0971 16.3486 15.0173C16.7225 14.9376 17.1115 14.9667 17.4694 15.1012C18.3767 15.4398 19.3194 15.6746 20.2794 15.8012C20.7652 15.8698 21.2088 16.1144 21.526 16.4887C21.8431 16.863 22.0116 17.3408 21.9994 17.8312Z"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </svg>
+                <a href="tel:+912242604260">+91 22 4260 4260</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <!-- Swiper JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
 
-  <!-- GSAP Core -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <!-- GSAP Core -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
 
-  <!-- Your JS Files (LAST) -->
-  <script src="Logic/Universal.js" defer></script>
-  <script src="Logic/script.js" defer></script>
-
-</body>
-
+    <!-- Your JS Files (LAST) -->
+    <script src="Logic/Universal.js" defer></script>
+    <script src="Logic/script.js" defer></script>
+  </body>
 </html>
