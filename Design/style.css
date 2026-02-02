@@ -996,11 +996,12 @@ body {
     min-height: 300px;
     display: flex;
     align-items: center;
+    flex-direction: column;
 }
 
-.blog-card-img {
+/* .blog-card-img {
     display: none;
-}
+} */
 
 .blog-card-img img {
     width: 100%;
@@ -1140,6 +1141,7 @@ body {
     /* ---------- TESTIMONIALS ---------- */
     .testimonials-section {
         text-align: center;
+        height: 100%;
     }
 
     .testimonials-section h2 {
@@ -1150,7 +1152,6 @@ body {
     .testimonials-section-profile,
     .testimonials-section-rating {
         justify-content: center;
-        /* flex-direction: column; */
     }
 
     .testimonials-section .sub-heading {
@@ -1160,6 +1161,18 @@ body {
     .testimonials-icon .icon-arrow {
         transform: translateY(0%);
     }
+
+    .testimonials-section-item {
+        width: 80%;
+        margin-top: 50px;
+
+    }
+
+    .testimonials-icon {
+        top: 0% !important;
+
+    }
+
 
 
 
@@ -1426,7 +1439,7 @@ body {
     }
 
     .hero .overlay-bg .image2 {
-        background: url("../Assests/home/Bg-image-herosection1.jpg") no-repeat right / cover !important;
+        background: url("../Assests/home/Bg-image-herosection5.png") no-repeat right / cover !important;
     }
 
     .hero .overlay-bg .image3 {
