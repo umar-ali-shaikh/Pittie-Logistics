@@ -99,6 +99,10 @@ body {
     z-index: -1;
 }
 
+.overlay-bg img {
+    display: none;
+}
+
 
 /* Default state */
 .hero .overlay-bg .overlay-image {
@@ -1448,6 +1452,10 @@ body {
 
     .hero-dots {
         top: 90%;
+    }
+
+    .overlay-bg img {
+        display: flex;
     }
 
     /* 
