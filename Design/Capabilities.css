@@ -4,7 +4,7 @@
     /* min-height: 311px;   */
     border-radius: 16px;
     overflow: hidden;
-    background-image: url("../Assests/capabilities/header-bg-img.png");
+    background-image: url("../Assests/capabilities/header-bg-img.jpg");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -334,6 +334,11 @@
 
 }
 
+@media (max-width: 576px) {
+    .cta-wrapper {
+        padding: 40px 10px !important;
+    }
+}
 
 
 /*========= Advanced technology SECTION ========= */
