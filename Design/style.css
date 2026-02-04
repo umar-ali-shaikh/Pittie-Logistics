@@ -1420,9 +1420,26 @@ body {
         width: 100% !important;
     }
 
+    .hero .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
     .hero {
-        min-height: 600px;
+        padding-block: 0;
+        position: relative;
+    }
+
+    .hero .swiper {
+        min-height: fit-content !important;
+    }
+
+
+    .hero {
+        max-height: fit-content !important;
         margin: 0 10px;
+        height: fit-content;
     }
 
     .hero-wrapper {
@@ -1430,21 +1447,54 @@ body {
     }
 
     .hero-dots {
-        top: 100%;
+        top: 90%;
     }
 
-
+    /* 
     .hero .overlay-bg .image1 {
         background: url("../Assests/home/Bg-image-herosection4-new.jpg") no-repeat center / cover !important;
     }
 
     .hero .overlay-bg .image2 {
-        background: url("../Assests/home/Bg-image-herosection5.jpg") no-repeat right / cover !important;
+        background: url("../Assests/home/Bg-image-herosection5.png") no-repeat right / cover !important;
     }
 
     .hero .overlay-bg .image3 {
         background: url("../Assests/home/Bg-image-herosection6.jpg") no-repeat right / cover !important;
 
+    } */
+    .hero .overlay-bg .image1 {
+        background: transparent;
+    }
+
+    .hero .overlay-bg .image2 {
+        background: transparent;
+    }
+
+    .hero .overlay-bg .image3 {
+        background: transparent;
+    }
+
+    .hero .overlay-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero .overlay-bg .overlay-image.active {
+        display: flex;
+    }
+
+    .hero .overlay-bg .overlay-image {
+        position: relative;
+        display: none;
+    }
+
+    .hero .overlay-bg {
+        height: fit-content;
+        position: relative;
+        min-height: 100%;
+        overflow: visible;
     }
 
 
