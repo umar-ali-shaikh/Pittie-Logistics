@@ -6,41 +6,39 @@ document.querySelectorAll("img").forEach((img) => {
 });
 
 // form successfull popup
-const contactForm = document.getElementById("contactForm");
+document.addEventListener("DOMContentLoaded", function () {
+  const contactForm = document.getElementById("contactForms");
 
-if (contactForm) {
+  if (!contactForm) {
+    console.error("❌ contactForm not found");
+    return;
+  }
+
   contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // 🚫 browser redirect band
+    e.preventDefault(); // ⛔ page reload STOP
 
     const formData = new FormData(contactForm);
 
     fetch(contactForm.action, {
-      method: contactForm.method || "POST",
+      method: "POST",
       body: formData,
     })
-      .then(res => res.text())
-      .then(text => {
-        try {
-          const data = JSON.parse(text);
-
-          if (data.success) {
-            alert("✅ " + data.message);
-            contactForm.reset();
-          } else {
-            alert("❌ " + data.message);
-          }
-
-        } catch (err) {
-          console.error("Invalid JSON from PHP:", text);
-          alert("❌ Server error. Please try again.");
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          alert("✅ " + data.message);
+          contactForm.reset();
+        } else {
+          alert("❌ " + data.message);
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.error(err);
-        alert("❌ Network error.");
+        alert("❌ Server error");
       });
   });
-}
+});
+
 
 
 

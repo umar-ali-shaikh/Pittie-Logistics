@@ -1,16 +1,16 @@
 <?php
 header('Content-Type: application/json');
-
+$config = require __DIR__.'/config.php';
 // ================= CONFIG =================
 
 $uploadDir = __DIR__ . '/uploads/resumes/';
 $maxFileSize = 2 * 1024 * 1024; // 2MB
 
-$smtpHost = getenv('SMTP_HOST');
-$smtpUser = getenv('SMTP_USER');
-$smtpPass = getenv('SMTP_PASS');
-$smtpPort = getenv('SMTP_PORT');
-$smtpSecure = getenv('SMTP_SECURE');
+$smtpHost   = $config['SMTP_HOST'];
+$smtpUser   = $config['SMTP_USER'];
+$smtpPass   = $config['SMTP_PASS'];
+$smtpPort   = $config['SMTP_PORT'];
+$smtpSecure = $config['SMTP_SECURE'];
 
 
 $fromEmail = 'info@pittieconsumer.com';

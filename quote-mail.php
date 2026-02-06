@@ -1,24 +1,26 @@
 ﻿<?php
 header('Content-Type: application/json');
+$config = require __DIR__.'/config.php';
 
 // ================= CONFIG =================
 
-$smtpHost = getenv('SMTP_HOST');
-$smtpUser = getenv('SMTP_USER');
-$smtpPass = getenv('SMTP_PASS');
-$smtpPort = getenv('SMTP_PORT');
-$smtpSecure = getenv('SMTP_SECURE');
+// Fallback values (LOCAL / DEV safety)
+$smtpHost   = $config['SMTP_HOST'];
+$smtpUser   = $config['SMTP_USER'];
+$smtpPass   = $config['SMTP_PASS'];
+$smtpPort   = $config['SMTP_PORT'];
+$smtpSecure = $config['SMTP_SECURE'];
 
-
-$fromEmail = 'info@pittieconsumer.com';
-$fromName  = 'Pittie Logistics Website';
-
-$toEmail = 'info@pittieconsumer.com';
-$toName  = 'Pittie Logistics Team';
+if (!$smtpHost || !$smtpUser || !$smtpPass) {
+    echo json_encode([
+        'success' => false,
+        'message' => 'Server configuration missing'
+    ]);
+    exit;
+}
 
 // ==========================================
 
-// PHPMailer Include
 require_once __DIR__ . '/PHPMailer/src/Exception.php';
 require_once __DIR__ . '/PHPMailer/src/PHPMailer.php';
 require_once __DIR__ . '/PHPMailer/src/SMTP.php';
@@ -26,7 +28,6 @@ require_once __DIR__ . '/PHPMailer/src/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// JSON Response Helper
 function respond($status, $msg) {
     echo json_encode([
         'success' => $status,
@@ -34,8 +35,6 @@ function respond($status, $msg) {
     ]);
     exit;
 }
-
-// ================= VALIDATION =================
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     respond(false, 'Invalid request.');
@@ -49,8 +48,6 @@ if (
     respond(false, 'Required fields are missing.');
 }
 
-// ================= DATA =================
-
 $name     = trim($_POST['full_name']);
 $phone    = trim($_POST['phone']);
 $email    = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
@@ -61,23 +58,13 @@ if (!$email) {
     respond(false, 'Invalid email address.');
 }
 
-// ================= SUBJECT =================
-
-switch ($formType) {
-    case 'home':
-        $subject = 'New Inquiry From Home Page';
-        break;
-    case 'contact':
-        $subject = 'New Inquiry From Contact Page';
-        break;
-    default:
-        $subject = 'New Website Inquiry';
-}
-
-// ================= SEND MAIL =================
+$subject = match ($formType) {
+    'home'    => 'New Inquiry From Home Page',
+    'contact' => 'New Inquiry From Contact Page',
+    default   => 'New Website Inquiry',
+};
 
 try {
-
     $mail = new PHPMailer(true);
 
     $mail->isSMTP();
@@ -96,28 +83,24 @@ try {
         ]
     ];
 
-    $mail->setFrom($fromEmail, $fromName);
-    $mail->addAddress($toEmail, $toName);
+    $mail->setFrom($smtpUser, 'Pittie Logistics Website');
+    $mail->addAddress($smtpUser);
 
     $mail->isHTML(true);
     $mail->Subject = $subject;
-
     $mail->Body = "
         <h3>New Website Inquiry</h3>
         <p><strong>Name:</strong> {$name}</p>
         <p><strong>Email:</strong> {$email}</p>
         <p><strong>Phone:</strong> {$phone}</p>
         <p><strong>Company:</strong> {$company}</p>
-        <p><strong>Form:</strong> {$formType}</p>
-        <p><strong>Date:</strong> " . date('d M Y - h:i A') . "</p>
+        <p><strong>Date:</strong> ".date('d M Y - h:i A')."</p>
     ";
 
     $mail->AltBody = "New Inquiry from {$name}";
-
     $mail->send();
 
-    respond(true, 'Message sent successfully.');
-
+    respond(true, 'Message sent successfully!');
 } catch (Exception $e) {
-    respond(false, 'Mail could not be sent.');
+    respond(false, 'Mailer error');
 }

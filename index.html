@@ -1170,15 +1170,13 @@
 
       <h2>Get a Quote</h2>
 
-      <form id="contactForm" action="quote-mail.php" method="POST" class="quote-form">
+      <form id="contactForms" action="quote-mail.php" method="POST" class="quote-form">
+        <input type="hidden" name="form_type" value="home">
         <input type="text" name="full_name" placeholder="Your Name" required />
         <input type="text" name="designation" placeholder="Designation" />
         <input type="text" name="company" placeholder="Company Name" />
         <input type="email" name="email" placeholder="Company Email" required />
         <input type="tel" name="phone" placeholder="Phone Number" required />
-
-        <input type="hidden" name="form_type" id="formType" />
-
         <button type="submit" aria-label="Submit Contact Form" class="btn btn-primary w-100">Submit</button>
       </form>
     </div>

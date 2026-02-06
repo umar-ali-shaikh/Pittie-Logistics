@@ -5,14 +5,15 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 header('Content-Type: application/json');
+$config = require __DIR__.'/config.php';
 
 // ================= CONFIG =================
 
-$smtpHost = getenv('SMTP_HOST');
-$smtpUser = getenv('SMTP_USER');
-$smtpPass = getenv('SMTP_PASS');
-$smtpPort = getenv('SMTP_PORT');
-$smtpSecure = getenv('SMTP_SECURE');
+$smtpHost   = $config['SMTP_HOST'];
+$smtpUser   = $config['SMTP_USER'];
+$smtpPass   = $config['SMTP_PASS'];
+$smtpPort   = $config['SMTP_PORT'];
+$smtpSecure = $config['SMTP_SECURE'];
 
 
 $fromEmail = 'info@pittieconsumer.com';
