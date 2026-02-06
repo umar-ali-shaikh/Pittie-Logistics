@@ -516,7 +516,7 @@ button.btn-primary:hover svg {
     padding: 50px 0;
     border-top: 1px solid #e5e7eb;
     font-family: var(--font-primary);
-    border-radius: 50px;
+    border-radius: 50px 50px 0 0;
     box-shadow: 0px 0px 40px -15px rgba(0, 76, 176, 0.5);
 }
 
@@ -750,6 +750,55 @@ button.btn-primary:hover svg {
         padding: 0;
     }
 
+}
 
 
+/* Modal background */
+.quote-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Modal box */
+.quote-modal-content {
+    background: #fff;
+    padding: 25px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Form inputs */
+.quote-modal-content input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* Mobile responsive */
+@media (max-width: 576px) {
+    .quote-modal-content {
+        margin: 15px;
+        padding: 20px;
+    }
 }

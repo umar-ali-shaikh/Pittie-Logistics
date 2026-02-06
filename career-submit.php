@@ -6,11 +6,12 @@ header('Content-Type: application/json');
 $uploadDir = __DIR__ . '/uploads/resumes/';
 $maxFileSize = 2 * 1024 * 1024; // 2MB
 
-$smtpHost = 'smtp.hostinger.com';
-$smtpUser = 'info@pittieconsumer.com';
-$smtpPass = 'Pittie@2025';
-$smtpPort = 465;
-$smtpSecure = 'ssl';
+$smtpHost = getenv('SMTP_HOST');
+$smtpUser = getenv('SMTP_USER');
+$smtpPass = getenv('SMTP_PASS');
+$smtpPort = getenv('SMTP_PORT');
+$smtpSecure = getenv('SMTP_SECURE');
+
 
 $fromEmail = 'info@pittieconsumer.com';
 $fromName  = 'Website Contact Form';

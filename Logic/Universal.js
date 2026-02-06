@@ -10,34 +10,39 @@ const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
   contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // Stop normal reload
+    e.preventDefault(); // 🚫 browser redirect band
 
-    let form = this;
-    let formData = new FormData(form);
+    const formData = new FormData(contactForm);
 
-    fetch(form.action, {
-      method: "POST",
+    fetch(contactForm.action, {
+      method: contactForm.method || "POST",
       body: formData,
     })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          // ✅ SUCCESS POPUP
-          alert("✅ " + data.message);
+      .then(res => res.text())
+      .then(text => {
+        try {
+          const data = JSON.parse(text);
 
-          // Clear form after success
-          form.reset();
-        } else {
-          // ❌ ERROR POPUP
-          alert("❌ " + data.message);
+          if (data.success) {
+            alert("✅ " + data.message);
+            contactForm.reset();
+          } else {
+            alert("❌ " + data.message);
+          }
+
+        } catch (err) {
+          console.error("Invalid JSON from PHP:", text);
+          alert("❌ Server error. Please try again.");
         }
       })
-      .catch((error) => {
-        alert("❌ Something went wrong. Please try again.");
-        console.error(error);
+      .catch(err => {
+        console.error(err);
+        alert("❌ Network error.");
       });
   });
 }
+
+
 
 // Footer links
 
@@ -62,7 +67,31 @@ document.addEventListener("DOMContentLoaded", function () {
         ?.classList.add("active");
       document
         .querySelectorAll(".service-content")
-        [index]?.classList.add("active");
+      [index]?.classList.add("active");
     }
   }
 });
+
+// Form modal get a quote form
+const openBtns = document.querySelectorAll(".openQuoteForm");
+const modal = document.getElementById("quoteModal");
+const closeBtn = document.getElementById("closeQuoteForm");
+
+openBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modal.style.display = "flex";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+
+

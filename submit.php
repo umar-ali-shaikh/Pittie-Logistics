@@ -8,11 +8,12 @@ header('Content-Type: application/json');
 
 // ================= CONFIG =================
 
-$smtpHost = 'smtp.hostinger.com';
-$smtpUser = 'info@pittieconsumer.com';
-$smtpPass = 'Pittie@2025'; // CHANGE PASSWORD
-$smtpPort = 465;
-$smtpSecure = 'ssl';
+$smtpHost = getenv('SMTP_HOST');
+$smtpUser = getenv('SMTP_USER');
+$smtpPass = getenv('SMTP_PASS');
+$smtpPort = getenv('SMTP_PORT');
+$smtpSecure = getenv('SMTP_SECURE');
+
 
 $fromEmail = 'info@pittieconsumer.com';
 $fromName  = 'Pittie Logistics Website';

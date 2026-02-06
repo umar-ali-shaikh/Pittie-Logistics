@@ -172,13 +172,13 @@
 
       <div class="overlay-bg">
         <div class="image1 overlay-image">
-          <img src="Assests/home/Bg-image-herosection4-new.jpg" alt="">
+          <img src="Assests/home/Bg-image-herosection4-new.jpg" alt="" />
         </div>
         <div class="image2 overlay-image">
-          <img src="Assests/home/Bg-image-herosection5.jpg" alt="">
+          <img src="Assests/home/Bg-image-herosection5.jpg" alt="" />
         </div>
         <div class="image3 overlay-image">
-          <img src="Assests/home/Bg-image-herosection6.jpg" alt="">
+          <img src="Assests/home/Bg-image-herosection6.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -252,8 +252,8 @@
             </div>
 
             <div class="d-flex what-we-do-section-btn gap-3">
-              <button class="btn btn-primary">
-                <a href="Contact.html">
+              <button class="btn btn-primary openQuoteForm">
+                <a href="javascript:void(0)">
                   Get a Quote
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
@@ -261,8 +261,9 @@
                   </svg>
                 </a>
               </button>
+
               <button class="btn btn-outline">
-                <a href="About-Us.html#best-at-sections">
+                <a href="Assests/pdf/Pittie-Logistics-Corporate-Deck.pdf" download>
                   Read More
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
@@ -1022,8 +1023,8 @@
 
         <div class="row">
           <div class="cta-action">
-            <button class="btn btn-primary">
-              <a href="Contact.html">
+            <button class="btn btn-primary openQuoteForm">
+              <a href="javascript:void(0)">
                 Get a Quote
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6.92757 16.8242L16.8242 6.92757M16.8242 6.92757H6.92757M16.8242 6.92757V16.8242"
@@ -1161,6 +1162,28 @@
       </div>
     </div>
   </footer>
+
+  <!-- Pop up form modal for get a quote section  -->
+  <div class="quote-modal" id="quoteModal">
+    <div class="quote-modal-content">
+      <span class="close-btn" id="closeQuoteForm">&times;</span>
+
+      <h2>Get a Quote</h2>
+
+      <form id="contactForm" action="quote-mail.php" method="POST" class="quote-form">
+        <input type="text" name="full_name" placeholder="Your Name" required />
+        <input type="text" name="designation" placeholder="Designation" />
+        <input type="text" name="company" placeholder="Company Name" />
+        <input type="email" name="email" placeholder="Company Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+
+        <input type="hidden" name="form_type" id="formType" />
+
+        <button type="submit" aria-label="Submit Contact Form" class="btn btn-primary w-100">Submit</button>
+      </form>
+    </div>
+  </div>
+
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 

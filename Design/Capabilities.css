@@ -738,4 +738,9 @@
     .operational-capabilities {
         padding: 20px 10px;
     }
+
+    .warehouse-image {
+        height: 200px;
+    }
+
 }

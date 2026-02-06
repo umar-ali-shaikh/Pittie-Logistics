@@ -11,11 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initServicesTabs();
 });
 
-
 // ================= HERO SLIDER =================
 
 function initHeroSlider() {
-
   const heroSwiperEl = document.querySelector(".hero-swiper");
   if (!heroSwiperEl) return;
 
@@ -38,24 +36,23 @@ function initHeroSlider() {
     autoplay: {
       delay: 4000,
       disableOnInteraction: false,
-      pauseOnMouseEnter: true
+      pauseOnMouseEnter: true,
     },
 
     observer: true,
     observeParents: true,
 
     on: {
-      init: swiper => updateHeroUI(swiper.realIndex),
-      slideChangeTransitionEnd: swiper => updateHeroUI(swiper.realIndex)
-    }
+      init: (swiper) => updateHeroUI(swiper.realIndex),
+      slideChangeTransitionEnd: (swiper) => updateHeroUI(swiper.realIndex),
+    },
   });
 
   function updateHeroUI(realIndex) {
-
     const index = realIndex % dots.length;
 
-    dots.forEach(d => d.classList.remove("active"));
-    bgImages.forEach(bg => bg.classList.remove("active"));
+    dots.forEach((d) => d.classList.remove("active"));
+    bgImages.forEach((bg) => bg.classList.remove("active"));
 
     dots[index]?.classList.add("active");
     bgImages[index]?.classList.add("active");
@@ -67,14 +64,11 @@ function initHeroSlider() {
 
   prevBtn?.addEventListener("click", () => heroSwiper.slidePrev());
   nextBtn?.addEventListener("click", () => heroSwiper.slideNext());
-
 }
-
 
 // ================= LOGO AUTO SLIDER =================
 
 function initLogoSlider() {
-
   if (!document.querySelector(".logo-swiper")) return;
 
   new Swiper(".logo-swiper", {
@@ -86,20 +80,17 @@ function initLogoSlider() {
 
     autoplay: {
       delay: 0,
-      disableOnInteraction: false
+      disableOnInteraction: false,
     },
 
     freeMode: true,
-    freeModeMomentum: false
+    freeModeMomentum: false,
   });
-
 }
-
 
 // ================= COUNTER =================
 
 function initCounter() {
-
   const counters = document.querySelectorAll(".milestone-stat-item h3");
   const section = document.querySelector(".milestone-section");
 
@@ -108,7 +99,6 @@ function initCounter() {
   let started = false;
 
   function animateCounter(counter) {
-
     const target = Number(counter.dataset.target);
     const suffix = counter.querySelector("span")?.innerText || "";
 
@@ -116,12 +106,10 @@ function initCounter() {
     let current = 0;
 
     function update() {
-
       const increment = Math.ceil(target / speed);
       current += increment;
 
       if (current >= target) {
-
         // FINAL VALUE SET
         if (suffix === "K") {
           counter.childNodes[0].nodeValue = Math.floor(target / 1000);
@@ -145,45 +133,42 @@ function initCounter() {
     update();
   }
 
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      if (entries[0].isIntersecting && !started) {
+        started = true;
 
-    if (entries[0].isIntersecting && !started) {
-
-      started = true;
-
-      counters.forEach(counter => {
-        animateCounter(counter);
-      });
-
-    }
-
-  }, { threshold: 0.4 });
+        counters.forEach((counter) => {
+          animateCounter(counter);
+        });
+      }
+    },
+    { threshold: 0.4 },
+  );
 
   observer.observe(section);
-
 }
-
 
 // ================= TESTIMONIALS =================
 
 function initTestimonials() {
-
   const swiperEl = document.querySelector(".testimonials-swiper");
   if (!swiperEl) return;
 
   const wrapper = swiperEl.querySelector(".swiper-wrapper");
-  const dots = document.querySelectorAll(".testimonials-section .hero-dots span");
+  const dots = document.querySelectorAll(
+    ".testimonials-section .hero-dots span",
+  );
 
   // Overlay Elements
   const overlays = document.querySelectorAll(
-    ".testimonials-section-overlay > div"
+    ".testimonials-section-overlay > div",
   );
 
   let swiper = null;
   let desktopHTML = wrapper.innerHTML;
 
   function setup() {
-
     if (swiper) {
       swiper.destroy(true, true);
       swiper = null;
@@ -194,20 +179,18 @@ function initTestimonials() {
     wrapper.innerHTML = isMobile ? "" : desktopHTML;
 
     if (isMobile) {
-
       wrapper.innerHTML = desktopHTML;
 
       const items = wrapper.querySelectorAll(".testimonials-section-item");
 
       wrapper.innerHTML = "";
 
-      items.forEach(card => {
+      items.forEach((card) => {
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
         slide.appendChild(card);
         wrapper.appendChild(slide);
       });
-
     }
 
     swiper = new Swiper(".testimonials-swiper", {
@@ -226,40 +209,37 @@ function initTestimonials() {
       preventClicksPropagation: false,
 
       // Desktop arrows only
-      navigation: isMobile ? false : {
-        nextEl: ".testimonials-icon .right",
-        prevEl: ".testimonials-icon .left"
-      },
+      navigation: isMobile
+        ? false
+        : {
+            nextEl: ".testimonials-icon .right",
+            prevEl: ".testimonials-icon .left",
+          },
 
       on: {
-        slideChange: s => {
+        slideChange: (s) => {
           updateDots(s.realIndex);
           updateOverlay(s.realIndex);
-        }
-      }
+        },
+      },
     });
 
     // Initial overlay state
     updateOverlay(0);
-
   }
 
   function updateDots(index) {
-
     const active = index % dots.length;
 
-    dots.forEach(d => d.classList.remove("active"));
+    dots.forEach((d) => d.classList.remove("active"));
     dots[active]?.classList.add("active");
-
   }
 
   function updateOverlay(index) {
-
     const active = index % overlays.length;
 
-    overlays.forEach(o => o.classList.remove("active"));
+    overlays.forEach((o) => o.classList.remove("active"));
     overlays[active]?.classList.add("active");
-
   }
 
   dots.forEach((dot, i) => {
@@ -268,16 +248,12 @@ function initTestimonials() {
 
   setup();
   window.addEventListener("resize", debounce(setup, 200));
-
 }
 
 // INIT
 initTestimonials();
 
-
-
 document.addEventListener("click", function (e) {
-
   const text = e.target.closest(".ellipsis-text");
 
   if (!text) return;
@@ -286,17 +262,11 @@ document.addEventListener("click", function (e) {
   e.stopPropagation();
 
   text.classList.toggle("expanded");
-
 });
-
-
-
-
 
 // ================= BLOGS =================
 
 function initBlogs() {
-
   const swiperEl = document.querySelector(".blogs-section-wrapper");
   if (!swiperEl) return;
 
@@ -307,7 +277,6 @@ function initBlogs() {
   const desktopHTML = wrapper.innerHTML;
 
   function setup() {
-
     if (swiper) {
       swiper.destroy(true, true);
       swiper = null;
@@ -317,28 +286,26 @@ function initBlogs() {
 
     const width = window.innerWidth;
 
-    const cards = [...document
-      .createRange()
-      .createContextualFragment(desktopHTML)
-      .querySelectorAll(".blog-card")];
+    const cards = [
+      ...document
+        .createRange()
+        .createContextualFragment(desktopHTML)
+        .querySelectorAll(".blog-card"),
+    ];
 
     // ================= MOBILE =================
     if (width <= 576) {
-
-      cards.forEach(card => {
+      cards.forEach((card) => {
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
         slide.appendChild(card);
         wrapper.appendChild(slide);
       });
-
     }
 
     // ================= TABLET =================
     else if (width <= 992) {
-
       for (let i = 0; i < cards.length; i += 2) {
-
         const slide = document.createElement("div");
         slide.className = "swiper-slide";
 
@@ -347,14 +314,11 @@ function initBlogs() {
 
         wrapper.appendChild(slide);
       }
-
     }
 
     // ================= DESKTOP =================
     else {
-
       wrapper.innerHTML = desktopHTML;
-
     }
 
     swiper = new Swiper(".blogs-section-wrapper", {
@@ -371,28 +335,24 @@ function initBlogs() {
 
       navigation: {
         nextEl: ".blogs-icon .right",
-        prevEl: ".blogs-icon .left"
+        prevEl: ".blogs-icon .left",
       },
 
       on: {
         slideChange(swiper) {
           updateDots(swiper.realIndex);
-        }
-      }
+        },
+      },
     });
-
-
   }
 
   function updateDots(index) {
-
     if (!dots.length) return;
 
     const active = index % dots.length;
 
-    dots.forEach(d => d.classList.remove("active"));
+    dots.forEach((d) => d.classList.remove("active"));
     dots[active]?.classList.add("active");
-
   }
 
   dots.forEach((dot, i) => {
@@ -401,14 +361,11 @@ function initBlogs() {
 
   setup();
   window.addEventListener("resize", debounce(setup, 250));
-
 }
-
 
 // ================= SERVICES TABS =================
 
 function initServicesTabs() {
-
   const tabs = document.querySelectorAll(".services-tabs .tab");
   const boxes = document.querySelectorAll(".Services-box");
 
@@ -416,28 +373,23 @@ function initServicesTabs() {
 
   boxes[0].classList.add("active");
 
-  tabs.forEach(tab => {
-
+  tabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-
       const target = tab.dataset.target;
 
-      tabs.forEach(t => t.classList.remove("active"));
-      boxes.forEach(b => b.classList.remove("active"));
+      tabs.forEach((t) => t.classList.remove("active"));
+      boxes.forEach((b) => b.classList.remove("active"));
 
       tab.classList.add("active");
-      document.querySelector(`[data-service="${target}"]`)?.classList.add("active");
-
+      document
+        .querySelector(`[data-service="${target}"]`)
+        ?.classList.add("active");
     });
-
   });
-
 }
-
 
 // ================= WHY CHOOSE SLIDER =================
 function initWhyChooseMobileSlider() {
-
   const row = document.querySelector(".about-grid .row");
   const dotsWrap = document.querySelector(".why-choose-dots");
   const prevBtn = document.querySelector(".why-choose-controls .prev");
@@ -460,7 +412,6 @@ function initWhyChooseMobileSlider() {
   }
 
   function updateSlider() {
-
     if (!isMobile()) {
       row.style.transform = "translateX(0)";
       dotsWrap.style.display = "none";
@@ -471,17 +422,14 @@ function initWhyChooseMobileSlider() {
 
     row.style.transform = `translateX(${-index * cardWidth}px)`;
 
-    [...dotsWrap.children].forEach(d => d.classList.remove("active"));
+    [...dotsWrap.children].forEach((d) => d.classList.remove("active"));
     dotsWrap.children[index]?.classList.add("active");
-
   }
 
   function createDots() {
-
     dotsWrap.innerHTML = "";
 
     cards.forEach((_, i) => {
-
       const dot = document.createElement("span");
       if (i === 0) dot.classList.add("active");
 
@@ -491,9 +439,7 @@ function initWhyChooseMobileSlider() {
       });
 
       dotsWrap.appendChild(dot);
-
     });
-
   }
 
   // Buttons
@@ -516,12 +462,11 @@ function initWhyChooseMobileSlider() {
 
   let startX = 0;
 
-  row.addEventListener("touchstart", e => {
+  row.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
   });
 
-  row.addEventListener("touchend", e => {
-
+  row.addEventListener("touchend", (e) => {
     if (!isMobile()) return;
 
     const endX = e.changedTouches[0].clientX;
@@ -531,7 +476,6 @@ function initWhyChooseMobileSlider() {
     if (diff < -50 && index > 0) index--;
 
     updateSlider();
-
   });
 
   // INIT
@@ -545,27 +489,18 @@ function initWhyChooseMobileSlider() {
     calcWidth();
     updateSlider();
   });
-
 }
 
 // INIT CALL
 initWhyChooseMobileSlider();
 
-
-
-
 // ================= UTILITY =================
 
 function debounce(fn, delay) {
-
   let timer;
 
   return function () {
     clearTimeout(timer);
     timer = setTimeout(fn, delay);
   };
-
 }
-
-
-F

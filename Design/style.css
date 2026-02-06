@@ -318,6 +318,7 @@ body {
     width: calc(100% - 40px);
     font-size: clamp(18px, 3vw, 24px);
     line-height: clamp(26px, 3.4vw, 38px);
+    width: fit-content;
 }
 
 .what-item {
@@ -1772,6 +1773,14 @@ body {
         width: 100%;
     }
 
+    .contact-wrapper {
+        padding: 0;
+    }
+
+    .contact-form-card {
+        padding: 20px;
+    }
+
     /* ---------- BLOG ---------- */
     .blogs-section {
         padding: 70px 0;
@@ -1801,7 +1810,7 @@ body {
 
     .blog-card {
         width: 100%;
-        padding: 24px;
+        padding: 18px;
     }
 
     .blogs-section-wrapper .swiper-slide {
@@ -1819,38 +1828,3 @@ body {
 }
 
 
-
-@media (min-width: 1400px) {}
-
-/* XXL */
-@media (min-width: 1200px) and (max-width: 1400px) {}
-
-/* XL */
-@media (min-width: 992px) and (max-width: 1200px) {}
-
-/* LG */
-@media (max-width: 992px) {}
-
-@media (min-width: 768px) and (max-width: 992px) {}
-
-/* MD */
-@media (max-width: 650px) {}
-
-@media (max-width: 768px) {}
-
-/* SM */
-@media (max-width: 576px) {}
-
-/* XS */
-@media (max-width: 480px) {}
-
-/* XXS */
-@media (max-width: 425px) {}
-
-/* XXXS */
-@media (max-width: 375px) {}
-
-/* Smallest Devices */
-@media (max-width: 320px) {}
-
-/*
