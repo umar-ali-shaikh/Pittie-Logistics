@@ -499,13 +499,19 @@
 
 
     <!-- Pop up form modal for get a quote section  -->
-     <div class="quote-modal" id="quoteModal">
+   <div class="quote-modal" id="quoteModal">
       <div class="quote-modal-content">
         <span class="close-btn" id="closeQuoteForm">&times;</span>
 
         <h2>Get a Quote</h2>
 
-        <form id="quoteForm">
+        <form
+          id="contactForms"
+          action="quote-mail.php"
+          method="POST"
+          class="quote-form"
+        >
+          <input type="hidden" name="form_type" value="home" />
           <input
             type="text"
             name="full_name"
@@ -521,12 +527,13 @@
             required
           />
           <input type="tel" name="phone" placeholder="Phone Number" required />
-
-          <textarea name="message" placeholder="Your Requirement"></textarea>
-
-          <input type="hidden" name="form_type" id="formType" />
-
-          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            aria-label="Submit Contact Form"
+            class="btn btn-primary w-100"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>

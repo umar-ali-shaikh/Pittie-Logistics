@@ -1139,15 +1139,17 @@
                 <h5>Mr. Anurag Khullar</h5>
                 <p>Sr. Manager - Warehousing (North)</p>
                 <p>
-                  Mr. Anurag Khullar has over 12 years of experience in legal
-                  domain which includes contract management, property, legal
-                  metrology, food safety, trademarks, litigations and
-                  compliances. Nishita has previously worked with reputed
-                  organizations such as Mr. D.I.Y, Nature’s Basket, Liberty Oil
-                  Mills and Godrej Agrovet. Nishita holds a graduate degree in
-                  law from Mumbai University. At Pittie Group, Nishita plays a
-                  key role in ensuring legal robustness, risk mitigation and
-                  operational compliance across critical business functions.
+                  Mr. Anurag Khullar is a seasoned warehousing and logistics
+                  professional with 18+ years of experience in managing
+                  large-scale distribution centers, supply chain operations, and
+                  multi-location warehousing. Currently serving as Senior
+                  Manager – Warehousing (North & East Zone) at Pro Body Balance
+                  Pvt. Ltd. (Pittie Group), he leads regional DC operations,
+                  drives operational efficiency, and strengthens inventory and
+                  compliance systems. With prior leadership roles across India
+                  and international markets, Anurag brings deep expertise in
+                  warehouse setup, team leadership, cost optimization, and
+                  customer-focused logistics operations.
                 </p>
               </div>
             </div>
@@ -1185,15 +1187,20 @@
                 <h5>Mr. Madhusudhan</h5>
                 <p>Sr. Manager - Warehousing (South)</p>
                 <p>
-                  Mr. Madhusudhan has over 12 years of experience in legal
-                  domain which includes contract management, property, legal
-                  metrology, food safety, trademarks, litigations and
-                  compliances. Nishita has previously worked with reputed
-                  organizations such as Mr. D.I.Y, Nature’s Basket, Liberty Oil
-                  Mills and Godrej Agrovet. Nishita holds a graduate degree in
-                  law from Mumbai University. At Pittie Group, Nishita plays a
-                  key role in ensuring legal robustness, risk mitigation and
-                  operational compliance across critical business functions.
+                  Mr. Madhusudhan Bandaru is an experienced warehousing and
+                  retail operations professional with over 10 years of
+                  experience across warehouse administration, inventory
+                  management, customs-controlled supply chains, and store
+                  operations. He is currently working as Senior Manager –
+                  Warehousing (South), where he oversees end-to-end warehouse
+                  and store operations, ensuring inventory accuracy, efficient
+                  logistics coordination, and strong team performance. With
+                  prior experience at Carl Zeiss India, Nuance Group (Duty Free
+                  – Airport), and Crossword Book Stores, Madhusudhan brings deep
+                  expertise in SAP-based warehouse systems, inventory control,
+                  compliance, and process optimization. Known for his
+                  operational discipline and people leadership, he consistently
+                  drives efficiency, accuracy, and customer satisfaction.
                 </p>
               </div>
             </div>
@@ -1205,18 +1212,16 @@
                 loading="lazy"
               />
               <div class="team-info">
-                <h5>Mr. Karitik Chakraborthy</h5>
+                <h5>Mr. Kartick Chakraborty</h5>
                 <p>Sr. Manager - Warehousing (East)</p>
                 <p>
-                  Mr. Karitik Chakraborthy has over 12 years of experience in
-                  legal domain which includes contract management, property,
-                  legal metrology, food safety, trademarks, litigations and
-                  compliances. Nishita has previously worked with reputed
-                  organizations such as Mr. D.I.Y, Nature’s Basket, Liberty Oil
-                  Mills and Godrej Agrovet. Nishita holds a graduate degree in
-                  law from Mumbai University. At Pittie Group, Nishita plays a
-                  key role in ensuring legal robustness, risk mitigation and
-                  operational compliance across critical business functions.
+                  Mr. Kartick Chakraborty is a Manager with over 9 years of
+                  experience in logistics and inventory control & overall 12
+                  year experience, I specialize in streamlining operations to
+                  maximize efficiency and safety. My focus is driving team
+                  performance, reducing shipping errors, and ensuring accurate
+                  inventory management, ultimately improving customer
+                  satisfaction through reliable, fast-paced distribution.
                 </p>
               </div>
             </div>
@@ -1742,13 +1747,19 @@
     </footer>
 
     <!-- Pop up form modal for get a quote section  -->
-     <div class="quote-modal" id="quoteModal">
+    <div class="quote-modal" id="quoteModal">
       <div class="quote-modal-content">
         <span class="close-btn" id="closeQuoteForm">&times;</span>
 
         <h2>Get a Quote</h2>
 
-        <form id="quoteForm">
+        <form
+          id="contactForms"
+          action="quote-mail.php"
+          method="POST"
+          class="quote-form"
+        >
+          <input type="hidden" name="form_type" value="home" />
           <input
             type="text"
             name="full_name"
@@ -1764,12 +1775,13 @@
             required
           />
           <input type="tel" name="phone" placeholder="Phone Number" required />
-
-          <textarea name="message" placeholder="Your Requirement"></textarea>
-
-          <input type="hidden" name="form_type" id="formType" />
-
-          <button type="submit">Submit</button>
+          <button
+            type="submit"
+            aria-label="Submit Contact Form"
+            class="btn btn-primary w-100"
+          >
+            Submit
+          </button>
         </form>
       </div>
     </div>

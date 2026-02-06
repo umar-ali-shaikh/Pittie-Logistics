@@ -89,7 +89,7 @@ try {
     $mail->isHTML(true);
     $mail->Subject = $subject;
     $mail->Body = "
-        <h3>New Website Inquiry</h3>
+        <h3>Get a Quote Form Request</h3>
         <p><strong>Name:</strong> {$name}</p>
         <p><strong>Email:</strong> {$email}</p>
         <p><strong>Phone:</strong> {$phone}</p>
