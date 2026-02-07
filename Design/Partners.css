@@ -433,8 +433,23 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .thumb-overlay p {
         height: 120px;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .product-image {
+        height: 100%;
+    }
+
+    .product-grid {
+        width: 80%;
+        margin: auto;
     }
 }
