@@ -623,8 +623,8 @@ body {
     overflow: hidden;
     position: relative;
     max-width: 1400px;
-    height: 90vh;
-    max-height: 650px;
+    height: 100vh;
+    max-height: 600px;
     display: flex;
     align-items: center;
     margin: auto;
@@ -681,7 +681,7 @@ body {
 }
 
 .testimonials-section-overlaybg1 {
-    background-image: url("../Assests/home/Testimonials-bg1.jpg");
+    background-image: url("../Assests/home/Testimonials-bg1.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -690,7 +690,7 @@ body {
 }
 
 .testimonials-section-overlaybg2 {
-    background-image: url("../Assests/home/Testimonials-bg2.jpg");
+    background-image: url("../Assests/home/Testimonials-bg2.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -739,6 +739,7 @@ body {
     flex: 0 0 100%;
     padding: 0;
     gap: 24px;
+    justify-content: end;
 }
 
 .testimonials-section-item {
@@ -802,10 +803,10 @@ body {
 
 .testimonials-icon {
     position: absolute;
-    top: 30%;
+    top: -13%;
     left: 0;
     display: flex;
-    justify-content: end;
+    justify-content: start;
     gap: 20px;
     width: 100%;
 }
@@ -1393,7 +1394,18 @@ body {
 
     .testimonials-section-box {
         gap: 20px;
+
     }
+
+   .testimonials-section-overlaybg {
+    background-position: right;
+
+    }
+    
+.testimonials-section-box-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+}
 
     .testimonials-section-item {
         padding: 24px;
@@ -1826,5 +1838,3 @@ body {
         display: none;
     }
 }
-
-
