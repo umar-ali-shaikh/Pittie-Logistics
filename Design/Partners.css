@@ -432,3 +432,9 @@
         overflow: auto;
     }
 }
+
+@media (max-width: 600px) {
+    .thumb-overlay p {
+        height: 120px;
+    }
+}
