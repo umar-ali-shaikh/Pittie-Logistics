@@ -403,7 +403,7 @@
     }
 
     .product-image {
-        height: 160px;
+        height: 220px;
     }
 
     .brand-name {
@@ -428,7 +428,7 @@
     }
 
     .thumb-overlay p {
-        height: 180px;
+        height: 175px;
         overflow: auto;
     }
 }
