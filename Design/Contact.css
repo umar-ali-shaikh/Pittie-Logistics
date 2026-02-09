@@ -251,9 +251,11 @@
 }
 
 .contact-card .muted {
-    color: #4b5563;
+    color: var(--text-primary) !important;
     line-height: 1.6;
     margin-bottom: 0;
+    font-weight: 500;
+    opacity: 1;
 }
 
 .contact-card a {
