@@ -22,14 +22,14 @@ navItems.forEach((item, index) => {
   });
 });
 
-function startAutoSlide() {
-  interval = setInterval(() => {
-    let nextIndex = (currentIndex + 1) % contents.length;
-    showContent(nextIndex);
-  }, 5000);
-}
+// function startAutoSlide() {
+//   interval = setInterval(() => {
+//     let nextIndex = (currentIndex + 1) % contents.length;
+//     showContent(nextIndex);
+//   }, 10000);
+// }
 
-startAutoSlide();
+// startAutoSlide();
 
 // URL redirect handling (without breaking existing logic)
 
