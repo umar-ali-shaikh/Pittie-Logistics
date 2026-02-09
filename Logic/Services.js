@@ -1,35 +1,35 @@
 const navItems = document.querySelectorAll(".services-nav li");
-  const contents = document.querySelectorAll(".service-content");
+const contents = document.querySelectorAll(".service-content");
 
-  let currentIndex = 0;
-  let interval;
+let currentIndex = 0;
+let interval;
 
-  function showContent(index) {
-    navItems.forEach((item) => item.classList.remove("active"));
-    contents.forEach((content) => content.classList.remove("active"));
+function showContent(index) {
+  navItems.forEach((item) => item.classList.remove("active"));
+  contents.forEach((content) => content.classList.remove("active"));
 
-    navItems[index].classList.add("active");
-    contents[index].classList.add("active");
+  navItems[index].classList.add("active");
+  contents[index].classList.add("active");
 
-    currentIndex = index;
-  }
+  currentIndex = index;
+}
 
-  navItems.forEach((item, index) => {
-    item.addEventListener("click", () => {
-      clearInterval(interval);
-      showContent(index);
-      startAutoSlide();
-    });
+navItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    clearInterval(interval);
+    showContent(index);
+    startAutoSlide();
   });
+});
 
-  function startAutoSlide() {
-    interval = setInterval(() => {
-      let nextIndex = (currentIndex + 1) % contents.length;
-      showContent(nextIndex);
-    }, 5000); 
-  }
+function startAutoSlide() {
+  interval = setInterval(() => {
+    let nextIndex = (currentIndex + 1) % contents.length;
+    showContent(nextIndex);
+  }, 5000);
+}
 
-  startAutoSlide();
+startAutoSlide();
 
 // URL redirect handling (without breaking existing logic)
 
@@ -37,7 +37,6 @@ const params = new URLSearchParams(window.location.search);
 const serviceIndex = params.get("service");
 
 if (serviceIndex !== null && contents[serviceIndex]) {
-
   clearInterval(interval);
 
   // Open correct service
@@ -48,7 +47,7 @@ if (serviceIndex !== null && contents[serviceIndex]) {
     setTimeout(() => {
       document.querySelector("#services-content").scrollIntoView({
         behavior: "smooth",
-        block: "start"
+        block: "start",
       });
     }, 300);
   });
@@ -57,11 +56,8 @@ if (serviceIndex !== null && contents[serviceIndex]) {
   startAutoSlide();
 }
 
- 
- 
-  // Collaboration section overlays and hotspots
+// Collaboration section overlays and hotspots
 document.addEventListener("DOMContentLoaded", () => {
-
   const overlays = [
     "overlayImage",
     "overlayImage1",
@@ -74,8 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "overlayImage8",
     "overlayImage9",
     "overlayImage10",
-    "overlayImage11"
-  ].map(id => document.getElementById(id));
+    "overlayImage11",
+  ].map((id) => document.getElementById(id));
 
   const hotspots = [
     ".hotspot",
@@ -89,8 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ".hotspot8",
     ".hotspot9",
     ".hotspot10",
-    ".hotspot11"
-  ].map(cls => document.querySelector(cls));
+    ".hotspot11",
+  ].map((cls) => document.querySelector(cls));
 
   let currentStep = -1;
   let interval;
@@ -105,12 +101,12 @@ document.addEventListener("DOMContentLoaded", () => {
   function toggleOverlay(event) {
     event.stopPropagation();
 
-    const index = hotspots.findIndex(h => h === event.currentTarget);
+    const index = hotspots.findIndex((h) => h === event.currentTarget);
     if (index === -1) return;
 
     // if clicked same active → reset
     if (currentStep === index) {
-      overlays.forEach(img => img.classList.remove("active"));
+      overlays.forEach((img) => img.classList.remove("active"));
       currentStep = -1;
       return;
     }
@@ -119,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // attach clicks
-  hotspots.forEach(h => {
+  hotspots.forEach((h) => {
     h.addEventListener("click", toggleOverlay);
   });
 
@@ -128,26 +124,15 @@ document.addEventListener("DOMContentLoaded", () => {
     interval = setInterval(() => {
       currentStep++;
       if (currentStep >= overlays.length) {
-        overlays.forEach(img => img.classList.remove("active"));
+        overlays.forEach((img) => img.classList.remove("active"));
         currentStep = -1;
       } else {
         activateChain(currentStep);
       }
-    }, 10000);
+    }, 2000);
   }
 
   startAuto();
-
 });
 
-
-
-
-// 
-
-
-
-
-
-
-
+//

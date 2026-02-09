@@ -411,12 +411,14 @@ body {
 .milestone-section {
     background-image: url("../Assests/home/our-milestone-bg.png");
     background-size: cover;
-    background-position: center;
+    background-position: center bottom;
     border-radius: var(--radius16);
     margin: 0 10px;
     color: #fff;
     display: flex;
     align-items: center;
+    height: 100vh;
+    max-height: 500px;
 }
 
 /* Title */
@@ -803,12 +805,13 @@ body {
 
 .testimonials-icon {
     position: absolute;
-    top: -13%;
-    left: 0;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    left: -5%;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     gap: 20px;
-    width: 100%;
+    width: 110%;
 }
 
 .testimonials-icon .icon-arrow {
@@ -1397,15 +1400,15 @@ body {
 
     }
 
-   .testimonials-section-overlaybg {
-    background-position: right;
+    .testimonials-section-overlaybg {
+        background-position: right;
 
     }
-    
-.testimonials-section-box-wrapper .swiper-slide {
-    display: flex;
-    justify-content: center;
-}
+
+    .testimonials-section-box-wrapper .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
 
     .testimonials-section-item {
         padding: 24px;
