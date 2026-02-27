@@ -265,7 +265,6 @@ document.addEventListener("click", function (e) {
 });
 
 // ================= BLOGS =================
-
 function initBlogs() {
   const swiperEl = document.querySelector(".blogs-section-wrapper");
   if (!swiperEl) return;
@@ -293,45 +292,48 @@ function initBlogs() {
         .querySelectorAll(".blog-card"),
     ];
 
-    // ================= MOBILE =================
+    // ================= MOBILE (1 per slide) =================
     if (width <= 576) {
       cards.forEach((card) => {
         const slide = document.createElement("div");
-        slide.className = "swiper-slide";
+        slide.className = "swiper-slide blogs-section-column";
         slide.appendChild(card);
         wrapper.appendChild(slide);
       });
     }
 
-    // ================= TABLET =================
+    // ================= TABLET (2 per slide) =================
     else if (width <= 992) {
       for (let i = 0; i < cards.length; i += 2) {
         const slide = document.createElement("div");
-        slide.className = "swiper-slide";
+        slide.className = "swiper-slide blogs-section-column";
 
         slide.appendChild(cards[i]);
-        cards[i + 1] && slide.appendChild(cards[i + 1]);
+        if (cards[i + 1]) slide.appendChild(cards[i + 1]);
 
         wrapper.appendChild(slide);
       }
     }
 
-    // ================= DESKTOP =================
+    // ================= DESKTOP (3 per slide) =================
     else {
-      wrapper.innerHTML = desktopHTML;
+      for (let i = 0; i < cards.length; i += 3) {
+        const slide = document.createElement("div");
+        slide.className = "swiper-slide blogs-section-column";
+
+        slide.appendChild(cards[i]);
+        if (cards[i + 1]) slide.appendChild(cards[i + 1]);
+        if (cards[i + 2]) slide.appendChild(cards[i + 2]);
+
+        wrapper.appendChild(slide);
+      }
     }
 
     swiper = new Swiper(".blogs-section-wrapper", {
-      slidesPerView: "auto", // REQUIRED
-      spaceBetween: 16,
-      speed: 700,
-      loop: true,
-
-      loopedSlides: cards.length,
-      loopAdditionalSlides: 3,
-
-      observer: true,
-      observeParents: true,
+      slidesPerView: 1, // IMPORTANT
+      spaceBetween: 20,
+      speed: 600,
+      loop: false, // VERY IMPORTANT (fixes random repeat)
 
       navigation: {
         nextEl: ".blogs-icon .right",
@@ -340,7 +342,7 @@ function initBlogs() {
 
       on: {
         slideChange(swiper) {
-          updateDots(swiper.realIndex);
+          updateDots(swiper.activeIndex);
         },
       },
     });
@@ -349,20 +351,17 @@ function initBlogs() {
   function updateDots(index) {
     if (!dots.length) return;
 
-    const active = index % dots.length;
-
     dots.forEach((d) => d.classList.remove("active"));
-    dots[active]?.classList.add("active");
+    dots[index]?.classList.add("active");
   }
 
   dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => swiper.slideToLoop(i));
+    dot.addEventListener("click", () => swiper.slideTo(i));
   });
 
   setup();
   window.addEventListener("resize", debounce(setup, 250));
 }
-
 // ================= SERVICES TABS =================
 
 function initServicesTabs() {
