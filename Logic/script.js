@@ -151,89 +151,134 @@ function initCounter() {
 
 // ================= TESTIMONIALS =================
 
+// function initTestimonials() {
+//   const swiperEl = document.querySelector(".testimonials-swiper");
+//   if (!swiperEl) return;
+
+//   const wrapper = swiperEl.querySelector(".swiper-wrapper");
+//   const dots = document.querySelectorAll(
+//     ".testimonials-section .hero-dots span",
+//   );
+
+//   // Overlay Elements
+//   const overlays = document.querySelectorAll(
+//     ".testimonials-section-overlay > div",
+//   );
+
+//   let swiper = null;
+//   let desktopHTML = wrapper.innerHTML;
+
+//   function setup() {
+//     if (swiper) {
+//       swiper.destroy(true, true);
+//       swiper = null;
+//     }
+
+//     const isMobile = window.innerWidth <= 768;
+
+//     wrapper.innerHTML = isMobile ? "" : desktopHTML;
+
+//     if (isMobile) {
+//       wrapper.innerHTML = desktopHTML;
+
+//       const items = wrapper.querySelectorAll(".testimonials-section-item");
+
+//       wrapper.innerHTML = "";
+
+//       items.forEach((card) => {
+//         const slide = document.createElement("div");
+//         slide.className = "swiper-slide";
+//         slide.appendChild(card);
+//         wrapper.appendChild(slide);
+//       });
+//     }
+
+//     swiper = new Swiper(".testimonials-swiper", {
+//       slidesPerView: isMobile ? "auto" : 1,
+//       spaceBetween: isMobile ? 16 : 30,
+//       speed: isMobile ? 600 : 1200,
+//       loop: true,
+
+//       // ✅ MOBILE ONLY TOUCH SLIDE
+//       allowTouchMove: isMobile,
+//       simulateTouch: isMobile,
+
+//       // Prevent click blocking
+//       touchStartPreventDefault: false,
+//       preventClicks: false,
+//       preventClicksPropagation: false,
+
+//       // Desktop arrows only
+//       navigation: isMobile
+//         ? false
+//         : {
+//             nextEl: ".testimonials-icon .right",
+//             prevEl: ".testimonials-icon .left",
+//           },
+
+//       on: {
+//         slideChange: (s) => {
+//           updateDots(s.realIndex);
+//           updateOverlay(s.realIndex);
+//         },
+//       },
+//     });
+
+//     // Initial overlay state
+//     updateOverlay(0);
+//   }
+
+//   function updateDots(index) {
+//     const active = index % dots.length;
+
+//     dots.forEach((d) => d.classList.remove("active"));
+//     dots[active]?.classList.add("active");
+//   }
+
+//   function updateOverlay(index) {
+//     const active = index % overlays.length;
+
+//     overlays.forEach((o) => o.classList.remove("active"));
+//     overlays[active]?.classList.add("active");
+//   }
+
+//   dots.forEach((dot, i) => {
+//     dot.addEventListener("click", () => swiper.slideToLoop(i));
+//   });
+
+//   setup();
+//   window.addEventListener("resize", debounce(setup, 200));
+// }
+
 function initTestimonials() {
   const swiperEl = document.querySelector(".testimonials-swiper");
   if (!swiperEl) return;
 
-  const wrapper = swiperEl.querySelector(".swiper-wrapper");
-  const dots = document.querySelectorAll(
-    ".testimonials-section .hero-dots span",
-  );
-
-  // Overlay Elements
   const overlays = document.querySelectorAll(
     ".testimonials-section-overlay > div",
   );
 
-  let swiper = null;
-  let desktopHTML = wrapper.innerHTML;
+  const cards = document.querySelectorAll(".testimonials-section-item");
 
-  function setup() {
-    if (swiper) {
-      swiper.destroy(true, true);
-      swiper = null;
-    }
+  const swiper = new Swiper(".testimonials-swiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 900,
+    loop: true,
 
-    const isMobile = window.innerWidth <= 768;
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
 
-    wrapper.innerHTML = isMobile ? "" : desktopHTML;
+    allowTouchMove: true,
 
-    if (isMobile) {
-      wrapper.innerHTML = desktopHTML;
-
-      const items = wrapper.querySelectorAll(".testimonials-section-item");
-
-      wrapper.innerHTML = "";
-
-      items.forEach((card) => {
-        const slide = document.createElement("div");
-        slide.className = "swiper-slide";
-        slide.appendChild(card);
-        wrapper.appendChild(slide);
-      });
-    }
-
-    swiper = new Swiper(".testimonials-swiper", {
-      slidesPerView: isMobile ? "auto" : 1,
-      spaceBetween: isMobile ? 16 : 30,
-      speed: isMobile ? 600 : 1200,
-      loop: true,
-
-      // ✅ MOBILE ONLY TOUCH SLIDE
-      allowTouchMove: isMobile,
-      simulateTouch: isMobile,
-
-      // Prevent click blocking
-      touchStartPreventDefault: false,
-      preventClicks: false,
-      preventClicksPropagation: false,
-
-      // Desktop arrows only
-      navigation: isMobile
-        ? false
-        : {
-            nextEl: ".testimonials-icon .right",
-            prevEl: ".testimonials-icon .left",
-          },
-
-      on: {
-        slideChange: (s) => {
-          updateDots(s.realIndex);
-          updateOverlay(s.realIndex);
-        },
+    on: {
+      slideChange: function () {
+        updateOverlay(this.realIndex);
       },
-    });
-
-    // Initial overlay state
-    updateOverlay(0);
-  }
-
-  function updateDots(index) {
-    const active = index % dots.length;
-
-    dots.forEach((d) => d.classList.remove("active"));
-    dots[active]?.classList.add("active");
-  }
+    },
+  });
 
   function updateOverlay(index) {
     const active = index % overlays.length;
@@ -242,27 +287,35 @@ function initTestimonials() {
     overlays[active]?.classList.add("active");
   }
 
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => swiper.slideToLoop(i));
-  });
+  updateOverlay(0);
 
-  setup();
-  window.addEventListener("resize", debounce(setup, 200));
+  // ⭐ Hover control only on testimonial cards
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      swiper.autoplay.stop();
+    });
+
+    card.addEventListener("mouseleave", () => {
+      swiper.autoplay.start();
+    });
+  });
 }
 
-// INIT
 initTestimonials();
 
-document.addEventListener("click", function (e) {
-  const text = e.target.closest(".ellipsis-text");
+// INIT
+// initTestimonials();
 
-  if (!text) return;
+// document.addEventListener("click", function (e) {
+//   const text = e.target.closest(".ellipsis-text");
 
-  e.preventDefault();
-  e.stopPropagation();
+//   if (!text) return;
 
-  text.classList.toggle("expanded");
-});
+//   e.preventDefault();
+//   e.stopPropagation();
+
+//   text.classList.toggle("expanded");
+// });
 
 // ================= BLOGS =================
 function initBlogs() {
